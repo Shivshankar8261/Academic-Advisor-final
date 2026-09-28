@@ -225,19 +225,26 @@ def basket_credits(baskets: list[tuple], batches: list[str]) -> list[dict]:
             q = f"SELECT * FROM baskets WHERE basket IN ({','.join('?' * len(names))})"
             rows = [r for r in con.execute(q, names) if not batches or r["batch"] in batches]
             for r in rows:
-                text = (f"EXACT RESULT from the spreadsheet: {r['batch']} batch - {label} basket ('{r['basket']}'): "
-                        f"minimum {_num(r['min_credits'])} credits required. Total credits for the degree: 180.")
+                text = (f"EXACT RESULT from the spreadsheet {SPREAD_FILE} (not the handbook): {r['batch']} batch - "
+                        f"{label} basket ('{r['basket']}'): minimum {_num(r['min_credits'])} credits required "
+                        f"('Fixed Min' column of tab '{r['source_tab']}'). Total credits for the degree: 180.")
                 if r["placed_credits"] is not None and r["placed_credits"] != r["min_credits"]:
-                    text += (f" NOTE (inconsistency in the source): the semester spread actually places "
-                             f"{_num(r['placed_credits'])} credits in this basket.")
+                    text += (f" NOTE (inconsistency in the source): the courses the same tab places in this "
+                             f"basket add up to {_num(r['placed_credits'])} credits.")
                 st = con.execute("SELECT credits, source_tab, source_row FROM struct_baskets WHERE batch=? AND "
                                  "replace(lower(basket),' ','') LIKE ?",
                                  (r["batch"], label.lower().replace(" ", "")[:8] + "%")).fetchone()
                 if st and st["credits"] != r["min_credits"]:
                     text += (f" NOTE (conflict in the source): the summary tab '{st['source_tab']}' (row "
                              f"{st['source_row']}) gives {_num(st['credits'])} credits for this basket.")
-                chunks.append(_chunk(text, SPREAD_FILE, f"tab '{r['source_tab']}', row {r['source_row']} "
-                                     f"({r['basket']} basket)"))
+                chunk = _chunk(text, SPREAD_FILE, f"tab '{r['source_tab']}', row {r['source_row']} "
+                               f"({r['basket']} basket)")
+                if "NOTE (" in text:  # the spreadsheet disagrees with itself: always flag it
+                    chunk["conflict"] = True
+                    chunk["must_mention"] = [(f"the source file is inconsistent on the {r['batch']} {label} credits - "
+                                              + text.split("180.", 1)[1].strip(),
+                                              ["inconsisten", "conflict", "differ", "discrepan", "disagree"])]
+                chunks.append(chunk)
     return chunks
 
 
