@@ -12,6 +12,8 @@ a claim the model made must not become a "fact" the student stated.
 import re
 from dataclasses import dataclass, field
 
+import identity
+
 MINOR_NAMES = r"law|design|psychology|economics|finance|marketing|start-?up|entrepreneurship"
 QUESTION_START = r"(what|which|who|how|when|where|why|can|could|may|should|is|are|am|do|does|did|will|would|have|has)\b"
 COMMAND_START = r"(list|show|tell|give|explain|summari[sz]e|compare|describe)\b"
@@ -154,7 +156,10 @@ def from_history(history: list[dict], message: str | None = None) -> Facts:
             last_assistant = turn["content"]
             seen.append(turn)
             continue
-        text = turn["content"]
+        text = identity.strip_address(turn["content"])
+        if identity.reply(text):  # "Hi Alice" is not a topic to carry forward
+            seen.append(turn)
+            continue
         _absorb(facts, text, bool(re.search(r"\bbatch\b", last_assistant, re.I)))
         if not recall_kind(text) and not CORRECTION_RE.search(text) and not _only_states_facts(text) \
                 and not (not facts.topic and _names_nothing(text)):

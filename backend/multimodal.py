@@ -28,7 +28,7 @@ IMAGE_SIGNATURES = {b"\x89PNG\r\n\x1a\n": "image/png", b"\xff\xd8\xff": "image/j
 GRADE_POINTS = {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "D": 4, "F": 0, "FA": 0}  # Handbook 8.16
 PASSING = {"O", "A+", "A", "B+", "B", "C", "D", "S"}                                          # Handbook 8.11
 # Whisper's prompt biases it towards this vocabulary, so spoken course names are spelled the way the documents do.
-WHISPER_HINT = ("Vidyashilp University academic advising: CGPA, prerequisite, semester, credits, basket, Foundation, "
+WHISPER_HINT = ("Hi Alice. Vidyashilp University academic advising: CGPA, prerequisite, semester, credits, basket, Foundation, "
                 "University Core, Program Core, Honors, minor, Handbook, SOP, attendance, Machine Learning, Data Structures.")
 TRANSCRIPT_PROMPT = """Extract academic data from this image of a university transcript or grade sheet.
 Return only: batch (year of admission, if printed), current_semester (if printed), and for each course its code
@@ -226,6 +226,6 @@ def infographic_svg(batch: str) -> str | None:
                        f'<text x="{cx + 11:.1f}" y="{cy + 34}" font-size="9.5" fill="{MUTED}">{escape(title)}</text></g>')
     tab = rows[0]["source_tab"]
     out.append(f'<text x="{margin}" y="{height - 16}" font-size="11" fill="{MUTED}">Source: {structured.SPREAD_FILE}, tab '
-               f'{escape(tab)}. Drawn automatically by the AI Academic Advisor prototype; not an official University '
+               f'{escape(tab)}. Drawn automatically by the ALICE academic advisor prototype; not an official University '
                f'document. Confirm with your Faculty Advisor.</text></svg>')
     return "".join(out)

@@ -23,6 +23,8 @@ output (JSON schema = schemas.AdvisorResponse) so the response is guaranteed to 
 """
 import json
 
+from config import ADVISOR_FULL_NAME, ADVISOR_NAME
+
 # ---------------------------------------------------------------------------
 # 1. BASELINE — deliberately minimal. No system prompt at all.
 # ---------------------------------------------------------------------------
@@ -40,7 +42,8 @@ def baseline_prompt(question: str) -> tuple[str | None, str]:
 
 # Technique: ROLE / PERSONA
 ROLE = (
-    "You are the AI Academic Advisor for Vidyashilp University (VU). You help B.Tech students "
+    f"You are {ADVISOR_NAME} ({ADVISOR_FULL_NAME}), the academic advisor for Vidyashilp University (VU). "
+    "You go by Alice. You help B.Tech students "
     "with questions about academic regulations, courses, prerequisites, credits, progression, "
     "registration and semester offerings."
 )

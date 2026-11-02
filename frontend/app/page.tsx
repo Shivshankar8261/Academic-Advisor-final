@@ -764,7 +764,10 @@ export default function Home() {
             <Image src="/vu-logo.png" alt="Vidyashilp University" width={110} height={40} priority />
             <div className="border-l border-slate-200 pl-4">
               <h1 className="bg-gradient-to-r from-brand-900 via-brand-600 to-violet-600 bg-clip-text text-lg font-bold tracking-tight text-transparent">
-                AI Academic Advisor
+                ALICE
+                <span className="ml-2 align-middle text-xs font-medium tracking-normal text-slate-500 [-webkit-text-fill-color:currentColor]">
+                  Academic Learning, Information &amp; Course Explorer
+                </span>
               </h1>
               <div className="flex items-center gap-2 text-xs text-slate-500">
                 <span
@@ -895,7 +898,7 @@ export default function Home() {
                 </div>
               </div>
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                Hi there! I&apos;m your{" "}
+                Hi! I&apos;m Alice, your{" "}
                 <span className="bg-gradient-to-r from-brand-600 to-violet-600 bg-clip-text text-transparent">
                   academic advisor
                 </span>
@@ -1128,7 +1131,7 @@ export default function Home() {
                 send(input);
               }
             }}
-            placeholder={awaitingClarification ? "Answer the advisor's question…" : "Ask an academic question…"}
+            placeholder={awaitingClarification ? "Answer Alice's question…" : "Ask Alice an academic question…"}
             className="max-h-40 flex-1 resize-none bg-transparent px-3 py-2.5 text-[15px] outline-none placeholder:text-slate-400"
           />
           <button
@@ -1156,7 +1159,7 @@ export default function Home() {
           </button>
         </form>
         <p className="mx-auto mt-2 max-w-4xl text-center text-[11px] text-slate-400">
-          AI-generated guidance: always confirm important decisions with your Faculty Advisor · Enter to send · This
+          Alice gives AI-generated guidance: always confirm important decisions with your Faculty Advisor · Enter to send · This
           conversation: {sessionTokens.toLocaleString()} tokens
         </p>
       </footer>

@@ -4,6 +4,9 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+ADVISOR_NAME = "ALICE"
+ADVISOR_FULL_NAME = "Academic Learning, Information & Course Explorer"
+
 BACKEND_DIR = Path(__file__).resolve().parent
 ROOT = BACKEND_DIR.parent
 load_dotenv(BACKEND_DIR / ".env")

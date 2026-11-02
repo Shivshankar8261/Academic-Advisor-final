@@ -27,6 +27,7 @@ from functools import lru_cache
 import agents
 import guard
 import llm
+import identity
 import memory
 import multimodal
 import prompts
@@ -58,7 +59,7 @@ NOT_IN_DOCUMENTS = AdvisorResponse(
     insufficient_information=True, conflict_detected=False)
 
 
-WELCOME = ("Welcome to the **Vidyashilp University AI Academic Advisor**! 👋\n\n"
+WELCOME = ("I'm **Alice**, the academic advisor for Vidyashilp University! 👋\n\n"
            "I answer questions from the Student Handbook, the SOP, the semester spread structures and the minor "
            "course lists. You can ask me things like:\n"
            "- *How many minors are offered for the 2025 batch?*\n"
@@ -67,18 +68,19 @@ WELCOME = ("Welcome to the **Vidyashilp University AI Academic Advisor**! 👋\n
            "Pick your profile at the top for answers about your own progress.")
 # Whole-message small talk only: "hi, how many minors?" still goes through retrieval.
 SMALL_TALK = [
-    (r"(hi+|hey+|hello+|hii+|namaste|good (morning|afternoon|evening)|greetings|yo)( there)?( advisor)?",
-     WELCOME),
     (r"(thanks?|thank you|thank u|thx|ty)( (so|very) much)?( a lot)?", "You're welcome! Ask me anything else about "
      "your courses, minors or academic rules."),
     (r"(bye|goodbye|see you|see ya|good night)", "Goodbye, and all the best with your studies at Vidyashilp "
      "University! 🎓"),
     (r"(ok(ay)?|cool|great|nice|got it|alright)", "Glad that helped. What else would you like to know?"),
-    (r"(who|what) are you|what can you do|help", WELCOME),
+    (r"what can you do|help", WELCOME),
 ]
 
 
 def small_talk(message: str) -> str | None:
+    fixed = identity.reply(message)  # greetings, and being asked her name
+    if fixed:
+        return fixed
     m = re.sub(r"[\s!.?,:)(]+$", "", message.strip().lower())
     return next((reply for rx, reply in SMALL_TALK if re.fullmatch(rx, m)), None)
 
@@ -239,7 +241,7 @@ def answer(message: str, strategy: str = "rag_structured", student_id: str | Non
     if not guarded:
         return _answer(message, strategy, student_id, history, session_record)
     start = time.perf_counter()
-    verdict = guard.check_input(message, student_id, use_classifier)
+    verdict = guard.check_input(message, student_id, use_classifier and not identity.reply(message))
     notice = (f"I removed your {' and '.join(verdict.redacted)} before processing: the advisor doesn't need it."
               if verdict.redacted else None)
     if verdict.category:
@@ -289,6 +291,7 @@ def _refusal(category: str) -> AdvisorResponse:
 
 def _answer(message: str, strategy: str, student_id: str | None, history: list[dict],
             session_record: dict | None) -> ChatResponse:
+    message = identity.strip_address(message)  # "Hi Alice, how many credits?" is a question about credits
     profile = multimodal.profile_from_record(session_record) if session_record else \
         (load_profiles().get(student_id) if student_id else None)
     start = time.perf_counter()

@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VU AI Academic Advisor",
-  description: "RAG-based academic advisor prototype (DATA308 Assignment 1)",
+  title: "ALICE | Academic Learning, Information & Course Explorer",
+  description: "ALICE, the academic advisor for Vidyashilp University",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

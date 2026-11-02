@@ -1,4 +1,4 @@
-# VU AI Academic Advisor — DATA308 Assignments #1 and #2
+# ALICE (Academic Learning, Information & Course Explorer): VU Academic Advisor — DATA308 Assignments #1 and #2
 
 A RAG-based academic advisor for Vidyashilp University that answers student questions **only from the
 university's own documents**, cites its sources, asks a clarifying question when it lacks facts about the
