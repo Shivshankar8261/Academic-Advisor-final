@@ -421,3 +421,9 @@ def test_next_semester_list_uses_the_stated_semester(stub):
     s = stub()
     r = play("rag_structured", ["I am in the 2024 batch, semester 3", "Which courses are in the next semester?"])[1]
     assert "Semester 4" in r.answer and not s.prompts
+
+
+def test_total_credits_after_a_semester_list_is_exact(stub):
+    s = stub()
+    r = play("rag_structured", ["I am in the 2023 batch", "What courses are in semester 4?", "How many credits in total?"])[2]
+    assert "| Semester 4, 2023 batch | 28 |" in r.answer and "| Whole programme, 2023 batch | 180 |" in r.answer and not s.prompts

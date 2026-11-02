@@ -137,6 +137,8 @@ def is_follow_up(message: str, history: list[dict]) -> bool:
         return True
     if re.match(r"(what|how) about\b|and\b|for\b|in\b|only\b", m, re.I) or LEANS_ON_TOPIC_RE.match(m):
         return True
+    if len(m.split()) <= 6 and re.search(r"\b(in total|altogether|overall)\b", m, re.I) and not OWN_SUBJECT_RE.search(m):
+        return True
     if len(m.split()) <= 10 and REFERS_BACK_RE.search(m) and not NOT_REFERRING_RE.search(m) and not OWN_SUBJECT_RE.search(m):
         return True
     return len(m.split()) <= 6 and not NEW_QUESTION_RE.search(m)

@@ -523,6 +523,21 @@ def _how_to_read(rows, listed: int, takes: int, tba: int) -> str:
     return " ".join(notes)
 
 
+def total_credits(batch: str, sem: int | None) -> list[dict]:
+    with _db() as con:
+        rows = con.execute("SELECT * FROM courses WHERE kind='programme' AND batch=? ORDER BY semester", (batch,)).fetchall()
+    if not rows:
+        return []
+    whole = _tally(rows)[3]
+    in_sem = [r for r in rows if r["semester"] == sem]
+    lines = ["| Scope | Credits |", "|---|---|"]
+    if in_sem:
+        lines.append(f"| Semester {sem}, {batch} batch | {_num(_tally(in_sem)[3])} |")
+    lines.append(f"| Whole programme, {batch} batch | {_num(whole)} |")
+    answer = "\n".join(lines)
+    return [_direct(_chunk(answer, SPREAD_FILE, f"Semester spread, {batch} batch"), answer)]
+
+
 def semester_list(batch: str, sem: int) -> list[dict]:
     with _db() as con:
         rows = con.execute("SELECT * FROM courses WHERE kind='programme' AND batch=? AND semester=? "
@@ -761,6 +776,12 @@ def route(question: str, profile: dict | None = None, message: str | None = None
     personal_minor = re.search(r"\bminors?\b", low) and re.search(r"\b(i|my|me)\b", (message or q).lower())
     if personal_minor and not batches and not codes:
         return ask_batch_for_minor()
+    now = (message or q).lower()
+    if batches and re.search(r"\b(how many|total)\b.{0,20}\bcredits?\b|\bcredits?\b.{0,12}\btotal\b", now) and not codes \
+            and not minor and not requirement_q and not SELF_CHECK_RE.search(low) \
+            and not any(re.search(rx, now) for rx, _, _ in BASKET_ALIASES):
+        stated_sem = re.search(r"\b(?:semester|sem)\s*(\d)\b", low)
+        return total_credits(batches[0], int(stated_sem.group(1)) if stated_sem else None)
     if CAN_TAKE_MINOR_RE.search(low) and not minor and not codes:
         if not batches:
             return ask_batch_for_minor()
