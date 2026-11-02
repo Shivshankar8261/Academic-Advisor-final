@@ -1,0 +1,11 @@
+# Vercel shuts an idle backend down, and the next student then waits several seconds for it to restart.
+name: Keep the advisor API warm
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS --max-time 30 https://vu-academic-advisor-api.vercel.app/health > /dev/null

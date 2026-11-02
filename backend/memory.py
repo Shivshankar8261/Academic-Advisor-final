@@ -92,6 +92,16 @@ def _absorb(facts: Facts, message: str, asked_batch: bool):
             _set(facts, "minor", minor.group(1).capitalize(), correcting)
 
 
+VAGUE_REQUEST_RE = re.compile(r"^\W*(help|help me|please help|i need help|need help|i have a (question|doubt)|question|doubt|advice"
+                              r"|what should i do|what can you do|guide me|courses?|minors?|subjects?)\W*$", re.I)
+CLARIFY_TOPIC = ("What would you like to know? Tell me your batch (year of admission) and the topic: for example the courses "
+                 "in a semester, prerequisites for a course, credits, a minor, attendance or registration.")
+
+
+def is_vague_request(message: str) -> bool:
+    return bool(VAGUE_REQUEST_RE.match(message))
+
+
 def _names_nothing(message: str) -> bool:
     """"can i take it?" has no subject of its own once the filler words are gone."""
     return not re.sub(r"\W+", "", FILLER_RE.sub(" ", message))
@@ -156,10 +166,14 @@ def from_history(history: list[dict], message: str | None = None) -> Facts:
     return facts
 
 
-def _without_stated_values(text: str) -> str:
-    """Drop batch, semester and programme from an old question: the current values are added back separately."""
+def _without_stated_values(text: str, facts: "Facts | None" = None) -> str:
+    """Drop batch, the student's own semester and programme from an old question: current values are added back
+    separately. "Courses in semester 4" names what is being asked about, so that semester stays."""
     text = re.sub(r"\b(20\d\d)\s*batch\b|\bbatch\s*(of\s*)?20\d\d\b", " ", text, flags=re.I)
-    text = re.sub(r"\b(?:semester|sem)\s*\d\b|\b\d(?:st|nd|rd|th)\s*(?:semester|sem)\b", " ", text, flags=re.I)
+    own = {str(x) for x in ((facts.semester if facts else None), (facts.corrected.get("semester") if facts else None)) if x}
+    def drop(m):
+        return " " if re.search(r"\d", m.group()).group() in own else m.group()
+    text = re.sub(r"\b(?:semester|sem)\s*\d\b|\b\d(?:st|nd|rd|th)\s*(?:semester|sem)\b", drop, text, flags=re.I)
     text = re.sub(r"\bb\.?\s?tech\b", " ", text, flags=re.I)
     return re.sub(r"^[\s,.]+|\s+(?=[,.])", "", re.sub(r"\s+", " ", text)).strip()
 
@@ -174,9 +188,9 @@ def contextual_query(message: str, history: list[dict], facts: Facts) -> str:
     kept = [x for x in re.findall(r"[^.?!\n]+[.?!]?", message) if not FOLLOW_UP_RE.search(x)]
     withdrawn = re.sub(r"\bnot\s+(?:(?:semester|sem|batch)\s*)?\d+(?:st|nd|rd|th)?|\b(correction|actually|sorry|i meant)\b\W*",
                        " ", " ".join(kept), flags=re.I)
-    parts = [_without_stated_values(facts.topic or "")]
+    parts = [_without_stated_values(facts.topic or "", facts)]
     if facts.topic != message:
-        parts += [_without_stated_values(x) for x in facts.thread[-2:]] + [withdrawn.strip()]
+        parts += [_without_stated_values(x, facts) for x in facts.thread[-2:]] + [withdrawn.strip()]
     if facts.batch:
         parts.append(f"{facts.batch} batch")
     if facts.semester and not re.search(r"\b(?:semester|sem)\s*\d", withdrawn, re.I):

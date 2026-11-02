@@ -344,7 +344,7 @@ def test_minor_list_without_a_batch_asks_for_it():
 
 
 def test_can_i_take_a_minor_is_not_turned_into_a_list():
-    assert not structured.route("Can I take the Law minor? how many courses", None, "Can I take the Law minor?")[0].get("direct_answer")
+    assert not structured.route("Can I take the Law minor for 2024? how many courses", None, "Can I take the Law minor for 2024?")[0].get("direct_answer")
 
 
 def test_citation_differing_only_in_punctuation_is_kept():
@@ -372,3 +372,52 @@ def test_sick_follow_up_searches_the_medical_rule_whatever_came_before():
     history = chat("Can I take Machine Learning next semester?")
     query = memory.contextual_query("what if I was sick?", history, memory.from_history(history, "what if I was sick?"))
     assert "medical" in query and "Machine Learning" not in query
+
+
+# Found by a battery of realistic questions: the bug removed "semester 4" from the question itself.
+def test_semester_being_asked_about_stays_in_the_query():
+    history = chat("I am in the 2023 batch")
+    message = "What courses are in semester 4?"
+    answer = structured.route(memory.contextual_query(message, history, memory.from_history(history, message)), None,
+                              message, memory.from_history(history, message))[0]["direct_answer"]
+    assert "2023 batch has" in answer and "Semester 4" in answer
+
+
+def test_a_corrected_own_semester_is_still_removed():
+    history = chat("BTech, 2024 batch, semester 5. Can I take a minor?")
+    message = "Correction: semester 3, not 5. Does that change your advice?"
+    query = memory.contextual_query(message, history, memory.from_history(history, message))
+    assert "semester 5" not in query
+
+
+@pytest.mark.parametrize("message", ["What courses are there in semester 3?", "How many courses are there?",
+                                     "What electives do I have?", "Which courses are in the next semester?",
+                                     "Which minors can I take?", "Can I do a minor in Law?"])
+def test_batch_dependent_question_asks_for_the_batch_without_a_model(stub, message):
+    s = stub()
+    r = play("rag_structured", [message])[0]
+    assert r.needs_clarification and "batch" in r.clarifying_question.lower() and not s.prompts
+
+
+def test_answering_with_only_the_year_gets_the_exact_list(stub):
+    s = stub()
+    first, second = play("rag_structured", ["What courses are there in semester 3?", "2024"])
+    assert first.needs_clarification and "2024 batch has" in second.answer and "Semester 3" in second.answer and not s.prompts
+
+
+@pytest.mark.parametrize("message", ["help me", "minor", "I have a question"])
+def test_empty_requests_are_asked_about_not_refused(stub, message):
+    stub()
+    assert play("rag_structured", [message])[0].needs_clarification
+
+
+def test_changing_the_year_keeps_the_table(stub):
+    s = stub()
+    r = play("rag_structured", ["List the Finance minor courses for 2024", "what about 2025?"])[1]
+    assert "2025 batch Finance minor" in r.answer and "|" in r.answer and not s.prompts
+
+
+def test_next_semester_list_uses_the_stated_semester(stub):
+    s = stub()
+    r = play("rag_structured", ["I am in the 2024 batch, semester 3", "Which courses are in the next semester?"])[1]
+    assert "Semester 4" in r.answer and not s.prompts

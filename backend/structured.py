@@ -297,6 +297,14 @@ def minor_availability(batch: str, semester: int | None) -> list[dict]:
     return [chunk]
 
 
+def ask_batch(reason: str, question: str = "Which batch are you in (your year of admission)?") -> list[dict]:
+    """Asked before any model runs: the answer would differ by batch, and guessing would make it wrong."""
+    chunk = _direct(_chunk(reason, SPREAD_FILE, "curriculum by batch"), reason)
+    chunk["clarify"] = question
+    chunk["sources_none"] = True
+    return [chunk]
+
+
 def ask_batch_for_minor() -> list[dict]:
     answer = "Minors differ by batch, so I need your batch before I can tell you what's open to you."
     chunk = _direct(_chunk(answer, MINOR_FILE, "minors by batch"), answer)
@@ -750,6 +758,9 @@ def route(question: str, profile: dict | None = None, message: str | None = None
     asked_now = message or q
     if ATTENDANCE_RULE_RE.search(asked_now) and not ATTENDANCE_PERSONAL_RE.search(asked_now):
         return attendance_rule()
+    personal_minor = re.search(r"\bminors?\b", low) and re.search(r"\b(i|my|me)\b", (message or q).lower())
+    if personal_minor and not batches and not codes:
+        return ask_batch_for_minor()
     if CAN_TAKE_MINOR_RE.search(low) and not minor and not codes:
         if not batches:
             return ask_batch_for_minor()
@@ -762,10 +773,10 @@ def route(question: str, profile: dict | None = None, message: str | None = None
     if codes:  # a specific course: semester / credits / prerequisites
         return course_lookup(codes, batches)
     if minor_q and not re.search(r"credits? (needed|required)|basket", low):
-        asked = message or q  # the merged search text can hold words from an earlier question
-        if (LIST_WORDS.search(asked) or re.search(r"\b(list|show|table|those|them)\b", asked, re.I)) \
+        asked = message or q  # "can I take it?" must not become a list because an earlier question was one
+        if (LIST_WORDS.search(q) or re.search(r"\b(list|show|table|those|them)\b", q, re.I)) \
                 and not SELF_CHECK_RE.search(asked):
-            show_all = bool(re.search(r"\b(list|show|which courses|what courses)\b", asked, re.I))
+            show_all = bool(re.search(r"\b(list|show|which courses|what courses)\b", q, re.I))
             return minor_direct(minor, batches, show_all) or minor_summary(minor, batches)
         return minor_summary(minor, batches)
     if not minor and re.search(r"\bminors?\b", low) and not re.search(r"credit|basket", low) and (
@@ -788,4 +799,16 @@ def route(question: str, profile: dict | None = None, message: str | None = None
     if batches and re.search(r"\b(courses|subjects)\b", low) and re.search(r"how many|\blist\b|\ball\b|total", low) \
             and not SELF_CHECK_RE.search(low):
         return batch_overview(batches[0])
+    # The answer differs by batch and we don't know it: ask, rather than let a model guess.
+    if not batches and not SELF_CHECK_RE.search(low) and re.search(r"\b(courses?|subjects?|electives?)\b", low) and (
+            sem or re.search(r"\b(next|current|this) (semester|sem|term)\b|\bhow many\b|\belectives?\b|\b(list|all)\b", low)):
+        return ask_batch(f"Courses differ by batch, so I need your batch to give you the exact list"
+                         f"{f' for Semester {sem}' if sem else ''}.")
+    next_sem = re.search(r"\bnext (semester|sem|term)\b", low)
+    if batches and next_sem and re.search(r"\b(courses?|subjects?)\b", low) and not SELF_CHECK_RE.search(low):
+        current = (facts.semester if facts else None) or (profile or {}).get("current_semester")
+        if current and current < 8:
+            return semester_list(batches[0], current + 1)
+        return ask_batch("I need your current semester to work out which courses come next.",
+                         "Which semester are you in now?")
     return []

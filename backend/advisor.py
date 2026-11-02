@@ -313,6 +313,12 @@ def _answer(message: str, strategy: str, student_id: str | None, history: list[d
             clarifying_question="Which course, minor or rule do you mean?" if kind == "unclear" else None,
             insufficient_information=False, conflict_detected=False), strategy, MEMORY_PROVIDER, start, 0.0, [])
 
+    if strategy != "baseline" and memory.is_vague_request(message) and not history:
+        return _response(AdvisorResponse(
+            answer=memory.CLARIFY_TOPIC, confidence="medium", grounded=False, sources=[], needs_clarification=True,
+            clarifying_question="Which batch are you in, and what would you like to know?",
+            insufficient_information=False, conflict_detected=False), strategy, MEMORY_PROVIDER, start, 0.0, [])
+
     if strategy == "baseline":
         convo = "".join(f"{t['role']}: {t['content']}\n" for t in history[-6:])
         _, user = prompts.baseline_prompt(f"{convo}{message}" if convo else message)
