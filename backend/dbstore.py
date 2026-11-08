@@ -11,8 +11,11 @@ Two jobs:
      API cannot read these tables; only this server's database role can.
 
 Without POSTGRES_URL (local runs, tests) everything here is a no-op and the bundled SQLite file is used.
-Load or refresh the hosted tables from the bundled file:  python load_supabase.py
+The backend sets Supabase up by itself: on start-up, if the hosted tables are missing or were loaded from an older
+bundled file (compared by checksum), it creates them, copies the bundled rows in, checks the counts and enables
+row-level security. python load_supabase.py does the same by hand.
 """
+import hashlib
 import os
 import shutil
 import sqlite3
@@ -43,7 +46,7 @@ TABLES = {
     "infra_rules": ["section", "text", "source_row"],
 }
 
-_state = {"source": "bundled", "synced_at": None, "error": None, "rows": 0}
+_state = {"source": "bundled", "synced_at": None, "error": None, "rows": 0, "seeded_at": None}
 _lock = threading.Lock()
 _conn = None
 
@@ -66,12 +69,64 @@ def status() -> dict:
     return dict(_state, configured=bool(DATABASE_URL))
 
 
+PG_TYPES = {"INTEGER": "bigint", "REAL": "double precision", "TEXT": "text"}
+CHAT_LOG = """CREATE TABLE IF NOT EXISTS chat_log (
+    id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    created_at timestamptz NOT NULL DEFAULT now(),
+    strategy text, question text, answer text, provider text, total_tokens integer, cost_usd double precision,
+    response_time_s double precision, needs_clarification boolean, insufficient_information boolean, guard text,
+    had_profile boolean, sources text)"""
+
+
+def _checksum(bundled: Path) -> str:
+    return hashlib.sha256(bundled.read_bytes()).hexdigest()[:16]
+
+
+def seed(bundled: Path, force: bool = False) -> bool:
+    """Create and load the hosted tables from the bundled file when they are missing or out of date.
+    Returns True if it loaded. Everything runs in one transaction, so a failure leaves the old data in place."""
+    import psycopg  # noqa: PLC0415
+    want = _checksum(bundled)
+    with psycopg.connect(DATABASE_URL, connect_timeout=6, prepare_threshold=None) as pg, pg.cursor() as cur:
+        cur.execute("CREATE TABLE IF NOT EXISTS alice_meta (key text PRIMARY KEY, value text)")
+        cur.execute("ALTER TABLE alice_meta ENABLE ROW LEVEL SECURITY")
+        cur.execute("SELECT value FROM alice_meta WHERE key='data_checksum'")
+        have = cur.fetchone()
+        cur.execute(CHAT_LOG)
+        cur.execute("ALTER TABLE chat_log ENABLE ROW LEVEL SECURITY")
+        cur.execute("CREATE INDEX IF NOT EXISTS chat_log_created ON chat_log (created_at)")
+        if have and have[0] == want and not force:
+            pg.commit()
+            return False
+        lite = sqlite3.connect(bundled)
+        for table, cols in TABLES.items():
+            types = {r[1]: r[2] for r in lite.execute(f"PRAGMA table_info({table})")}
+            cur.execute(f"DROP TABLE IF EXISTS {table}")
+            cur.execute(f"CREATE TABLE {table} ({', '.join(f'{_q(c)} {PG_TYPES[types[c]]}' for c in cols)})")
+            rows = lite.execute(f"SELECT {', '.join(cols)} FROM {table}").fetchall()
+            with cur.copy(f"COPY {table} ({', '.join(_q(c) for c in cols)}) FROM STDIN") as copy:
+                for row in rows:
+                    copy.write_row(row)
+            cur.execute(f"ALTER TABLE {table} ENABLE ROW LEVEL SECURITY")  # the public REST API can read nothing
+            cur.execute(f"SELECT COUNT(*) FROM {table}")
+            if cur.fetchone()[0] != len(rows):
+                raise RuntimeError(f"{table}: hosted row count differs from the bundled file")
+        cur.execute("INSERT INTO alice_meta VALUES ('data_checksum', %s) ON CONFLICT (key) DO UPDATE SET value=EXCLUDED.value",
+                    (want,))
+        pg.commit()
+        lite.close()
+    _state["seeded_at"] = time.time()
+    return True
+
+
 def sync(bundled: Path) -> Path:
     """Copy the hosted tables into the local cache; returns the SQLite file the lookups should read."""
     if not DATABASE_URL:
         return bundled
     try:
         with _lock:
+            if _state["synced_at"] is None:  # first sync of this instance: make sure Supabase is set up
+                seed(bundled)
             tmp = CACHE.with_suffix(".tmp")
             shutil.copy2(bundled, tmp)  # same schema and indexes; the hosted rows replace the bundled ones
             lite = sqlite3.connect(tmp)
@@ -103,6 +158,18 @@ def due() -> bool:
 LOG_SQL = """INSERT INTO chat_log (strategy, question, answer, provider, total_tokens, cost_usd, response_time_s,
     needs_clarification, insufficient_information, guard, had_profile, sources)
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+
+
+def chat_log_count() -> int | None:
+    """How many chats are stored (a count only: the content is never served)."""
+    if not DATABASE_URL:
+        return None
+    try:
+        with connect().cursor() as cur:
+            cur.execute("SELECT COUNT(*) FROM chat_log")
+            return cur.fetchone()[0]
+    except Exception:  # noqa: BLE001
+        return None
 
 
 def log_chat(question: str, reply, had_profile: bool) -> None:

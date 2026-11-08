@@ -62,7 +62,8 @@ def health():
     db = dbstore.status()
     return {"status": "ok", "llm_chain": llm.CHAIN, "strategies": advisor.STRATEGIES,
             "database": {"source": db["source"], "configured": db["configured"], "rows": db["rows"],
-                         "synced_at": db["synced_at"], "error": db["error"]}}
+                         "synced_at": db["synced_at"], "seeded_at": db["seeded_at"], "error": db["error"],
+                         "chats_logged": dbstore.chat_log_count()}}
 
 
 @app.get("/students")
