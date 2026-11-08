@@ -126,8 +126,8 @@ def recall_kind(message: str, facts: "Facts | None" = None, history: list[dict] 
     # Nothing earlier to lean on: ask, or acknowledge, rather than search the documents for "it".
     if REFERS_BACK_RE.search(message) and _names_nothing(message):
         return "unclear"
-    if _only_states_facts(message):
-        return "noted"
+    if _only_states_facts(message) and not re.search(r"\bb\.?\s?m\.?\s?s\b|\bdigital business\b", message, re.I):
+        return "noted"  # "BMS semester 2" asks about that semester; it doesn't tell us the student's
     return None
 
 

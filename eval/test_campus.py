@@ -133,3 +133,9 @@ def test_academic_questions_are_not_taken_over(question):
 
 def test_btech_answers_unchanged():
     assert "14 courses" in first_line("How many courses are in the Foundation basket for the 2022 batch?")
+
+
+@pytest.mark.parametrize("text", ["BMS semester 2", "bms sem 3", "BMS Semester III"])
+def test_bms_semester_alone_is_a_question_not_a_fact_about_the_student(text):
+    r = ask(text)
+    assert "BMS" in r.answer and not r.answer.startswith("Noted")
