@@ -74,7 +74,7 @@ const EXAMPLES: { icon: string; tag: string; q: string }[] = [
   { icon: "🧮", tag: "Course lists", q: "How many courses are in the Foundation basket for the 2022 batch?" },
   { icon: "📝", tag: "Registration", q: "I missed registration because of a family function. Can I still register late?" },
   { icon: "🗺️", tag: "Infographic", q: "Show me an infographic of the 2024 batch course structure" },
-  { icon: "🏫", tag: "Campus", q: "Which rooms have AC, and is anything under maintenance?" },
+  { icon: "🏫", tag: "Campus", q: "Is anything on campus under maintenance right now?" },
   { icon: "💼", tag: "BMS programme", q: "What BMS courses are in semester 3?" },
 ];
 
