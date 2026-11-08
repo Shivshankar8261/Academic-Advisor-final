@@ -13,6 +13,9 @@ import sqlite3
 from contextlib import contextmanager
 from functools import lru_cache
 
+import threading
+
+import dbstore
 from config import COURSES_DB
 
 MINOR_FILE = "Minor_Courses_for_BTech_Students.xlsx"
@@ -48,10 +51,31 @@ INFOGRAPHIC_RE = re.compile(r"\b(infographic|diagram|flow ?chart|roadmap|visual 
                             re.I)
 
 
+_live = {"path": COURSES_DB, "busy": False}
+
+
+def refresh(block: bool = False) -> None:
+    """Pull the hosted tables into the local cache: at start-up (block=True), then in the background when due."""
+    def run():
+        try:
+            _live["path"] = dbstore.sync(COURSES_DB)
+        finally:
+            _live["busy"] = False
+    if _live["busy"] or not dbstore.due():
+        return
+    _live["busy"] = True
+    run() if block else threading.Thread(target=run, daemon=True).start()
+
+
+def live_db():
+    refresh()
+    return _live["path"]
+
+
 @contextmanager
 def _db():
     """Read-only connection per call (cheap for a local file, and safe across request threads)."""
-    con = sqlite3.connect(f"file:{COURSES_DB}?mode=ro", uri=True)
+    con = sqlite3.connect(f"file:{live_db()}?mode=ro", uri=True)
     con.row_factory = sqlite3.Row
     try:
         yield con
@@ -760,6 +784,10 @@ def mentioned_codes(q: str) -> list[str]:
 
 
 def route(question: str, profile: dict | None = None, message: str | None = None, facts=None) -> list[dict]:
+    import campus  # noqa: PLC0415 - campus builds on this module's helpers
+    exact = campus.route(question, message)
+    if exact:  # BMS spread and campus infrastructure: exact answers from the November 2026 files
+        return exact
     q = question.strip()
     low = q.lower()
     batches = _batches(q, profile, message, facts)

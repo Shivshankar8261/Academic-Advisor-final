@@ -74,6 +74,8 @@ const EXAMPLES: { icon: string; tag: string; q: string }[] = [
   { icon: "🧮", tag: "Course lists", q: "How many courses are in the Foundation basket for the 2022 batch?" },
   { icon: "📝", tag: "Registration", q: "I missed registration because of a family function. Can I still register late?" },
   { icon: "🗺️", tag: "Infographic", q: "Show me an infographic of the 2024 batch course structure" },
+  { icon: "🏫", tag: "Campus", q: "Which rooms have AC, and is anything under maintenance?" },
+  { icon: "💼", tag: "BMS programme", q: "What BMS courses are in semester 3?" },
 ];
 
 function formatCost(cost: number | null): string {
@@ -495,6 +497,7 @@ export default function Home() {
   const [students, setStudents] = useState<StudentSummary[]>([]);
   const [loading, setLoading] = useState(false);
   const [backendOk, setBackendOk] = useState<boolean | null>(null);
+  const [dbSource, setDbSource] = useState<string | null>(null); // "supabase" or "bundled": where answers are read from
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const scrollRef = useRef<HTMLElement>(null);
 
@@ -638,6 +641,8 @@ export default function Home() {
         if (cancelled) return;
         setBackendOk(r.ok);
         if (r.ok) {
+          const health = await r.clone().json().catch(() => null);
+          if (!cancelled) setDbSource(health?.database?.source ?? null);
           const list = await fetch(`${API}/students`).then((res) => (res.ok ? res.json() : []));
           if (!cancelled) setStudents(Array.isArray(list) ? list : []);
           return;
@@ -791,7 +796,15 @@ export default function Home() {
                   </span>
                   {backendOk === null ? "connecting…" : backendOk ? "online" : "offline"}
                 </span>
-                <span className="hidden sm:inline">Grounded in Handbook · SOP · Semester spread · Minors</span>
+                <span className="hidden sm:inline">Grounded in Handbook · SOP · B.Tech &amp; BMS spreads · Minors · Campus</span>
+                {dbSource && (
+                  <span
+                    className="hidden rounded-full bg-slate-100 px-2 py-0.5 font-medium text-slate-600 sm:inline"
+                    title={dbSource === "supabase" ? "Answers are read from the Supabase database" : "Supabase unreachable: using the bundled copy"}
+                  >
+                    {dbSource === "supabase" ? "Database: Supabase" : "Database: bundled copy"}
+                  </span>
+                )}
               </div>
             </div>
           </div>

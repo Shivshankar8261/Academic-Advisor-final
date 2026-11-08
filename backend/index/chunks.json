@@ -2328,6 +2328,310 @@
 "pages": ""
 },
 {
+"text": "[B.M.S. (Hons.) Digital Business: semester spread (DRAFT, source: Semester_Spread_Structures_Sept_2026_with_BMS.xlsx)]\n# B.M.S. (Hons.) Digital Business: semester spread (DRAFT, source: Semester_Spread_Structures_Sept_2026_with_BMS.xlsx)",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "B.M.S. (Hons.) Digital Business: semester spread (DRAFT, source: Semester_Spread_Structures_Sept_2026_with_BMS.xlsx)",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Status of this document]\nThis sheet is a DRAFT, not an official University document. Sources: Sem III/V/VII BMS timetables (actual, from uploaded files) + Program Structure webpage (basket credit targets). Sem I, II, IV, VI, VIII have NO timetable data yet — cells left blank pending input. Basket assignment (University Core / Foundation / Major / Specialization / Minor-Open) is Claude's best-effort mapping against the published program structure, NOT an official document — please verify.\n- 1. Semesters III, V, VII are populated from the uploaded, officially published timetables (batch 2025 for Sem III AY2026-27; batch 2023 for Sem V AY2025-26 and Sem VII AY2026-27).\n- 2. Semesters I, II, IV, VI, VIII are BLANK — no timetable was provided for these. Share them and I will fill these in the same format.",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "Status of this document",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Status of this document]\n- 3. 'Fixed Min Credits' and the basket names/credit targets (University Core 18, Foundation 32, Major 52, Specialization 20, Minor/Open 24, Research/Internship/Project 18 = 164 total) are taken from the official BMS (Hons.) program page: vidyashilp.edu.in (BMS Hons - Degree in Business Management).\n- 4. The basket each course is placed in (University Core / Foundation / Major / Specialization / Minor-Open) is Claude's best-effort match against the course lists on that page — the timetables themselves do NOT label baskets, so this is inferred, not official. Please have the program team confirm/correct basket tagging, especially: ME-I, MRM, LM, BRM, HRA, LRS (ambiguous placements).\n- 5. 'Credits Captured' sums only the credits of courses actually placed in that basket from the timetables we have — it will stay below 'Fixed Min Credits' until Sem I/II/IV/VI/VIII data is added.",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "Status of this document",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Status of this document]\n- 6. Research/Internship/Project (18 cr) basket has zero courses captured because none of Sem III/V/VII timetables listed an internship/capstone course — expected in Sem IV/VI/VIII, not yet provided.",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "Status of this document",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Credit baskets (minimum credits from the official BMS programme page)]\n- University Core: minimum 18 credits; 2 credits captured from the available timetables\n- Program Foundation: minimum 32 credits; 3 credits captured from the available timetables\n- Major (Digital Business): minimum 52 credits; 21 credits captured from the available timetables\n- Specialization Tracks: minimum 20 credits; 42 credits captured from the available timetables\n- Minor / Open: minimum 24 credits; 71 credits captured from the available timetables\n- Research / Internship / Project: minimum 18 credits; 0 credits captured from the available timetables\n- Total: minimum 164 credits; 139 captured",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "Credit baskets (minimum credits from the official BMS programme page)",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 1]\nNo timetable data has been provided for this semester; the sheet leaves it blank.",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 1",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 2]\nNo timetable data has been provided for this semester; the sheet leaves it blank.",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 2",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 3]\nTaken from the batch 2025 timetable. Basket placement is inferred, not official.\n- FICHR: Fundamentals of Indian Constitution and Human Rights (University Core), L-T-P 1-1-0, 2 credits\n- BRM: Business Research Methods (Program Foundation), L-T-P 2-1-0, 3 credits\n- FMM: Foundations of Marketing Management (Major (Digital Business)), L-T-P 2-2-0, 4 credits\n- FMA: Financial and Management Accounting (Major (Digital Business)), L-T-P 2-1-0, 3 credits\n- OSCM: Operations and Supply Chain Management (Major (Digital Business)), L-T-P 3-1-0, 4 credits\n- BPsy: Biological Psychology (Minor / Open), L-T-P 3-1-0, 4 credits\n- FPsy-I: Foundations of Psychology I (Minor / Open), L-T-P 3-1-0, 4 credits\n- EDS: Essentials of Data Science (Minor / Open), L-T-P 2-0-4, 4 credits\n- ME-I: Microeconomics I (Minor / Open), L-T-P 3-1-0, 4 credits\n- MRM: Making with Reframed Media (Minor / Open), L-T-P 2-2-0, 4 credits\n- LM: Legal Methods (Minor / Open), L-T-P 2-0-2, 3 credits",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 3",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 4]\nNo timetable data has been provided for this semester; the sheet leaves it blank.",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 4",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 5]\nTaken from the batch 2023 timetable. Basket placement is inferred, not official.\n- IMC: Integrated Marketing Communications (Specialization Tracks), L-T-P 2-1-0, 3 credits\n- FIMR: Financial Institutions Markets and Regulations (Specialization Tracks), L-T-P 2-1-0, 3 credits\n- IFT: Introduction to Fintech (Specialization Tracks), L-T-P 1-1-0, 2 credits\n- PAF: Project Appraisal and Financing (Specialization Tracks), L-T-P 2-2-0, 4 credits\n- CBB: Consumer Buying Behaviour (Specialization Tracks), L-T-P 2-2-0, 4 credits\n- MR: Marketing Research (Specialization Tracks), L-T-P 2-2-0, 4 credits\n- ECP: Entrepreneurship Concepts and Practice (Specialization Tracks), L-T-P 2-2-0, 4 credits\n- DTE: Design Thinking for Entrepreneurship (Specialization Tracks), L-T-P 2-1-2, 4 credits\n- EML: Essentials of Machine Learning (Minor / Open), L-T-P 3-0-2, 4 credits\n- SPsy-I: Social Psychology (Minor / Open), L-T-P 3-1-0, 4 credits",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 5",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 5]\n- IAD: Information Architecture and Design (Minor / Open), L-T-P 2-2-0, 4 credits\n- DMI: Drawing and Moving Image (Minor / Open), L-T-P 2-2-0, 4 credits\n- BIL: Basics of International Law (Minor / Open), L-T-P 3-1-0, 4 credits",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 5",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 6]\nNo timetable data has been provided for this semester; the sheet leaves it blank.",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 6",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 7]\nTaken from the batch 2023 timetable. Basket placement is inferred, not official.\n- SDM-M: Strategy & Decision Making (Major (Digital Business)), L-T-P 1-1-0, 2 credits\n- BSS: Business Strategy Simulation (Major (Digital Business)), L-T-P 0-0-0, 2 credits\n- LADB: Legal Aspects in Digital Business (Major (Digital Business)), L-T-P 2-0-0, 2 credits\n- HRA: HR Analytics (Major (Digital Business)), L-T-P 2-2-0, 4 credits\n- MA: Management Accounting (R) (Specialization Tracks), L-T-P 3-1-0, 4 credits\n- RFM: Risk and FX management (Specialization Tracks), L-T-P 2-2-0, 4 credits\n- BM: Brand Management (Specialization Tracks), L-T-P 2-1-0, 3 credits\n- SMA: Social Media Analytics (Specialization Tracks), L-T-P 2-1-0, 3 credits\n- LAL: Labour Legislation (Minor / Open), L-T-P 2-2-0, 4 credits\n- GAI: Generative AI (Minor / Open), L-T-P 1-0-2, 2 credits\n- ADL: Applied Deep Learning (Minor / Open), L-T-P 1-0-4, 3 credits\n- IE-I: International Economics (Minor / Open), L-T-P 3-1-0, 4 credits",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 7",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 7]\n- PsPsy: Psychopathology (Minor / Open), L-T-P 3-1-0, 4 credits\n- DF: Designing Futures (Minor / Open), L-T-P 2-2-2, 5 credits\n- LRS: Law Relating to Start-ups (Minor / Open), L-T-P 3-1-0, 4 credits\n- IPR: Intellectual Property Rights (Minor / Open), L-T-P 2-0-0, 2 credits",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 7",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[BMS Semester 8]\nNo timetable data has been provided for this semester; the sheet leaves it blank.",
+"source_file": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
+"section": "BMS Semester 8",
+"processed_file": "bms_structure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Campus infrastructure (SYNTHETIC demo data, source: College_Infrastructure_Dataset_SYNTHETIC.xlsx)]\n# Campus infrastructure (SYNTHETIC demo data, source: College_Infrastructure_Dataset_SYNTHETIC.xlsx)",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Campus infrastructure (SYNTHETIC demo data, source: College_Infrastructure_Dataset_SYNTHETIC.xlsx)",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Status of this data]\nThis is SYNTHETIC sample campus data created for the AI Academic Advisor demo. It does not describe the real Vidyashilp University campus.",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Status of this data",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block-wise summary]\n- Classrooms: Block A 12, Block B 12, Block C 12, campus total 36\n- Classroom seating capacity: Block A 632, Block B 632, Block C 632, campus total 1896\n- Computer labs: Block A 2, Block B 3, Block C 1, campus total 6\n- Desktop computers in labs: Block A 70, Block B 112, Block C 30, campus total 212\n- Faculty offices (3rd floor): Block A 7, Block B 7, Block C 7, campus total 21\n- Lobbies (ground floor): Block A 1, Block B 1, Block C 1, campus total 3\n- Total rooms: Block A 35, Block B 31, Block C 30, campus total 96\n- CCTV cameras in classrooms (2 per classroom): Block A 24, Block B 24, Block C 24, campus total 72\n- Interactive touch-screen displays in classrooms (1 per classroom): Block A 12, Block B 12, Block C 12, campus total 36\n- Corridor and entrance CCTV cameras: Block A 18, Block B 18, Block C 18, campus total 54\n- Rooms with AC: Block A 4, Block B 3, Block C 2, campus total 9\n- Equipment items not fully operational: Block A 4, Block B 5, Block C 2, campus total 11",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block-wise summary",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block-wise summary]\n- Campus-wide CCTV cameras (gate, parking, open ground, pathways): campus total 22",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block-wise summary",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Infrastructure rules]\n- The campus has three blocks (A, B and C). Each block has a ground floor with a lobby, plus a first, second and third floor.\n- Every classroom has exactly 2 CCTV cameras.\n- Every classroom has 1 TV/display screen: a large interactive touch screen used for presenting and writing.\n- Every classroom has student chairs, tables and a faculty desk.\n- Each classroom floor has 6 classrooms.\n- Air conditioning is primarily available in computer labs.\n- The third floor of each block is designated exclusively for faculty offices and faculty-related spaces.\n- Every floor has washrooms.\n- CCTV cameras cover corridors and the whole campus, except washrooms/restrooms.",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Infrastructure rules",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Layout notes]\n- Floors: Ground Floor (lobby, library, seminar halls, meeting rooms, administrative spaces) and First, Second and Third floors.\n- Room numbers follow BLOCK-FLOOR+SEQ: A-001 is on the ground floor, A-101 on the first floor, A-201 on the second, A-301 on the third.\n- Classrooms are on the first and second floors of every block, 6 per floor.\n- CCTV covers corridors, lobbies, entrances, pathways, parking and open areas; washrooms have no cameras.\n- The display screen in every classroom is a large interactive touch screen used for display and writing.",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Layout notes",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block A, Ground Floor rooms]\n- A-001: Block A Lobby (Lobby), capacity 40, AC No\n- A-002: Seminar Hall A (Seminar Hall), capacity 150, AC Yes\n- A-003: Administrative Office (Administrative Space), capacity 8, AC No\n- A-004: Principal's Office (Administrative Space), capacity 6, AC No\n- A-005: Accounts & Fee Counter (Administrative Space), capacity 4, AC No\n- A-006: Student Services Desk (Administrative Space), capacity 4, AC No\n- A-007: First-Aid & Sick Room (First-Aid Room), capacity 2, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block A, Ground Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block A, First Floor rooms]\n- A-101: Classroom A-101 (Classroom), capacity 60, AC No\n- A-102: Classroom A-102 (Classroom), capacity 60, AC No\n- A-103: Classroom A-103 (Classroom), capacity 60, AC No\n- A-104: Classroom A-104 (Classroom), capacity 48, AC No\n- A-105: Classroom A-105 (Classroom), capacity 48, AC No\n- A-106: Classroom A-106 (Classroom), capacity 40, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block A, First Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block A, Second Floor rooms]\n- A-201: Classroom A-201 (Classroom), capacity 60, AC No\n- A-202: Classroom A-202 (Classroom), capacity 60, AC No\n- A-203: Classroom A-203 (Classroom), capacity 60, AC No\n- A-204: Classroom A-204 (Classroom), capacity 48, AC No\n- A-205: Classroom A-205 (Classroom), capacity 48, AC No\n- A-206: Classroom A-206 (Classroom), capacity 40, AC No\n- A-207: Computer Lab 1 (Programming) (Computer Lab), capacity 40, AC Yes\n- A-208: Computer Lab 2 (Networks) (Computer Lab), capacity 30, AC Yes\n- A-209: Server & Network Room (Server & Network Room), capacity 2, AC Yes",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block A, Second Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block A, Third Floor rooms]\n- A-301: Faculty Office CSE-1 (Faculty Office, Computer Science & Engineering), capacity 4, AC No\n- A-302: Faculty Office CSE-2 (Faculty Office, Computer Science & Engineering), capacity 4, AC No\n- A-303: Faculty Office CSE-3 (Faculty Office, Computer Science & Engineering), capacity 4, AC No\n- A-304: Faculty Office CSE-4 (Faculty Office, Computer Science & Engineering), capacity 4, AC No\n- A-305: Faculty Office IT-1 (Faculty Office, Information Technology), capacity 4, AC No\n- A-306: Faculty Office IT-2 (Faculty Office, Information Technology), capacity 4, AC No\n- A-307: Faculty Office IT-3 (Faculty Office, Information Technology), capacity 4, AC No\n- A-308: HOD Cabin (CSE) (HOD Cabin, Computer Science & Engineering), capacity 1, AC No\n- A-309: HOD Cabin (IT) (HOD Cabin, Information Technology), capacity 1, AC No\n- A-310: Faculty Lounge A (Faculty Lounge), capacity 16, AC No\n- A-311: Faculty Meeting Room A (Faculty Meeting Room), capacity 16, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block A, Third Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block A, Third Floor rooms]\n- A-312: Department Record Room A (Department Record Room), capacity 2, AC No\n- A-313: Faculty Pantry A (Faculty Pantry), capacity 4, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block A, Third Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block B, Ground Floor rooms]\n- B-001: Block B Lobby (Lobby), capacity 40, AC No\n- B-002: Central Library (Library), capacity 200, AC No\n- B-003: Meeting Room B1 (Meeting Room), capacity 20, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block B, Ground Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block B, First Floor rooms]\n- B-101: Classroom B-101 (Classroom), capacity 60, AC No\n- B-102: Classroom B-102 (Classroom), capacity 60, AC No\n- B-103: Classroom B-103 (Classroom), capacity 60, AC No\n- B-104: Classroom B-104 (Classroom), capacity 48, AC No\n- B-105: Classroom B-105 (Classroom), capacity 48, AC No\n- B-106: Classroom B-106 (Classroom), capacity 40, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block B, First Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block B, Second Floor rooms]\n- B-201: Classroom B-201 (Classroom), capacity 60, AC No\n- B-202: Classroom B-202 (Classroom), capacity 60, AC No\n- B-203: Classroom B-203 (Classroom), capacity 60, AC No\n- B-204: Classroom B-204 (Classroom), capacity 48, AC No\n- B-205: Classroom B-205 (Classroom), capacity 48, AC No\n- B-206: Classroom B-206 (Classroom), capacity 40, AC No\n- B-207: Computer Lab 3 (Databases) (Computer Lab), capacity 36, AC Yes\n- B-208: Computer Lab 4 (Data Science) (Computer Lab), capacity 36, AC Yes\n- B-209: Computer Lab 5 (Open Access) (Computer Lab), capacity 40, AC Yes",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block B, Second Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block B, Third Floor rooms]\n- B-301: Faculty Office ECE-1 (Faculty Office, Electronics & Communication Engineering), capacity 4, AC No\n- B-302: Faculty Office ECE-2 (Faculty Office, Electronics & Communication Engineering), capacity 4, AC No\n- B-303: Faculty Office ECE-3 (Faculty Office, Electronics & Communication Engineering), capacity 4, AC No\n- B-304: Faculty Office ECE-4 (Faculty Office, Electronics & Communication Engineering), capacity 4, AC No\n- B-305: Faculty Office MATH-1 (Faculty Office, Mathematics & Sciences), capacity 4, AC No\n- B-306: Faculty Office MATH-2 (Faculty Office, Mathematics & Sciences), capacity 4, AC No\n- B-307: Faculty Office MATH-3 (Faculty Office, Mathematics & Sciences), capacity 4, AC No\n- B-308: HOD Cabin (ECE) (HOD Cabin, Electronics & Communication Engineering), capacity 1, AC No\n- B-309: HOD Cabin (MATH) (HOD Cabin, Mathematics & Sciences), capacity 1, AC No\n- B-310: Faculty Lounge B (Faculty Lounge), capacity 16, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block B, Third Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block B, Third Floor rooms]\n- B-311: Faculty Meeting Room B (Faculty Meeting Room), capacity 16, AC No\n- B-312: Department Record Room B (Department Record Room), capacity 2, AC No\n- B-313: Faculty Pantry B (Faculty Pantry), capacity 4, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block B, Third Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block C, Ground Floor rooms]\n- C-001: Block C Lobby (Lobby), capacity 40, AC No\n- C-002: Seminar Hall C (Seminar Hall), capacity 120, AC Yes\n- C-003: Meeting Room C1 (Meeting Room), capacity 16, AC No\n- C-004: Examination Cell (Administrative Space), capacity 6, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block C, Ground Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block C, First Floor rooms]\n- C-101: Classroom C-101 (Classroom), capacity 60, AC No\n- C-102: Classroom C-102 (Classroom), capacity 60, AC No\n- C-103: Classroom C-103 (Classroom), capacity 60, AC No\n- C-104: Classroom C-104 (Classroom), capacity 48, AC No\n- C-105: Classroom C-105 (Classroom), capacity 48, AC No\n- C-106: Classroom C-106 (Classroom), capacity 40, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block C, First Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block C, Second Floor rooms]\n- C-201: Classroom C-201 (Classroom), capacity 60, AC No\n- C-202: Classroom C-202 (Classroom), capacity 60, AC No\n- C-203: Classroom C-203 (Classroom), capacity 60, AC No\n- C-204: Classroom C-204 (Classroom), capacity 48, AC No\n- C-205: Classroom C-205 (Classroom), capacity 48, AC No\n- C-206: Classroom C-206 (Classroom), capacity 40, AC No\n- C-207: Computer Lab 6 (Management Analytics) (Computer Lab), capacity 30, AC Yes",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block C, Second Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block C, Third Floor rooms]\n- C-301: Faculty Office MECH-1 (Faculty Office, Mechanical Engineering), capacity 4, AC No\n- C-302: Faculty Office MECH-2 (Faculty Office, Mechanical Engineering), capacity 4, AC No\n- C-303: Faculty Office MECH-3 (Faculty Office, Mechanical Engineering), capacity 4, AC No\n- C-304: Faculty Office MECH-4 (Faculty Office, Mechanical Engineering), capacity 4, AC No\n- C-305: Faculty Office MGMT-1 (Faculty Office, Management Studies), capacity 4, AC No\n- C-306: Faculty Office MGMT-2 (Faculty Office, Management Studies), capacity 4, AC No\n- C-307: Faculty Office MGMT-3 (Faculty Office, Management Studies), capacity 4, AC No\n- C-308: HOD Cabin (MECH) (HOD Cabin, Mechanical Engineering), capacity 1, AC No\n- C-309: HOD Cabin (MGMT) (HOD Cabin, Management Studies), capacity 1, AC No\n- C-310: Faculty Lounge C (Faculty Lounge), capacity 16, AC No\n- C-311: Faculty Meeting Room C (Faculty Meeting Room), capacity 16, AC No\n- C-312: Department Record Room C (Department Record Room), capacity 2, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block C, Third Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Block C, Third Floor rooms]\n- C-313: Faculty Pantry C (Faculty Pantry), capacity 4, AC No",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Block C, Third Floor rooms",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Equipment not fully operational]\n- EQ-0138 in A-207: Projector, 0 of 1 working (Under maintenance)\n- EQ-0143 in A-208: Desktop computer, 29 of 30 working (Partially operational)\n- EQ-0182 in A-304: Desktop computer, 1 of 2 working (Partially operational)\n- EQ-0214 in A-310: Ceiling fan, 3 of 4 working (Partially operational)\n- EQ-0247 in B-102: CCTV camera, 1 of 2 working (Partially operational)\n- EQ-0272 in B-105: Interactive touch-screen display, 0 of 1 working (Under maintenance)\n- EQ-0339 in B-207: Air conditioner (split), 2 of 3 working (Partially operational)\n- EQ-0413 in B-308: Desktop computer, 0 of 1 working (Under maintenance)\n- EQ-0418 in B-309: Desktop computer, 0 of 1 working (Under maintenance)\n- EQ-0569 in C-302: Desktop computer, 1 of 2 working (Partially operational)\n- EQ-0570 in C-302: Ceiling fan, 1 of 2 working (Partially operational)",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Equipment not fully operational",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[Facilities not fully operational]\n- FAC-0006: Lift L2, Block A, floor Ground, Central lift lobby (Under maintenance)\n- FAC-0022: Lift L2, Block A, floor 1, Central lift lobby (Under maintenance)\n- FAC-0036: Lift L2, Block A, floor 2, Central lift lobby (Under maintenance)\n- FAC-0050: Lift L2, Block A, floor 3, Central lift lobby (Under maintenance)\n- FAC-0091: RO Drinking Water Dispenser, Block B, floor 2, Near lift lobby (Under maintenance)\n- FAC-0150: ABC Dry Powder Fire Extinguisher, Block C, floor 2, Main corridor, near Staircases S1 and S2 (Partially operational)",
+"source_file": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+"section": "Facilities not fully operational",
+"processed_file": "campus_infrastructure.md",
+"course_code": "",
+"pages": ""
+},
+{
 "text": "Course CDES105: Appreciating and Deconstructing Art and Media | credits: 3 | L-T-P: None | basket: Minor - Design\n- 2022 batch: semester 3, prerequisites: NIL\n- 2023 batch: semester 3, prerequisites: NIL",
 "source_file": "Minor_Courses_for_BTech_Students.xlsx",
 "section": "Course CDES105 Appreciating and Deconstructing Art and Media",

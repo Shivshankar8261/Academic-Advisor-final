@@ -8,6 +8,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 import advisor
+import dbstore
+import guard
+import structured
 import llm
 import multimodal
 from config import ALLOWED_ORIGINS, MAX_UPLOAD_BYTES, RATE_LIMIT_PER_MIN
@@ -19,6 +22,7 @@ from schemas import ChatRequest, ChatResponse
 async def lifespan(_app: FastAPI):
     # Warm-up: load the embedding model, load the chunk index and create the LLM clients once at startup,
     # so the first student request does not pay ~5 s of model-loading latency.
+    structured.refresh(block=True)  # course, BMS and campus tables from Supabase (bundled copy if unreachable)
     retrieve("warm up")
     llm.warm_up()
     advisor.load_profiles()
@@ -55,7 +59,10 @@ async def security_headers(request: Request, call_next):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "llm_chain": llm.CHAIN, "strategies": advisor.STRATEGIES}
+    db = dbstore.status()
+    return {"status": "ok", "llm_chain": llm.CHAIN, "strategies": advisor.STRATEGIES,
+            "database": {"source": db["source"], "configured": db["configured"], "rows": db["rows"],
+                         "synced_at": db["synced_at"], "error": db["error"]}}
 
 
 @app.get("/students")
@@ -71,9 +78,12 @@ def chat(req: ChatRequest):
     if req.student_id and req.student_id not in advisor.load_profiles():
         raise HTTPException(404, "unknown student")
     # sync endpoint -> FastAPI runs it in a thread pool, so concurrent requests don't block each other
-    return advisor.answer(req.message, req.strategy, req.student_id,
-                          [t.model_dump() for t in req.conversation_history], guarded=True,
-                          session_record=req.session_record.model_dump() if req.session_record else None)
+    reply = advisor.answer(req.message, req.strategy, req.student_id,
+                           [t.model_dump() for t in req.conversation_history], guarded=True,
+                           session_record=req.session_record.model_dump() if req.session_record else None)
+    # Logged with personal data removed by the same scrub the safety layer uses; the student ID is never stored.
+    dbstore.log_chat(guard.scrub(req.message)[0], reply, bool(req.student_id or req.session_record))
+    return reply
 
 
 async def _read_upload(file: UploadFile) -> bytes:
