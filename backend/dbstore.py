@@ -24,7 +24,22 @@ import threading
 import time
 from pathlib import Path
 
-DATABASE_URL = os.getenv("POSTGRES_URL") or os.getenv("DATABASE_URL")
+LIBPQ_PARAMS = {"sslmode", "connect_timeout", "application_name", "options", "sslrootcert", "target_session_attrs"}
+
+
+def _clean_url(url: str | None) -> str | None:
+    """Vercel's Supabase URL carries non-libpq query settings (e.g. supa=base-pooler.x) that psycopg rejects."""
+    if not url:
+        return url
+    from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit  # noqa: PLC0415
+    parts = urlsplit(url)
+    query = [(k, v) for k, v in parse_qsl(parts.query) if k in LIBPQ_PARAMS]
+    if not any(k == "sslmode" for k, _ in query):
+        query.append(("sslmode", "require"))
+    return urlunsplit(parts._replace(query=urlencode(query)))
+
+
+DATABASE_URL = _clean_url(os.getenv("POSTGRES_URL") or os.getenv("DATABASE_URL"))
 SYNC_EVERY_S = float(os.getenv("DB_SYNC_EVERY_S", "600"))
 CACHE = Path(tempfile.gettempdir()) / "alice_courses_live.db"
 
