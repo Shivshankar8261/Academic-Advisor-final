@@ -9,13 +9,6 @@ const API = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 type Strategy = "baseline" | "structured" | "rag" | "rag_structured" | "agentic";
 
-const STRATEGIES: { value: Strategy; label: string }[] = [
-  { value: "rag_structured", label: "RAG + Student Profile (final)" },
-  { value: "agentic", label: "Agentic (6-step pipeline)" },
-  { value: "rag", label: "RAG" },
-  { value: "structured", label: "Structured prompt (no docs)" },
-  { value: "baseline", label: "Baseline LLM" },
-];
 
 type Source = { source_file: string; section: string };
 
@@ -492,8 +485,8 @@ function Stat({ label, value }: { label: string; value: string | number | null }
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
-  const [strategy, setStrategy] = useState<Strategy>("rag_structured");
-  const [studentId, setStudentId] = useState("");
+  const strategy: Strategy = "rag_structured"; // the final advisor; other strategies remain available through the API
+  const [studentId, setStudentId] = useState(""); // no profile picker in the UI: students are anonymous
   const [students, setStudents] = useState<StudentSummary[]>([]);
   const [loading, setLoading] = useState(false);
   const [backendOk, setBackendOk] = useState<boolean | null>(null);
@@ -750,8 +743,6 @@ export default function Home() {
 
   const selected = students.find((s) => s.student_id === studentId);
 
-  const selectClass =
-    "w-full min-w-0 max-w-[18rem] truncate rounded-lg border border-slate-200 bg-white/90 px-2.5 py-1.5 text-sm text-slate-800 shadow-sm outline-none transition hover:border-brand-500/50 focus:border-brand-500 focus:ring-2 focus:ring-brand-100";
 
   return (
     <div className="relative isolate flex h-dvh flex-col overflow-hidden text-slate-900">
@@ -809,39 +800,6 @@ export default function Home() {
             </div>
           </div>
 
-          <label className="flex min-w-0 items-center gap-2 whitespace-nowrap text-xs font-medium text-slate-500">
-            👤 Profile
-            <select
-              className={selectClass}
-              value={studentId}
-              onChange={(e) => {
-                setStudentId(e.target.value);
-                setSessionRecord(null);
-              }}
-            >
-              <option value="">No profile (anonymous)</option>
-              {students.map((s) => (
-                <option key={s.student_id} value={s.student_id}>
-                  {s.student_id}
-                  {s.batch ? ` · ${s.batch} batch · sem ${s.current_semester} · CGPA ${s.cgpa}` : " · incomplete record"}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="flex min-w-0 items-center gap-2 whitespace-nowrap text-xs font-medium text-slate-500">
-            🧠 Strategy
-            <select
-              className={selectClass}
-              value={strategy}
-              onChange={(e) => setStrategy(e.target.value as Strategy)}
-            >
-              {STRATEGIES.map((s) => (
-                <option key={s.value} value={s.value}>
-                  {s.label}
-                </option>
-              ))}
-            </select>
-          </label>
           <button
             className="inline-flex items-center gap-1.5 rounded-lg bg-brand-900 px-3.5 py-1.5 text-sm font-medium text-white shadow-md shadow-brand-900/20 transition hover:-translate-y-0.5 hover:bg-brand-700"
             onClick={newChat}
