@@ -64,7 +64,8 @@ type StudentSummary = {
 
 const EXAMPLES: { icon: string; tag: string; q: string }[] = [
   { icon: "📘", tag: "Prerequisites", q: "Can I take Machine Learning next semester?" },
-  { icon: "🧮", tag: "Course lists", q: "How many courses are in the Foundation basket for the 2022 batch?" },
+  { icon: "🎓", tag: "Programmes", q: "What specialisation tracks does the B.Tech Data Science programme offer?" },
+  { icon: "🧠", tag: "Minors", q: "Which minors can a B.A. Psychology student take?" },
   { icon: "📝", tag: "Registration", q: "I missed registration because of a family function. Can I still register late?" },
   { icon: "🗺️", tag: "Infographic", q: "Show me an infographic of the 2024 batch course structure" },
   { icon: "🏫", tag: "Campus", q: "Is anything on campus under maintenance right now?" },
@@ -131,14 +132,57 @@ async function errorText(res: Response): Promise<string> {
   return `${res.status} ${res.statusText || "request failed"}`;
 }
 
+// The advisor mascot: white helmet, navy visor with smiling eyes, red "spark" lines.
+function Robot({ className, sparks = true }: { className?: string; sparks?: boolean }) {
+  return (
+    <svg viewBox="0 0 220 190" className={className} aria-hidden fill="none">
+      <ellipse cx="100" cy="176" rx="50" ry="7" fill="#e1122b" opacity="0.12" />
+      <line x1="100" y1="34" x2="100" y2="50" stroke="#0f2350" strokeWidth="6" strokeLinecap="round" />
+      <circle cx="100" cy="24" r="9" fill="#fff" stroke="#0f2350" strokeWidth="6" />
+      <rect x="26" y="90" width="20" height="40" rx="7" fill="#c9d1dd" stroke="#0f2350" strokeWidth="5" />
+      <rect x="154" y="90" width="20" height="40" rx="7" fill="#c9d1dd" stroke="#0f2350" strokeWidth="5" />
+      <rect x="40" y="50" width="120" height="118" rx="58" fill="#fff" stroke="#0f2350" strokeWidth="6" />
+      <path d="M58 140c14 18 70 18 84 0" stroke="#e6eaf1" strokeWidth="8" strokeLinecap="round" />
+      <rect x="56" y="84" width="88" height="48" rx="24" fill="#0f2350" />
+      <path d="M76 116q9-14 18 0M106 116q9-14 18 0" stroke="#fff" strokeWidth="6" strokeLinecap="round" />
+      {sparks && (
+        <path d="M170 12l-8 22M196 32l-20 14M202 58l-24 2" stroke="#e1122b" strokeWidth="6" strokeLinecap="round" />
+      )}
+    </svg>
+  );
+}
+
 function AdvisorAvatar() {
   return (
-    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-900 text-white shadow-md shadow-brand-500/30">
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.8}>
-        <path d="M22 10 12 5 2 10l10 5 10-5Z" strokeLinejoin="round" />
-        <path d="M6 12v5c3 2 9 2 12 0v-5" strokeLinejoin="round" />
-      </svg>
+    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white shadow-md shadow-brand-900/10 ring-1 ring-slate-200">
+      <Robot className="h-8 w-8 translate-x-[3px]" sparks={false} />
     </div>
+  );
+}
+
+// Layered navy / grey / red waves along the bottom edge, as in the brand artwork.
+function Waves() {
+  return (
+    <svg
+      viewBox="0 0 1440 200"
+      preserveAspectRatio="none"
+      className="absolute inset-x-0 bottom-0 h-[16vh] max-h-44 min-h-20 w-full"
+    >
+      <defs>
+        <linearGradient id="wave-navy" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stopColor="#12306b" />
+          <stop offset="0.55" stopColor="#12306b" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient id="wave-red" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0.35" stopColor="#e1122b" stopOpacity="0" />
+          <stop offset="1" stopColor="#e1122b" />
+        </linearGradient>
+      </defs>
+      <path d="M0 40C320 30 560 150 940 150c220 0 380-60 500-120v170H0Z" fill="#e9eef6" />
+      <path d="M0 110c260 0 470 60 760 90H0Z" fill="url(#wave-navy)" />
+      <path d="M1440 70c-180 70-420 120-760 130h760Z" fill="url(#wave-red)" />
+      <path d="M0 150c300-10 520 30 720 50H0Z" fill="#0f2350" opacity="0.9" />
+    </svg>
   );
 }
 
@@ -287,7 +331,7 @@ const AssistantMessage = memo(function AssistantMessage({ reply, question }: { r
   return (
     <div className="flex max-w-full gap-3 sm:max-w-[88%]">
       <AdvisorAvatar />
-      <div className="min-w-0 flex-1 rounded-2xl rounded-tl-md border border-white/70 bg-white p-5 shadow-md shadow-slate-200/60 ring-1 ring-slate-200/70">
+      <div className="min-w-0 flex-1 rounded-3xl rounded-tl-md border border-slate-100 bg-white p-5 shadow-[0_10px_30px_-12px_rgba(15,35,80,0.18)]">
         {reply.insufficient_information && !reply.needs_clarification && (
           <div className="mb-3 flex gap-2 rounded-xl border border-amber-200 bg-gradient-to-r from-amber-50 to-yellow-50 px-3 py-2.5 text-sm font-medium text-amber-900">
             <span>⚠️</span>
@@ -457,12 +501,12 @@ function TypingIndicator() {
   return (
     <div className="flex animate-fade-up items-center gap-3 self-start">
       <AdvisorAvatar />
-      <div className="flex items-center gap-3 rounded-2xl rounded-tl-md bg-white/90 px-4 py-3 shadow-md ring-1 ring-slate-200/70">
+      <div className="flex items-center gap-3 rounded-3xl rounded-tl-md bg-white px-4 py-3 shadow-md ring-1 ring-slate-100">
         <div className="flex gap-1">
           {[0, 150, 300].map((d) => (
             <span
               key={d}
-              className="h-2 w-2 animate-typing rounded-full bg-brand-500"
+              className="h-2 w-2 animate-typing rounded-full bg-vured-500"
               style={{ animationDelay: `${d}ms` }}
             />
           ))}
@@ -744,72 +788,288 @@ export default function Home() {
   const selected = students.find((s) => s.student_id === studentId);
 
 
+  const chatting = messages.length > 0;
+
+  // Phones have room for a short placeholder only; the full one wraps onto three lines.
+  const [narrow, setNarrow] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 639px)");
+    const update = () => setNarrow(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  // re-measure the textarea once the placeholder changes (the long one wraps and leaves the box too tall)
+  useEffect(() => {
+    const el = inputRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${Math.min(el.scrollHeight, 160)}px`;
+  }, [narrow]);
+
+  // Panels that sit above the search bar (transcript check, mic meter, notices) plus the bar itself.
+  // Rendered in the hero on the landing screen, and docked at the bottom once a conversation starts.
+  const composer = (
+    <div className="w-full">
+      {draft && (
+        <div className="mb-3 max-h-[45dvh] overflow-y-auto rounded-3xl border border-slate-100 bg-white p-5 text-left shadow-xl shadow-brand-900/10">
+          <h2 className="font-semibold text-brand-900">Check what I read from your transcript</h2>
+          <p className="mt-1 text-sm text-slate-600">
+            AI can misread images, so please correct anything wrong. Nothing is used until you confirm, and the image
+            was not saved. Credits and CGPA are worked out from these grades and the course list.
+          </p>
+          {(draft.rejected.length > 0 || draft.unreadable_rows > 0) && (
+            <p className="mt-2 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-900">
+              ⚠️ {draft.unreadable_rows > 0 && `${draft.unreadable_rows} row(s) were unreadable. `}
+              {draft.rejected.length > 0 && `Not in the university's course list, so left out: ${draft.rejected.join(", ")}.`}
+            </p>
+          )}
+          <div className="mt-3 flex flex-wrap gap-3 text-sm">
+            <label className="flex items-center gap-2 font-medium text-slate-700">
+              Batch
+              <select
+                className="rounded-lg border border-slate-200 px-2 py-1"
+                value={draft.batch ?? ""}
+                onChange={(e) => setDraft({ ...draft, batch: e.target.value || null })}
+              >
+                <option value="">Choose…</option>
+                {BATCHES.map((b) => (
+                  <option key={b}>{b}</option>
+                ))}
+              </select>
+            </label>
+            <label className="flex items-center gap-2 font-medium text-slate-700">
+              Current semester
+              <select
+                className="rounded-lg border border-slate-200 px-2 py-1"
+                value={draft.current_semester ?? ""}
+                onChange={(e) => setDraft({ ...draft, current_semester: Number(e.target.value) || null })}
+              >
+                <option value="">Choose…</option>
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+                  <option key={n}>{n}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <ul className="mt-3 grid gap-1.5 sm:grid-cols-3">
+            {draft.courses.map((c, i) => (
+              <li key={c.code + i} className="flex items-center gap-2 rounded-lg bg-slate-50 px-2 py-1 text-sm">
+                <span className="font-mono text-xs">{c.code}</span>
+                <select
+                  aria-label={`Grade for ${c.code}`}
+                  className="ml-auto rounded border border-slate-200 bg-white px-1"
+                  value={c.grade}
+                  onChange={(e) =>
+                    setDraft({
+                      ...draft,
+                      courses: draft.courses.map((x, j) => (j === i ? { ...x, grade: e.target.value } : x)),
+                    })
+                  }
+                >
+                  {GRADES.map((g) => (
+                    <option key={g}>{g}</option>
+                  ))}
+                </select>
+                <button
+                  type="button"
+                  aria-label={`Remove ${c.code}`}
+                  className="text-slate-400 hover:text-vured-500"
+                  onClick={() => setDraft({ ...draft, courses: draft.courses.filter((_, j) => j !== i) })}
+                >
+                  ✕
+                </button>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-3 flex items-center gap-2">
+            <button
+              type="button"
+              disabled={!draft.batch || !draft.current_semester}
+              onClick={confirmDraft}
+              className="rounded-full bg-vured-500 px-4 py-1.5 text-sm font-medium text-white hover:bg-vured-600 disabled:opacity-40"
+            >
+              Use this record
+            </button>
+            <button type="button" onClick={() => setDraft(null)} className="rounded-full px-3 py-1.5 text-sm text-slate-600 hover:bg-slate-100">
+              Discard
+            </button>
+            {(!draft.batch || !draft.current_semester) && (
+              <span className="text-sm text-amber-800">Please choose your batch and semester.</span>
+            )}
+          </div>
+        </div>
+      )}
+      {recording && (
+        <div className="mb-2 flex items-center gap-3 rounded-full bg-vured-50 px-4 py-1.5 text-sm text-brand-900">
+          <span className="whitespace-nowrap">🎙️ Listening… speak, then press ⏹</span>
+          <div
+            role="meter"
+            aria-label="Microphone level"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={Math.round(Math.min(1, micLevel * 12) * 100)}
+            className="h-2 flex-1 overflow-hidden rounded-full bg-white"
+          >
+            <div className="h-full bg-vured-500 transition-[width]" style={{ width: `${Math.min(1, micLevel * 12) * 100}%` }} />
+          </div>
+        </div>
+      )}
+      {(notice || busyNote) && (
+        <p className={`mb-2 rounded-2xl px-4 py-1.5 text-left text-sm ${notice ? "bg-vured-50 text-vured-600" : "bg-brand-50 text-brand-900"}`}>
+          {notice ?? busyNote}
+        </p>
+      )}
+      {micHelp && mics.length > 0 && (
+        <label className="mb-2 flex items-center gap-2 rounded-2xl bg-amber-50 px-4 py-1.5 text-sm font-medium text-amber-900">
+          🎤 Microphone
+          <select
+            className="min-w-0 flex-1 rounded-lg border border-amber-200 bg-white px-2 py-1 font-normal"
+            value={micId}
+            onChange={(e) => {
+              setMicId(e.target.value);
+              startRecording(e.target.value);
+            }}
+          >
+            <option value="">System default</option>
+            {mics.map((m) => (
+              <option key={m.deviceId} value={m.deviceId}>
+                {m.label || "Microphone"}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+      <form
+        className={`flex items-end gap-0.5 rounded-[32px] border bg-white py-2 pl-3 pr-2 shadow-[0_12px_40px_-12px_rgba(15,35,80,0.22)] transition focus-within:ring-4 sm:gap-2 sm:pl-6 ${
+          awaitingClarification
+            ? "border-vured-500/50 ring-vured-50"
+            : "border-slate-100 focus-within:border-brand-100 focus-within:ring-brand-50"
+        }`}
+        onSubmit={(e) => {
+          e.preventDefault();
+          send(input);
+        }}
+      >
+        <svg viewBox="0 0 24 24" className="mb-3 hidden h-6 w-6 shrink-0 text-slate-500 sm:block" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m15.5 15.5 5 5" strokeLinecap="round" />
+        </svg>
+        <input
+          ref={fileRef}
+          type="file"
+          accept="image/png,image/jpeg,image/webp"
+          className="hidden"
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            if (file) uploadTranscript(file);
+          }}
+        />
+        <textarea
+          ref={inputRef}
+          rows={1}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
+              e.preventDefault();
+              send(input);
+            }
+          }}
+          aria-label="Your question"
+          placeholder={awaitingClarification ? "Answer the advisor's question…" : narrow ? "Ask a question..." : "Ask your academic question..."}
+          className="max-h-40 min-w-0 flex-1 resize-none bg-transparent px-2 py-3 text-base text-slate-800 outline-none placeholder:text-slate-500 sm:text-lg"
+        />
+        <button
+          type="button"
+          title="Upload a photo of your transcript (a person's name or ID on it is not kept)"
+          aria-label="Upload transcript image"
+          disabled={!!busyNote}
+          onClick={() => fileRef.current?.click()}
+          className="mb-0.5 flex h-9 w-9 shrink-0 sm:h-11 sm:w-11 items-center justify-center rounded-full text-slate-400 transition hover:bg-brand-50 hover:text-brand-900 disabled:opacity-40"
+        >
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+            <path d="m21 11-8.5 8.5a5 5 0 0 1-7-7L14 4a3.3 3.3 0 0 1 4.7 4.7L10.2 17a1.7 1.7 0 0 1-2.4-2.4L15.5 7" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          title={recording ? "Stop recording" : "Ask by voice. You can check the text before sending."}
+          aria-label={recording ? "Stop recording" : "Record a voice question"}
+          aria-pressed={recording}
+          disabled={!!busyNote}
+          onClick={() => (recording ? recorderRef.current?.stop() : startRecording())}
+          className={`mb-0.5 flex h-9 w-9 shrink-0 sm:h-11 sm:w-11 items-center justify-center rounded-full transition disabled:opacity-40 ${
+            recording ? "animate-pulse bg-vured-50 text-vured-500" : "text-slate-400 hover:bg-brand-50 hover:text-brand-900"
+          }`}
+        >
+          {recording ? (
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
+              <rect x="6" y="6" width="12" height="12" rx="2" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+              <rect x="9" y="3" width="6" height="11" rx="3" />
+              <path d="M5 11a7 7 0 0 0 14 0M12 18v3" strokeLinecap="round" />
+            </svg>
+          )}
+        </button>
+        <button
+          type="submit"
+          disabled={loading || !input.trim()}
+          aria-label="Send"
+          className="flex h-12 w-14 shrink-0 items-center justify-center rounded-full bg-vured-500 text-white shadow-md shadow-vured-500/30 transition hover:scale-[1.03] hover:bg-vured-600 disabled:scale-100 disabled:cursor-not-allowed disabled:shadow-none sm:w-[72px]"
+        >
+          <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor" aria-hidden>
+            <path d="M21.4 2.6 2.9 9.9c-.8.3-.8 1.4 0 1.7l6.6 2.6 2.6 6.6c.3.8 1.4.8 1.7 0l7.3-18.5c.2-.5-.3-1-.7-.7Zm-11 10.2-.1-.1 7.9-7.9-6.1 9.4-1.7-1.4Z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+  );
+
   return (
-    <div className="relative isolate flex h-dvh flex-col overflow-hidden text-slate-900">
-      {/* decorative background — fixed and static, so it never scrolls or repaints */}
+    <div className="relative isolate flex h-dvh flex-col overflow-hidden bg-[#fbfbfd] text-slate-900">
+      {/* decorative background: soft light and the brand waves, fixed so they never scroll or repaint */}
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f5f7ff] via-[#f8f9fc] to-[#f3f0ff]" />
-        <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-brand-500/15 blur-3xl" />
-        <div className="absolute -right-24 top-1/3 h-96 w-96 rounded-full bg-violet-400/15 blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-sky-300/15 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,#ffffff_0%,#f6f7fb_70%)]" />
+        <div className={`transition-opacity duration-500 ${chatting ? "opacity-40" : "opacity-100"}`}>
+          <Waves />
+        </div>
       </div>
 
-      <header className="shrink-0 border-b border-white/60 bg-white/85 px-4 py-3 sm:px-6 shadow-sm">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-4">
-          <div className="mr-auto flex items-center gap-4">
-            <Image src="/vu-logo.png" alt="Vidyashilp University" width={110} height={40} priority />
-            <div className="border-l border-slate-200 pl-4">
-              <h1 className="bg-gradient-to-r from-brand-900 via-brand-600 to-violet-600 bg-clip-text text-lg font-bold tracking-tight text-transparent">
-                ALICE
-                <span className="ml-2 align-middle text-xs font-medium tracking-normal text-slate-500 [-webkit-text-fill-color:currentColor]">
-                  Academic Learning, Information &amp; Course Explorer
-                </span>
-              </h1>
-              <div className="flex items-center gap-2 text-xs text-slate-500">
-                <span
-                  className={`inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 font-medium ring-1 ${
-                    backendOk
-                      ? "bg-emerald-50 text-emerald-700 ring-emerald-200"
-                      : backendOk === false
-                        ? "bg-rose-50 text-rose-700 ring-rose-200"
-                        : "bg-slate-50 text-slate-500 ring-slate-200"
-                  }`}
-                >
-                  <span className="relative flex h-2 w-2">
-                    {backendOk && (
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    )}
-                    <span
-                      className={`relative inline-flex h-2 w-2 rounded-full ${
-                        backendOk ? "bg-emerald-500" : backendOk === false ? "bg-rose-500" : "bg-slate-400"
-                      }`}
-                    />
-                  </span>
-                  {backendOk === null ? "connecting…" : backendOk ? "online" : "offline"}
-                </span>
-                <span className="hidden sm:inline">Grounded in Handbook · SOP · B.Tech &amp; BMS spreads · Minors · Campus</span>
-                {dbSource && (
-                  <span
-                    className="hidden rounded-full bg-slate-100 px-2 py-0.5 font-medium text-slate-600 sm:inline"
-                    title={dbSource === "supabase" ? "Answers are read from the Supabase database" : "Supabase unreachable: using the bundled copy"}
-                  >
-                    {dbSource === "supabase" ? "Database: Supabase" : "Database: bundled copy"}
-                  </span>
-                )}
-              </div>
-            </div>
+      <header
+        className={`shrink-0 px-4 py-4 transition-colors sm:px-10 sm:py-6 ${
+          chatting ? "border-b border-slate-100 bg-white/85 backdrop-blur" : ""
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center gap-4">
+          <div className="mr-auto flex items-center gap-4 sm:gap-6">
+            <Image src="/vu-logo.png" alt="Vidyashilp University" width={160} height={58} priority className="h-10 w-auto sm:h-14" />
+            <span aria-hidden className="h-10 w-px bg-slate-300 sm:h-14" />
+            {chatting && (
+              <span className="hidden font-[family-name:var(--font-display)] text-lg font-bold text-brand-900 sm:inline">
+                VU Academic Advisor
+              </span>
+            )}
           </div>
 
           <button
-            className="inline-flex items-center gap-1.5 rounded-lg bg-brand-900 px-3.5 py-1.5 text-sm font-medium text-white shadow-md shadow-brand-900/20 transition hover:-translate-y-0.5 hover:bg-brand-700"
+            className="inline-flex items-center gap-2.5 rounded-full border-2 border-vured-500 bg-white/70 px-4 py-2 text-base font-medium text-brand-900 transition hover:bg-vured-50 sm:px-7 sm:py-2.5 sm:text-lg"
             onClick={newChat}
           >
-            <span className="text-base leading-none">＋</span> New chat
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
+              <path
+                d="M12 3.5c-4.97 0-9 3.36-9 7.5 0 2.2 1.14 4.18 2.96 5.55L5.5 20.5l4.08-2.2c.78.15 1.59.2 2.42.2 4.97 0 9-3.36 9-7.5s-4.03-7.5-9-7.5Z"
+                strokeLinejoin="round"
+              />
+            </svg>
+            New Chat
           </button>
         </div>
 
         {sessionRecord && (
-          <div className="mx-auto mt-3 flex max-w-5xl flex-wrap items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-900">
+          <div className="mx-auto mt-3 flex max-w-4xl flex-wrap items-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm text-emerald-900">
             🔒 Using your confirmed record: {sessionRecord.batch} batch, semester {sessionRecord.current_semester},{" "}
             {sessionRecord.courses.length} courses. Kept in this browser tab only, never stored on the server.
             <button type="button" className="ml-auto font-medium underline" onClick={() => setSessionRecord(null)}>
@@ -819,7 +1079,7 @@ export default function Home() {
         )}
 
         {selected && !sessionRecord && (
-          <div className="mx-auto mt-3 flex max-w-5xl animate-fade-up flex-wrap items-center gap-2 rounded-xl border border-brand-100 bg-gradient-to-r from-brand-50 to-violet-50 px-3 py-2">
+          <div className="mx-auto mt-3 flex max-w-4xl animate-fade-up flex-wrap items-center gap-2 rounded-2xl border border-brand-100 bg-brand-50 px-3 py-2">
             <div className="mr-2 flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-900 text-xs font-bold text-white">
                 {selected.student_id.slice(-2)}
@@ -827,9 +1087,7 @@ export default function Home() {
               <div>
                 <div className="text-sm font-semibold text-brand-900">
                   {selected.student_id}{" "}
-                  <span className="rounded bg-white/80 px-1.5 py-0.5 text-[10px] font-medium text-slate-500">
-                    synthetic
-                  </span>
+                  <span className="rounded bg-white/80 px-1.5 py-0.5 text-[10px] font-medium text-slate-500">synthetic</span>
                 </div>
                 <div className="max-w-md text-xs text-slate-600">{selected.scenario}</div>
               </div>
@@ -845,295 +1103,78 @@ export default function Home() {
       </header>
 
       {backendOk === false && (
-        <div className="border-b border-rose-200 bg-rose-50/90 px-4 py-2 text-center text-sm text-rose-800">
-          Advisor backend is offline at <span className="font-mono">{API}</span> — start it with{" "}
-          <code className="rounded bg-white px-1.5 py-0.5 font-mono text-xs">
-            cd backend &amp;&amp; uvicorn main:app --port 8000
-          </code>
-          . Retrying automatically…
+        <div className="mx-auto mb-2 rounded-full bg-vured-50 px-4 py-1.5 text-center text-sm text-vured-600">
+          Can&apos;t reach the advisor right now. Retrying automatically…
         </div>
       )}
 
-      <main ref={scrollRef} className="chat-scroll min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-8 sm:px-6">
-        <div className="mx-auto flex max-w-4xl flex-col gap-5">
-          {messages.length === 0 && (
-            <div className="mt-6 flex animate-fade-up flex-col items-center text-center">
-              <div className="relative mb-5">
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-500 to-violet-500 opacity-40 blur-xl" />
-                <div className="relative flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-brand-500 via-brand-700 to-brand-900 text-white shadow-xl">
-                  <svg viewBox="0 0 24 24" className="h-10 w-10" fill="none" stroke="currentColor" strokeWidth={1.6}>
-                    <path d="M22 10 12 5 2 10l10 5 10-5Z" strokeLinejoin="round" />
-                    <path d="M6 12v5c3 2 9 2 12 0v-5" strokeLinejoin="round" />
-                    <path d="M22 10v6" strokeLinecap="round" />
-                  </svg>
-                </div>
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                Hi! I&apos;m Alice, your{" "}
-                <span className="bg-gradient-to-r from-brand-600 to-violet-600 bg-clip-text text-transparent">
-                  academic advisor
-                </span>
-              </h2>
-              <p className="mt-3 max-w-xl text-slate-600">
-                Ask me about courses, prerequisites, credits, progression, attendance or registration. Every answer
-                is backed by official university documents.
-              </p>
+      <main ref={scrollRef} className="chat-scroll min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 sm:px-6">
+        {!chatting ? (
+          <div className="mx-auto flex min-h-full max-w-5xl animate-fade-up flex-col items-center justify-center pb-[18vh] pt-2 text-center">
+            <Robot className="h-32 w-auto animate-float sm:h-44" />
+            <h1 className="mt-2 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-brand-900 sm:text-6xl">
+              VU Academic Advisor
+            </h1>
+            <span aria-hidden className="mt-6 h-1 w-24 rounded-full bg-vured-500 sm:mt-8 sm:w-32" />
 
-              <div className="mt-8 grid w-full max-w-3xl gap-3 sm:grid-cols-2">
-                {EXAMPLES.map((ex, i) => (
-                  <button
-                    key={ex.q}
-                    onClick={() => send(ex.q)}
-                    style={{ animationDelay: `${120 + i * 70}ms` }}
-                    className="group flex animate-fade-up items-start gap-3 rounded-2xl border border-white/80 bg-white/80 p-4 text-left shadow-sm ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:bg-white hover:shadow-lg hover:shadow-brand-500/10 hover:ring-brand-500/40"
-                  >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-xl transition group-hover:scale-110">
-                      {ex.icon}
-                    </span>
-                    <span>
-                      <span className="block text-[11px] font-semibold uppercase tracking-wider text-brand-600">
-                        {ex.tag}
-                      </span>
-                      <span className="mt-0.5 block text-sm text-slate-700">{ex.q}</span>
-                    </span>
-                  </button>
-                ))}
-              </div>
+            <div className="mt-10 w-full max-w-4xl sm:mt-14">{composer}</div>
+
+            <div className="mt-6 flex max-w-4xl flex-wrap justify-center gap-2">
+              {EXAMPLES.map((ex, i) => (
+                <button
+                  key={ex.q}
+                  onClick={() => send(ex.q)}
+                  title={ex.q}
+                  style={{ animationDelay: `${150 + i * 60}ms` }}
+                  className="animate-fade-up rounded-full border border-slate-200 bg-white/80 px-3.5 py-1.5 text-sm text-slate-600 transition hover:border-vured-500/50 hover:text-brand-900"
+                >
+                  <span className="mr-1.5">{ex.icon}</span>
+                  {ex.q}
+                </button>
+              ))}
             </div>
-          )}
-
-          {messages.map((m, i) =>
-            m.role === "user" ? (
-              <div
-                key={i}
-                className="max-w-[85%] animate-fade-up self-end whitespace-pre-wrap break-words rounded-2xl sm:max-w-[75%] rounded-tr-md bg-gradient-to-br from-brand-500 to-brand-900 px-4 py-2.5 text-[15px] text-white shadow-lg shadow-brand-500/25"
-              >
-                {m.content}
-              </div>
-            ) : m.role === "assistant" ? (
-              <div key={i} className="animate-fade-up self-start">
-                <AssistantMessage
-                  reply={m.reply}
-                  question={messages.slice(0, i).reduce((q, x) => (x.role === "user" ? x.content : q), "")}
-                />
-              </div>
-            ) : (
-              <div
-                key={i}
-                className="animate-fade-up self-start rounded-xl border border-rose-200 bg-rose-50 px-4 py-2.5 text-sm text-rose-800"
-              >
-                ❌ Error: {m.content}
-              </div>
-            ),
-          )}
-          {loading && <TypingIndicator />}
-        </div>
+          </div>
+        ) : (
+          <div className="mx-auto flex max-w-4xl flex-col gap-5 py-8">
+            {messages.map((m, i) =>
+              m.role === "user" ? (
+                <div
+                  key={i}
+                  className="max-w-[85%] animate-fade-up self-end whitespace-pre-wrap break-words rounded-3xl rounded-tr-md bg-brand-900 px-5 py-3 text-[15px] text-white shadow-lg shadow-brand-900/20 sm:max-w-[75%]"
+                >
+                  {m.content}
+                </div>
+              ) : m.role === "assistant" ? (
+                <div key={i} className="animate-fade-up self-start">
+                  <AssistantMessage
+                    reply={m.reply}
+                    question={messages.slice(0, i).reduce((q, x) => (x.role === "user" ? x.content : q), "")}
+                  />
+                </div>
+              ) : (
+                <div
+                  key={i}
+                  className="animate-fade-up self-start rounded-2xl border border-vured-500/20 bg-vured-50 px-4 py-2.5 text-sm text-vured-600"
+                >
+                  ❌ Error: {m.content}
+                </div>
+              ),
+            )}
+            {loading && <TypingIndicator />}
+          </div>
+        )}
       </main>
 
-      <footer className="shrink-0 px-4 pb-5 pt-2 sm:px-6">
-        {draft && (
-          <div className="mx-auto mb-2 max-h-[45dvh] max-w-4xl overflow-y-auto rounded-2xl border border-brand-100 bg-white p-4 shadow-xl">
-            <h2 className="font-semibold text-brand-900">Check what I read from your transcript</h2>
-            <p className="mt-1 text-sm text-slate-600">
-              AI can misread images, so please correct anything wrong. Nothing is used until you confirm, and the image
-              was not saved. Credits and CGPA are worked out from these grades and the course list.
-            </p>
-            {(draft.rejected.length > 0 || draft.unreadable_rows > 0) && (
-              <p className="mt-2 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-900">
-                ⚠️ {draft.unreadable_rows > 0 && `${draft.unreadable_rows} row(s) were unreadable. `}
-                {draft.rejected.length > 0 && `Not in the university's course list, so left out: ${draft.rejected.join(", ")}.`}
-              </p>
-            )}
-            <div className="mt-3 flex flex-wrap gap-3 text-sm">
-              <label className="flex items-center gap-2 font-medium text-slate-700">
-                Batch
-                <select
-                  className="rounded-lg border border-slate-200 px-2 py-1"
-                  value={draft.batch ?? ""}
-                  onChange={(e) => setDraft({ ...draft, batch: e.target.value || null })}
-                >
-                  <option value="">Choose…</option>
-                  {BATCHES.map((b) => (
-                    <option key={b}>{b}</option>
-                  ))}
-                </select>
-              </label>
-              <label className="flex items-center gap-2 font-medium text-slate-700">
-                Current semester
-                <select
-                  className="rounded-lg border border-slate-200 px-2 py-1"
-                  value={draft.current_semester ?? ""}
-                  onChange={(e) => setDraft({ ...draft, current_semester: Number(e.target.value) || null })}
-                >
-                  <option value="">Choose…</option>
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                    <option key={n}>{n}</option>
-                  ))}
-                </select>
-              </label>
-            </div>
-            <ul className="mt-3 grid gap-1.5 sm:grid-cols-3">
-              {draft.courses.map((c, i) => (
-                <li key={c.code + i} className="flex items-center gap-2 rounded-lg bg-slate-50 px-2 py-1 text-sm">
-                  <span className="font-mono text-xs">{c.code}</span>
-                  <select
-                    aria-label={`Grade for ${c.code}`}
-                    className="ml-auto rounded border border-slate-200 bg-white px-1"
-                    value={c.grade}
-                    onChange={(e) =>
-                      setDraft({
-                        ...draft,
-                        courses: draft.courses.map((x, j) => (j === i ? { ...x, grade: e.target.value } : x)),
-                      })
-                    }
-                  >
-                    {GRADES.map((g) => (
-                      <option key={g}>{g}</option>
-                    ))}
-                  </select>
-                  <button
-                    type="button"
-                    aria-label={`Remove ${c.code}`}
-                    className="text-slate-400 hover:text-rose-600"
-                    onClick={() => setDraft({ ...draft, courses: draft.courses.filter((_, j) => j !== i) })}
-                  >
-                    ✕
-                  </button>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-3 flex items-center gap-2">
-              <button
-                type="button"
-                disabled={!draft.batch || !draft.current_semester}
-                onClick={confirmDraft}
-                className="rounded-lg bg-brand-900 px-3.5 py-1.5 text-sm font-medium text-white disabled:opacity-40"
-              >
-                Use this record
-              </button>
-              <button type="button" onClick={() => setDraft(null)} className="rounded-lg px-3 py-1.5 text-sm text-slate-600 hover:bg-slate-100">
-                Discard
-              </button>
-              {(!draft.batch || !draft.current_semester) && (
-                <span className="text-sm text-amber-800">Please choose your batch and semester.</span>
-              )}
-            </div>
-          </div>
-        )}
-        {recording && (
-          <div className="mx-auto mb-2 flex max-w-4xl items-center gap-3 rounded-lg bg-rose-50 px-3 py-1.5 text-sm text-rose-900">
-            <span className="whitespace-nowrap">🎙️ Listening… speak, then press ⏹</span>
-            <div
-              role="meter"
-              aria-label="Microphone level"
-              aria-valuemin={0}
-              aria-valuemax={100}
-              aria-valuenow={Math.round(Math.min(1, micLevel * 12) * 100)}
-              className="h-2 flex-1 overflow-hidden rounded-full bg-rose-100"
-            >
-              <div className="h-full bg-rose-500 transition-[width]" style={{ width: `${Math.min(1, micLevel * 12) * 100}%` }} />
-            </div>
-          </div>
-        )}
-        {(notice || busyNote) && (
-          <p className={`mx-auto mb-2 max-w-4xl rounded-lg px-3 py-1.5 text-sm ${notice ? "bg-rose-50 text-rose-800" : "bg-brand-50 text-brand-900"}`}>
-            {notice ?? busyNote}
+      {chatting && (
+        <footer className="shrink-0 px-4 pb-4 pt-2 sm:px-6">
+          <div className="mx-auto max-w-4xl">{composer}</div>
+          <p className="mx-auto mt-2 max-w-4xl text-center text-[11px] text-slate-500">
+            AI-generated guidance: always confirm important decisions with your Faculty Advisor · Enter to send · This
+            conversation: {sessionTokens.toLocaleString()} tokens
+            {dbSource && ` · ${dbSource === "supabase" ? "Database: Supabase" : "Database: bundled copy"}`}
           </p>
-        )}
-        {micHelp && mics.length > 0 && (
-          <label className="mx-auto mb-2 flex max-w-4xl items-center gap-2 rounded-lg bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-900">
-            🎤 Microphone
-            <select
-              className="min-w-0 flex-1 rounded-lg border border-amber-200 bg-white px-2 py-1 font-normal"
-              value={micId}
-              onChange={(e) => {
-                setMicId(e.target.value);
-                startRecording(e.target.value);
-              }}
-            >
-              <option value="">System default</option>
-              {mics.map((m) => (
-                <option key={m.deviceId} value={m.deviceId}>
-                  {m.label || "Microphone"}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
-        <form
-          className={`mx-auto flex max-w-4xl items-end gap-2 rounded-2xl border bg-white p-2 shadow-xl transition focus-within:ring-4 ${
-            awaitingClarification
-              ? "border-brand-500/60 shadow-brand-500/20 ring-brand-100"
-              : "border-slate-200 shadow-slate-300/40 focus-within:border-brand-500/50 focus-within:ring-brand-100"
-          }`}
-          onSubmit={(e) => {
-            e.preventDefault();
-            send(input);
-          }}
-        >
-          <input
-            ref={fileRef}
-            type="file"
-            accept="image/png,image/jpeg,image/webp"
-            className="hidden"
-            onChange={(e) => {
-              const file = e.target.files?.[0];
-              if (file) uploadTranscript(file);
-            }}
-          />
-          <button
-            type="button"
-            title="Upload a photo of your transcript (a person's name or ID on it is not kept)"
-            aria-label="Upload transcript image"
-            disabled={!!busyNote}
-            onClick={() => fileRef.current?.click()}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-lg text-slate-500 transition hover:bg-brand-50 disabled:opacity-40"
-          >
-            📎
-          </button>
-          <textarea
-            ref={inputRef}
-            rows={1}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
-                e.preventDefault();
-                send(input);
-              }
-            }}
-            placeholder={awaitingClarification ? "Answer Alice's question…" : "Ask Alice an academic question…"}
-            className="max-h-40 flex-1 resize-none bg-transparent px-3 py-2.5 text-[15px] outline-none placeholder:text-slate-400"
-          />
-          <button
-            type="button"
-            title={recording ? "Stop recording" : "Ask by voice. You can check the text before sending."}
-            aria-label={recording ? "Stop recording" : "Record a voice question"}
-            aria-pressed={recording}
-            disabled={!!busyNote}
-            onClick={() => (recording ? recorderRef.current?.stop() : startRecording())}
-            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-lg transition disabled:opacity-40 ${
-              recording ? "animate-pulse bg-rose-100 text-rose-700" : "text-slate-500 hover:bg-brand-50"
-            }`}
-          >
-            {recording ? "⏹" : "🎤"}
-          </button>
-          <button
-            type="submit"
-            disabled={loading || !input.trim()}
-            aria-label="Send"
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-900 text-white shadow-md shadow-brand-500/30 transition hover:scale-105 disabled:scale-100 disabled:opacity-35 disabled:shadow-none"
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2}>
-              <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-        </form>
-        <p className="mx-auto mt-2 max-w-4xl text-center text-[11px] text-slate-400">
-          Alice gives AI-generated guidance: always confirm important decisions with your Faculty Advisor · Enter to send · This
-          conversation: {sessionTokens.toLocaleString()} tokens
-        </p>
-      </footer>
+        </footer>
+      )}
     </div>
   );
 }

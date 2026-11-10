@@ -6,12 +6,19 @@
 }
 
 @theme {
-  --color-brand-50: #eef1ff;
-  --color-brand-100: #dfe4ff;
-  --color-brand-500: #4f5bd5;
-  --color-brand-600: #3b46b8;
-  --color-brand-700: #2c3694;
-  --color-brand-900: #1e2a78;
+  /* Vidyashilp navy + red */
+  --color-brand-50: #eef2f9;
+  --color-brand-100: #dbe3f1;
+  --color-brand-500: #2a4a8a;
+  --color-brand-600: #1f3a72;
+  --color-brand-700: #172d5c;
+  --color-brand-900: #0f2350;
+  --color-vured-50: #fdecee;
+  --color-vured-500: #e1122b;
+  --color-vured-600: #c50d23;
+
+  --font-display: var(--font-ubuntu), var(--font-geist-sans), sans-serif;
+  --animate-float: float 4s ease-in-out infinite;
 
   --animate-fade-up: fade-up 0.35s ease-out both;
   --animate-typing: typing 1.2s ease-in-out infinite;
@@ -24,6 +31,15 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
     }
   }
   @keyframes typing {
@@ -41,7 +57,7 @@
 }
 
 body {
-  background: #f5f7fc;
+  background: #fbfbfd;
   color: #0f172a;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
