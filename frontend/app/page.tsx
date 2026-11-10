@@ -34,19 +34,7 @@ type AdvisorReply = {
   human_review: string | null;
 };
 
-type RecordCourse = { code: string; grade: string };
-type SessionRecord = { batch: string; current_semester: number; courses: RecordCourse[] };
-type TranscriptDraft = {
-  batch: string | null;
-  current_semester: number | null;
-  courses: RecordCourse[];
-  rejected: string[];
-  unreadable_rows: number;
-};
-
-const GRADES = ["O", "A+", "A", "B+", "B", "C", "D", "F", "FA", "S", "U", "I"];
 const SILENT_MIC_RMS = 0.0005; // quieter than any real microphone's noise floor: only a dead input stays below this
-const BATCHES = ["2022", "2023", "2024", "2025", "2026"];
 
 type Message =
   | { role: "user"; content: string }
@@ -65,19 +53,6 @@ type StudentSummary = {
 function formatCost(cost: number | null): string {
   if (cost === null) return "free tier";
   return cost < 0.0001 ? "<$0.0001" : `$${cost.toFixed(4)}`;
-}
-
-// Shrinks the photo before upload (Vercel caps request bodies at 4.5 MB); re-encoding also drops EXIF data.
-async function prepareImage(file: File): Promise<Blob> {
-  const bitmap = await createImageBitmap(file);
-  const scale = Math.min(1, 1800 / Math.max(bitmap.width, bitmap.height));
-  const canvas = document.createElement("canvas");
-  canvas.width = Math.round(bitmap.width * scale);
-  canvas.height = Math.round(bitmap.height * scale);
-  canvas.getContext("2d")?.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-  return new Promise((resolve, reject) =>
-    canvas.toBlob((b) => (b ? resolve(b) : reject(new Error("Could not read that image."))), "image/jpeg", 0.9),
-  );
 }
 
 const CONFIDENCE_STYLE: Record<string, { pill: string; dot: string }> = {
@@ -520,7 +495,7 @@ export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const strategy: Strategy = "rag_structured"; // the final advisor; other strategies remain available through the API
-  const [studentId, setStudentId] = useState(""); // no profile picker in the UI: students are anonymous
+  const [studentId] = useState(""); // no profile picker in the UI: students are anonymous
   const [students, setStudents] = useState<StudentSummary[]>([]);
   const [loading, setLoading] = useState(false);
   const [backendOk, setBackendOk] = useState<boolean | null>(null);
@@ -529,7 +504,6 @@ export default function Home() {
   const scrollRef = useRef<HTMLElement>(null);
 
   const abortRef = useRef<AbortController | null>(null);
-  const fileRef = useRef<HTMLInputElement>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const [recording, setRecording] = useState(false);
   const [micLevel, setMicLevel] = useState(0);
@@ -538,8 +512,6 @@ export default function Home() {
   const [micHelp, setMicHelp] = useState(false);
   const [busyNote, setBusyNote] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
-  const [draft, setDraft] = useState<TranscriptDraft | null>(null);
-  const [sessionRecord, setSessionRecord] = useState<SessionRecord | null>(null);
 
   async function startRecording(deviceId = micId) {
     setNotice(null);
@@ -626,36 +598,6 @@ export default function Home() {
     }
   }
 
-  async function uploadTranscript(file: File) {
-    setNotice(null);
-    setBusyNote("Reading your transcript…");
-    try {
-      const form = new FormData();
-      form.append("file", await prepareImage(file), "transcript.jpg");
-      const res = await fetch(`${API}/transcript/read`, { method: "POST", body: form });
-      if (!res.ok) throw new Error(await errorText(res));
-      const data = await res.json();
-      if (!data.readable || data.courses.length === 0) {
-        setNotice("I couldn't find courses and grades in that image. Please try a clearer photo of your transcript.");
-      } else {
-        setDraft(data);
-      }
-    } catch (e) {
-      setNotice(e instanceof Error ? e.message : String(e));
-    } finally {
-      setBusyNote(null);
-      if (fileRef.current) fileRef.current.value = "";
-    }
-  }
-
-  function confirmDraft() {
-    if (!draft?.batch || !draft.current_semester) return;
-    setSessionRecord({ batch: draft.batch, current_semester: draft.current_semester, courses: draft.courses });
-    setStudentId("");
-    setDraft(null);
-    setMessages([]);
-  }
-
   const sessionTokens = messages.reduce((sum, m) => sum + (m.role === "assistant" ? m.reply.usage.total_tokens : 0), 0);
 
   // Poll /health until the backend is up (it may be started after the frontend), then load the profiles.
@@ -737,8 +679,7 @@ export default function Home() {
         body: JSON.stringify({
           message,
           strategy,
-          student_id: sessionRecord ? null : studentId || null,
-          session_record: sessionRecord,
+          student_id: studentId || null,
           conversation_history: history,
         }),
       });
@@ -797,99 +738,10 @@ export default function Home() {
     el.style.height = `${Math.min(el.scrollHeight, 160)}px`;
   }, [narrow]);
 
-  // Panels that sit above the search bar (transcript check, mic meter, notices) plus the bar itself.
+  // Panels that sit above the search bar (mic meter, notices) plus the bar itself.
   // Rendered in the hero on the landing screen, and docked at the bottom once a conversation starts.
   const composer = (
     <div className="w-full">
-      {draft && (
-        <div className="mb-3 max-h-[45dvh] overflow-y-auto rounded-3xl border border-slate-100 bg-white p-5 text-left shadow-xl shadow-brand-900/10">
-          <h2 className="font-semibold text-brand-900">Check what I read from your transcript</h2>
-          <p className="mt-1 text-sm text-slate-600">
-            AI can misread images, so please correct anything wrong. Nothing is used until you confirm, and the image
-            was not saved. Credits and CGPA are worked out from these grades and the course list.
-          </p>
-          {(draft.rejected.length > 0 || draft.unreadable_rows > 0) && (
-            <p className="mt-2 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-900">
-              ⚠️ {draft.unreadable_rows > 0 && `${draft.unreadable_rows} row(s) were unreadable. `}
-              {draft.rejected.length > 0 && `Not in the university's course list, so left out: ${draft.rejected.join(", ")}.`}
-            </p>
-          )}
-          <div className="mt-3 flex flex-wrap gap-3 text-sm">
-            <label className="flex items-center gap-2 font-medium text-slate-700">
-              Batch
-              <select
-                className="rounded-lg border border-slate-200 px-2 py-1"
-                value={draft.batch ?? ""}
-                onChange={(e) => setDraft({ ...draft, batch: e.target.value || null })}
-              >
-                <option value="">Choose…</option>
-                {BATCHES.map((b) => (
-                  <option key={b}>{b}</option>
-                ))}
-              </select>
-            </label>
-            <label className="flex items-center gap-2 font-medium text-slate-700">
-              Current semester
-              <select
-                className="rounded-lg border border-slate-200 px-2 py-1"
-                value={draft.current_semester ?? ""}
-                onChange={(e) => setDraft({ ...draft, current_semester: Number(e.target.value) || null })}
-              >
-                <option value="">Choose…</option>
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                  <option key={n}>{n}</option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <ul className="mt-3 grid gap-1.5 sm:grid-cols-3">
-            {draft.courses.map((c, i) => (
-              <li key={c.code + i} className="flex items-center gap-2 rounded-lg bg-slate-50 px-2 py-1 text-sm">
-                <span className="font-mono text-xs">{c.code}</span>
-                <select
-                  aria-label={`Grade for ${c.code}`}
-                  className="ml-auto rounded border border-slate-200 bg-white px-1"
-                  value={c.grade}
-                  onChange={(e) =>
-                    setDraft({
-                      ...draft,
-                      courses: draft.courses.map((x, j) => (j === i ? { ...x, grade: e.target.value } : x)),
-                    })
-                  }
-                >
-                  {GRADES.map((g) => (
-                    <option key={g}>{g}</option>
-                  ))}
-                </select>
-                <button
-                  type="button"
-                  aria-label={`Remove ${c.code}`}
-                  className="text-slate-400 hover:text-vured-500"
-                  onClick={() => setDraft({ ...draft, courses: draft.courses.filter((_, j) => j !== i) })}
-                >
-                  ✕
-                </button>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-3 flex items-center gap-2">
-            <button
-              type="button"
-              disabled={!draft.batch || !draft.current_semester}
-              onClick={confirmDraft}
-              className="rounded-full bg-vured-500 px-4 py-1.5 text-sm font-medium text-white hover:bg-vured-600 disabled:opacity-40"
-            >
-              Use this record
-            </button>
-            <button type="button" onClick={() => setDraft(null)} className="rounded-full px-3 py-1.5 text-sm text-slate-600 hover:bg-slate-100">
-              Discard
-            </button>
-            {(!draft.batch || !draft.current_semester) && (
-              <span className="text-sm text-amber-800">Please choose your batch and semester.</span>
-            )}
-          </div>
-        </div>
-      )}
       {recording && (
         <div className="mb-2 flex items-center gap-3 rounded-full bg-vured-50 px-4 py-1.5 text-sm text-brand-900">
           <span className="whitespace-nowrap">🎙️ Listening… speak, then press ⏹</span>
@@ -945,16 +797,6 @@ export default function Home() {
           <circle cx="10.5" cy="10.5" r="6.5" />
           <path d="m15.5 15.5 5 5" strokeLinecap="round" />
         </svg>
-        <input
-          ref={fileRef}
-          type="file"
-          accept="image/png,image/jpeg,image/webp"
-          className="hidden"
-          onChange={(e) => {
-            const file = e.target.files?.[0];
-            if (file) uploadTranscript(file);
-          }}
-        />
         <textarea
           ref={inputRef}
           rows={1}
@@ -970,18 +812,6 @@ export default function Home() {
           placeholder={awaitingClarification ? "Answer the advisor's question…" : narrow ? "Ask a question..." : "Ask your academic question..."}
           className="max-h-40 min-w-0 flex-1 resize-none bg-transparent px-2 py-3 text-base text-slate-800 outline-none placeholder:text-slate-500 sm:text-lg"
         />
-        <button
-          type="button"
-          title="Upload a photo of your transcript (a person's name or ID on it is not kept)"
-          aria-label="Upload transcript image"
-          disabled={!!busyNote}
-          onClick={() => fileRef.current?.click()}
-          className="mb-0.5 flex h-9 w-9 shrink-0 sm:h-11 sm:w-11 items-center justify-center rounded-full text-slate-400 transition hover:bg-brand-50 hover:text-brand-900 disabled:opacity-40"
-        >
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden>
-            <path d="m21 11-8.5 8.5a5 5 0 0 1-7-7L14 4a3.3 3.3 0 0 1 4.7 4.7L10.2 17a1.7 1.7 0 0 1-2.4-2.4L15.5 7" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
         <button
           type="button"
           title={recording ? "Stop recording" : "Ask by voice. You can check the text before sending."}
@@ -1058,17 +888,7 @@ export default function Home() {
           </button>
         </div>
 
-        {sessionRecord && (
-          <div className="mx-auto mt-3 flex max-w-4xl flex-wrap items-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm text-emerald-900">
-            🔒 Using your confirmed record: {sessionRecord.batch} batch, semester {sessionRecord.current_semester},{" "}
-            {sessionRecord.courses.length} courses. Kept in this browser tab only, never stored on the server.
-            <button type="button" className="ml-auto font-medium underline" onClick={() => setSessionRecord(null)}>
-              Remove
-            </button>
-          </div>
-        )}
-
-        {selected && !sessionRecord && (
+        {selected && (
           <div className="mx-auto mt-3 flex max-w-4xl animate-fade-up flex-wrap items-center gap-2 rounded-2xl border border-brand-100 bg-brand-50 px-3 py-2">
             <div className="mr-2 flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-900 text-xs font-bold text-white">
