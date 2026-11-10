@@ -11,7 +11,7 @@ Chunking strategy
 Every chunk carries metadata used for citations: source_file (the ORIGINAL university document)
 and section (heading path, e.g. "Academic Regulations > 7. Attendance Requirements (7.3)").
 
-Run:  python ingest.py   (re-run after extract_data.py or make_profiles.py so backend/index/data stays in sync)
+Run:  python ingest.py   (re-run after extract_data.py, extract_brochures.py or make_profiles.py so backend/index/data stays in sync)
 """
 import json
 import re
@@ -21,6 +21,7 @@ import numpy as np
 
 import embedder
 from config import DATA_DIR, INDEX_DIR, PROCESSED_DIR, RUNTIME_DATA_FILES
+from extract_brochures import BROCHURES
 
 MAX_CHARS = 1000
 
@@ -34,6 +35,9 @@ DOCS = {
     "term_context.md": "term_context.md (derived)",
     "bms_structure.md": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
     "campus_infrastructure.md": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
+    # programme brochures and the programme sheet (extract_brochures.py)
+    "programmes.md": "Vu Uni Data.xlsx",
+    **{f"brochure_{slug}.md": fname for fname, (slug, _) in BROCHURES.items()},
 }
 
 

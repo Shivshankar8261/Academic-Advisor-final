@@ -1,18 +1,331 @@
 [
  {
-  "id": "X03",
-  "query": "How many University Core credits does the 2026 batch need?",
-  "expected": "Conflict inside the source file: the 2026 semester spread says 24 credits, the Struct_2026_DS summary says 18.",
+  "id": "R01",
+  "query": "How many courses are in the Finance minor? List the courses and the total credits.",
+  "expected": "Per batch (Minor Courses xlsx, tab Finance): 2022-2024: 8 courses / 24 credits each (2022 'Financial and Management Accounting' has no code); 2025: 6 courses / 22 credits + 2 credits TBD (two 'New' courses without codes); 2026: 1 course (MGMT330, 4 credits) + 20 credits TBD.",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2022 batch Finance minor lists 8 courses, worth 24 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| No code yet | Financial and Management Accounting (FAMA) | 3 | 3 | NIL |\n| FINA333 | Fiancial Institutions Markets and Services | 4 | 3 | MGMT208 |\n| MGMT207 | Corporate Finance | 5 | 3 | 'FAMA Financial and management accounting' (no course code given in the source) |\n| MGMT209 | Financial Statement Anaylsis | 6 | 3 | FINA201 |\n| MGMT210 | Basics of INVESTMENT MANAGEMENT | 6 | 4 | FINA333 |\n| MGMT213 | Introduction To Fintech | 7 | 2 | FINA333 |\n| MGMT323 | Basics of Startup Finance | 7 | 4 | MGMT207 |\n| MGMT203 | Business Strategy Simulation | 7 | 2 | (MKMT201 OR MGMT207 OR FINA201) |\n\nFINA201, MKMT201 are listed as a prerequisite but not defined anywhere in the supplied files. The 2022 batch Minor/Open basket requires 24 credits.\n\n---\n\n**The 2023 batch Finance minor lists 8 courses, worth 24 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| MGMT208 | Introduction to Financial Accounting | 3 | 3 | NIL |\n| FINA333 | Fiancial Institutions Markets and Services | 4 | 3 | MGMT208 |\n| MGMT207 | Corporate Finance | 5 | 3 | MGMT208 |\n| MGMT209 | Finacial Statement Analysis | 6 | 3 | MGMT208 |\n| MGMT210 | Basics of Investment Management | 6 | 4 | FINA333 |\n| MGMT323 | Basics of Startup Finance | 6 | 4 | MGMT207 |\n| MGMT213 | Introduction To Fintech | 7 | 2 | NIL |\n| MGMT307 | Strategy & Decision Making | 7 | 2 | NIL |\n\nThe 2023 batch Minor/Open basket requires 24 credits.\n\n---\n\n**The 2024 batch Finance minor lists 8 courses, worth 24 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| MGMT208 | Introduction to Financial Accounting | 3 | 3 | NIL |\n| FINA333 | Fiancial Institutions Markets and Services | 4 | 3 | MGMT208 |\n| MGMT207 | Corporate Finance | 5 | 3 | NIL |\n| MGMT209 | Finacial Statement Analysis | 5 | 3 | NIL |\n| MGMT210 | Basics of Investment Management | 6 | 4 | FINA333 |\n| MGMT323 | Basics of Startup Finance | 6 | 4 | MGMT207 |\n| MGMT213 | Introduction To Fintech | 7 | 2 | NIL |\n| MGMT307 | Strategy & Decision Making | 7 | 2 | NIL |\n\nThe 2024 batch Minor/Open basket requires 24 credits.\n\n---\n\n**The 2025 batch Finance minor lists 6 courses, worth 22 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| MGMT330 | Introduction to Financial Accounting (R ) | 3 | 4 | NIL |\n| No code yet | Financial Institutions Markets & Services with Fintech (GIVE NEW NAME) | 4 | 4 | NIL |\n| No code yet | Corporate Finance New Name | 5 | 4 | NIL |\n| MGMT210 | Basics of Investment Management | 6 | 4 | FINA333 |\n| MGMT213 | Introduction To Fintech | 6 | 2 | NIL |\n| MGMT323 | Basics of Startup Finance | 7 | 4 | MGMT207 |\n\n2 more credits are not decided yet (TBA/TBD in the source). The 2025 batch Minor/Open basket requires 32 credits.\n\n---\n\n**The 2026 batch Finance minor lists 1 course, worth 4 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| MGMT330 | Introduction to Financial Accounting (R) | 3 | 4 | NIL |\n\n20 more credits are not decided yet (TBA/TBD in the source). The 2026 batch Minor/Open basket requires 32 credits.",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Finance', Finance minor 2022 batch, rows 3-10; tab 'Finance', Finance minor 2023 batch, rows 14-21; tab 'Finance', Finance minor 2024 batch, rows 25-32; tab 'Finance', Finance minor 2025 batch, rows 36-42; tab 'Finance', Finance minor 2026 batch, rows 46-47"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R02",
+  "query": "How many courses are in the Law minor for the 2024 batch and how many credits do they add up to?",
+  "expected": "4 courses (LAWP100, LAWS301, LAWM301, LAWM302) = 14 credits; a further 10 credits are TBA (tab Law Minor, rows 11-15).",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2024 batch Law minor lists 4 courses, worth 14 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| LAWP100 | Political Science I | 3 | 3 | NIL |\n| LAWS301 | Legal Methods | 3 | 3 | NIL |\n| LAWM301 | Constitution for Citizens | 4 | 4 | NIL |\n| LAWM302 | Basics of International Law | 5 | 4 | NIL |\n\n10 more credits are not decided yet (TBA/TBD in the source). The 2024 batch Minor/Open basket requires 24 credits.",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Law Minor', Law minor 2024 batch, rows 11-15"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R03",
+  "query": "List the Design minor courses for the 2023 batch with their total credits.",
+  "expected": "6 courses (CDES105, CDES702, CDES221, CDES219, CDES301, CDES312) = 24 credits (tab Design Minor, rows 11-16).",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2023 batch Design minor lists 6 courses, worth 24 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| CDES105 | Appreciating and Deconstructing Art and Media | 3 | 3 | NIL |\n| CDES702 | Integrative Studio II- Sensemaking, Visualization | 4 | 4 | NIL |\n| CDES221 | Information Architecture and Design | 5 | 4 | NIL |\n| CDES219 | Elements of Sound | 6 | 4 | NIL |\n| CDES301 | Sketch to Story | 6 | 4 | NIL |\n| CDES312 | Designing Futures | 7 | 5 | NIL |\n\nThe 2023 batch Minor/Open basket requires 24 credits.",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Design Minor', Design minor 2023 batch, rows 11-16"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R04",
+  "query": "How many courses does the Psychology minor have for the 2025 batch?",
+  "expected": "6 courses x 4 credits = 24 credits; the first is an either/or PSYC201 / PSYC103 (tab Psychology, rows 23-28).",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2025 batch Psychology minor lists 6 courses, worth 24 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| PSYC201/ PSYC103 | Biological Psychology/ Foundations of Psychology I | 3 | 4 | NIL |\n| PSYC202 | Cognitive Psychology | 4 | 4 | PSYC101 |\n| PSYC241 | Social Psychology | 5 | 4 | PSYC101 |\n| PSYC306 | Health Psychology | 6 | 4 | PSYC101 AND PSYC201 |\n| PSYC104 | Lifespan Development I | 6 | 4 | NIL |\n| PSYC255 | Psychopathology | 7 | 4 | NIL |\n\nThe 2025 batch Minor/Open basket requires 32 credits.",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Psychology', Psychology minor 2025 batch, rows 23-28"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R05",
+  "query": "Which Economics minor courses can the 2024 batch take?",
+  "expected": "None: the Economics tab says 'No Students' for the 2024 batch (row 16).",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "groq:openai/gpt-oss-120b",
+  "answer": "The Economics minor is not offered to the 2024 batch, so there are no Economics minor courses available for that cohort.",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Economics', row 16",
+   "Minor_Courses_for_BTech_Students.xlsx | Economics Minor - 2024 Batch (tab Economics, rows 16-16)"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R06",
+  "query": "How many courses are in the Marketing minor for the 2025 batch and what are the total credits?",
+  "expected": "5 courses = 19 credits (Services Marketing is 'New' with no code and TBD prerequisites) + 5 credits TBD (tab Marketing, rows 37-42).",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2025 batch Marketing minor lists 5 courses, worth 19 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| MGMT328 | Foundation of Marketing Management | 3 | 4 | NIL |\n| MGMT302 | Digital and Ecommerce Marketing | 4 | 4 | MKTG201 |\n| MGMT304 | Integrated Marketing Communications | 5 | 3 | NIL |\n| No code yet | Services Marketing | 5 | 4 | not yet decided (TBA/TBD in source) |\n| MGMT314 | Sales and Distribution Management | 6 | 4 | MKTG201 |\n\n5 more credits are not decided yet (TBA/TBD in the source). The 2025 batch Minor/Open basket requires 32 credits.",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Marketing', Marketing minor 2025 batch, rows 37-42"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R07",
+  "query": "What courses are in the Start-up minor for the 2024 batch?",
+  "expected": "2 courses: MGMT326 Product Development and MGMT336 Design Thinking for Entrepreneurship (8 credits) + 16 credits TBD (tab Start-up, rows 3-5).",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2024 batch Start-up minor lists 2 courses, worth 8 credits.**\n\n| Course Code | Title | Semester | Credits | Prerequisites |\n|---|---|---|---|---|\n| MGMT326 | Product Development | 4 | 4 | MKTG201 |\n| MGMT336 | Design Thinking for Entrepreneurship | 5 | 4 | NIL |\n\n16 more credits are not decided yet (TBA/TBD in the source). The 2024 batch Minor/Open basket requires 24 credits.",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Start-up', Start-up minor 2024 batch, rows 3-5"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R08",
+  "query": "In which semester is Health Psychology (PSYC306) offered in the Psychology minor, and what are its prerequisites?",
+  "expected": "Semester 6 (2023-2026 batches); prerequisites PSYC101 AND PSYC201.",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "groq:openai/gpt-oss-20b",
+  "answer": "Health Psychology (PSYC306) is scheduled for semester 6 (an even‑semester course) in the Psychology minor. Its prerequisites are PSYC101 Introduction to Psychology and PSYC201 Biological Psychology.",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Psychology', PSYC306, rows 13-33",
+   "Minor_Courses_for_BTech_Students.xlsx | Course PSYC306 Health Psychology"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R09",
+  "query": "What are the prerequisites for Industrial Economics (ECON413)?",
+  "expected": "ECON201 AND (ECON202 OR ECON207) - '/' means OR; ECON202 is not defined anywhere in the supplied files.",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "groq:openai/gpt-oss-20b",
+  "answer": "The course *Industrial Economics* (ECON413) requires the following prerequisites for the 2022‑batch curriculum:\n- **ECON201 – Microeconomics**\n- **Either ECON202 or ECON207 – Macroeconomics and Applicants to Indian Economy**\n\nNote that ECON202 is not defined in the supplied course data, so its details are unknown. If you need the exact description or credit information for ECON202, you may need to consult the university’s course catalogue or contact the registrar’s office.\n\n",
+  "sources": [
+   "Minor_Courses_for_BTech_Students.xlsx | tab 'Economics', ECON413, row 5",
+   "Minor_Courses_for_BTech_Students.xlsx | Course ECON413 Industrial Economics"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R10",
+  "query": "How many Minor/Open credits does the 2024 batch need?",
+  "expected": "24 credits (Sem_Spread_2024, Open/Minor basket).",
   "label": "correct",
   "source_correct": true,
   "provider": "gemini:gemini-flash-lite-latest",
-  "answer": "For the 2026 batch, the University Core basket requires a minimum of 24 credits based on the 'Fixed Min' column of the spreadsheet tab 'Sem_Spread_DS_2026'. However, please note that there is an inconsistency in the source: the courses placed in this basket add up to only 18 credits, and the summary tab 'Struct_2026_DS' also gives 18 credits for this basket.",
+  "answer": "For the 2024 batch, the minimum number of credits required for the Minor/Open basket (also referred to as Open/Minor) is 24 credits.",
   "sources": [
-   "Semester_Spread_Structures_Sept_2026.xlsx | tab 'Sem_Spread_DS_2026', row 3 (Univ Core basket)"
+   "Semester_Spread_Structures_Sept_2026.xlsx | tab 'Sem_Spread_2024', row 22 (Open/Minor basket)",
+   "Semester_Spread_Structures_Sept_2026.xlsx | 2024 Batch - Credit baskets (tab Sem_Spread_2024)",
+   "Semester_Spread_Structures_Sept_2026.xlsx | 2024 Batch - Credit structure summary (Struct_2024)"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R11",
+  "query": "Where is Vidyashilp University?",
+  "expected": "Bengaluru: #125, Bettenahalli, Kundana Hobli, Chapparkallu Road, Bengaluru - 562110 (handbook back cover, p. 84). Must not say Mysore.",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "gemini:gemini-flash-lite-latest",
+  "answer": "Vidyashilp University is located at the following address: Vidyashilp University Founding Campus, #125, Bettenahalli Kundana Hobli, Chapparkallu Road, Bengaluru – 562110.",
+  "sources": [
+   "Student Handbook Aug 2026.pdf | University Address (handbook back cover), p. 84",
+   "Bachelor of Management (Hons.) Brochure.pdf | B.M.S. (Hons.) Digital Business: Apply Now, p. 16"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R12",
+  "query": "What is the B.Tech tuition fee?",
+  "expected": "Not in the documents: the handbook describes the fee components and payment rules but gives no amount.",
+  "label": "correct",
+  "source_correct": null,
+  "provider": "gemini:gemini-flash-lite-latest",
+  "answer": "This isn't in the provided documents.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83).",
+  "sources": [],
+  "flags": {
+   "insufficient_information": true,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": false
+  }
+ },
+ {
+  "id": "R13",
+  "query": "What is the minimum attendance required to appear for the end-term exams?",
+  "expected": "75% in every course (Handbook 7.2); may be relaxed to no less than 65% for medical exigencies or representing State/India, with Vice-Chancellor approval (7.3-7.4).",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The minimum attendance is 75% of the classes actually conducted, in every course you register for** (Handbook 7.2).\n\n| Situation | Minimum | Who decides | Clause |\n|---|---|---|---|\n| Normal rule | 75% | Not applicable | 7.2 |\n| Serious medical case: hospitalisation, trauma or contagious disease (yours or a family member's), with documents | Can be relaxed, never below 65% | Faculty Advisor recommends to Program Chair; Vice-Chancellor approves | 7.3 |\n| Representing the State or India in an event, with certificates | Can be relaxed, never below 65% | Director, Campus Life and Faculty Advisor recommend to Program Chair; Vice-Chancellor approves | 7.4 |\n\nBelow the applicable minimum you cannot sit the end-term exam for that course and receive an FA grade (7.6).",
+  "sources": [
+   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 7. Attendance Requirements (7.2), p. 21"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R14",
+  "query": "Is late registration allowed?",
+  "expected": "SOP is internally inconsistent: 'Course Registration Deadline' allows late registration up to one week (no extensions), while 'Late Registration' says no late registration except medical/competition cases, up to two weeks (Handbook 2.6 agrees with the latter).",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "gemini:gemini-3.5-flash-lite",
+  "answer": "The University documents contain an inconsistency regarding late registration. The SOP states under 'Late Registration' that no late registration shall be permitted except for medical exigencies or competitions, but under 'Course Registration Deadline' it states a maximum of one calendar week is permissible. Meanwhile, the Student Handbook (Clauses 2.6 and 2.7) allows late registration for medical cases up to two weeks, for competitions/events with approval, and for any other reason up to one calendar week upon paying a Late Fee. Please confirm the exact rule with the Program Chair or the Office of the Registrar.",
+  "sources": [
+   "SOP_STUDENT_17082026.pdf | 1. Course Registration (Course Registration Deadline vs Late Registration), pp. 1-2",
+   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 2. Registration (2.7), pp. 16-17",
+   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 2. Registration (2.6.2), p. 16",
+   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 2. Registration (2.6), p. 16"
   ],
   "flags": {
    "insufficient_information": false,
    "conflict_detected": true,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R15",
+  "query": "totally how many courses are there for all the semester programme foundation basket for 2022 batch",
+  "expected": "14 courses listed (13 taken: PSYC101/ECON101 is either/or), 34 credits, Sem Spread BTECH-2022.",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2022 batch Foundation basket lists 14 courses across Semesters 1, 2, 3, 4 and 6, worth 34 credits in total.**\n\nPSYC101/ECON101 is an either/or choice, so a student actually takes 13 courses from these 14.\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| MATH201 | Calculus | 1 | 3 | 2-1-0 | NIL |\n| COMP132 | Design Workshop | 1 | 2 | 0-0-4 | NIL |\n| MTSC111 | Materials for Smart Devices | 1 | 3 | 2-0-2 | NIL |\n| DATA131 | Visualizing Data for Story Telling | 1 | 2 | 1-0-2 | NIL |\n| PSYC101 (either/or) | Introduction to Psychology | 1 | 3 | 2-1-0 | NIL |\n| ECON101 (either/or) | Introduction to Economics | 1 | 3 | 2-1-0 | NIL |\n| MATH202 | Probability Theory | 2 | 3 | 2-1-0 | NIL |\n| MTSC211 | Sustainable Smart Materials | 2 | 3 | 2-0-2 | MTSC111 |\n| ENGL201 | Academic Writing | 2 | 3 | 2-0-2 | UCOR102 |\n| MTSC781 | Sustainable Cities and Communities | 3 | 3 | 0-0-0 | NIL |\n| MATH204 | Linear Algebra | 3 | 3 | 2-1-0 | NIL |\n| SLAD206 | Human Values in Work and Life | 4 | 2 | 0-0-0 | NIL |\n| SLAD207 | Foundation Seminar | 4 | 1 | 0-0-0 | NIL |\n| LANG101 | Language | 6 | 3 | 0-0-0 | NIL |",
+  "sources": [
+   "Semester_Spread_Structures_Sept_2026.xlsx | tab 'Sem Spread BTECH-2022', Foundation basket, rows 7-11"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R16",
+  "query": "How many courses in semester 3 for the 2023 batch?",
+  "expected": "8 named courses plus 1 TBA slot, 29 credits.",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2023 batch has 8 courses listed in Semester 3, worth 29 credits in total.**\n\n1 further slot is listed only as TBA in the source (the student chooses later).\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| UCOR205 | Socio Cultural Perspectives on Indian Life-SPIL | 3 | 3 | 2-1-0 | NIL |\n| UCOR201 | Introduction to Epistemology | 3 | 2 | 1-1-0 | NIL |\n| MTSC781 | Sustainable Cities and Communities | 3 | 3 | 0-0-0 | NIL |\n| MATH204 | Linear Algebra | 3 | 3 | 2-1-0 | NIL |\n| COMP203 | Analysis of Algorithms | 3 | 4 | 3-0-2 | COMP201 |\n| COMP202 | Theoretical Computer Science | 3 | 4 | 3-1-0 | NIL |\n| MATH207 | Research Methodology | 3 | 3 | 2-0-2 | NIL |\n| DATA202 | Exploratory Data Analysis | 3 | 3 | 2-0-2 | DATA201 AND MATH203 |\n| TBA | Minor/Open (#1 Course) | 3 | 4 | 4-0-0 | NIL |",
+  "sources": [
+   "Semester_Spread_Structures_Sept_2026.xlsx | tab 'Sem_Spread_2023', semester 3, rows 3-21"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R17",
+  "query": "List the Program Core courses for the 2024 batch",
+  "expected": "13 courses, 46 credits.",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The 2024 batch Program Core basket lists 13 courses across Semesters 1, 2, 3, 4, 5, 6 and 7, worth 46 credits in total.**\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| DATA103 | Programming in Python | 1 | 3 | 1-0-4 | NIL |\n| COMP201 | Data Structures | 2 | 4 | 3-0-2 | NIL |\n| DATA132 | Data visualization and Storytelling | 2 | 3 | 1-0-4 | DATA103 |\n| COMP203 | Analysis of Algorithms | 3 | 4 | 3-0-2 | COMP201 |\n| COMP202 | Theoretical Computer Science | 3 | 4 | 3-1-0 | NIL |\n| COMP209 | Databases Management | 4 | 4 | 3-0-2 | NIL |\n| COMP204 | Digital Design and Computer Organization | 4 | 4 | 3-1-0 | NIL |\n| COMP301 | Artificial Intelligence | 4 | 4 | 3-0-2 | NIL |\n| COMP208 | Networks | 5 | 4 | 3-0-2 | NIL |\n| COMP207 | Operating Systems | 5 | 3 | 2-0-2 | NIL |\n| COMP205 | Object Oriented Programming | 5 | 3 | 2-0-2 | NIL |\n| COMP206 | Microprocessors and Computer Architecture | 6 | 4 | 3-0-2 | COMP204 AND COMP207 |\n| COMP302 | Internet of Things | 7 | 2 | 0-0-4 | COMP132 AND COMP201 AND COMP206 AND COMP208 AND COMP301 |",
+  "sources": [
+   "Semester_Spread_Structures_Sept_2026.xlsx | tab 'Sem_Spread_2024', Program Core basket, rows 12-15"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
+   "needs_clarification": false,
+   "grounded": true
+  }
+ },
+ {
+  "id": "R18",
+  "query": "What is the minimum attendance?",
+  "expected": "75% of classes conducted (Handbook 7.2); 65% only as an approved relaxation.",
+  "label": "correct",
+  "source_correct": true,
+  "provider": "none (exact database lookup)",
+  "answer": "**The minimum attendance is 75% of the classes actually conducted, in every course you register for** (Handbook 7.2).\n\n| Situation | Minimum | Who decides | Clause |\n|---|---|---|---|\n| Normal rule | 75% | Not applicable | 7.2 |\n| Serious medical case: hospitalisation, trauma or contagious disease (yours or a family member's), with documents | Can be relaxed, never below 65% | Faculty Advisor recommends to Program Chair; Vice-Chancellor approves | 7.3 |\n| Representing the State or India in an event, with certificates | Can be relaxed, never below 65% | Director, Campus Life and Faculty Advisor recommend to Program Chair; Vice-Chancellor approves | 7.4 |\n\nBelow the applicable minimum you cannot sit the end-term exam for that course and receive an FA grade (7.6).",
+  "sources": [
+   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 7. Attendance Requirements (7.2), p. 21"
+  ],
+  "flags": {
+   "insufficient_information": false,
+   "conflict_detected": false,
    "needs_clarification": false,
    "grounded": true
   }
