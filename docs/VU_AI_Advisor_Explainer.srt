@@ -1,0 +1,187 @@
+1
+00:00:00,350 --> 00:00:05,393
+Welcome to the AI Academic Advisor of Vidyashilp University.
+
+2
+00:00:05,393 --> 00:00:10,940
+An advisor that knows when to answer, what to answer, when to ask,
+
+3
+00:00:10,940 --> 00:00:13,630
+and when to say it doesn't know.
+
+4
+00:00:14,530 --> 00:00:16,911
+A student's question sounds simple.
+
+5
+00:00:16,911 --> 00:00:19,769
+Can I take Machine Learning next semester?
+
+6
+00:00:19,769 --> 00:00:24,735
+But the answer depends on the handbook, the semester spread, their batch,
+
+7
+00:00:24,735 --> 00:00:26,164
+and their own record.
+
+8
+00:00:26,164 --> 00:00:28,410
+A general chatbot simply guesses.
+
+9
+00:00:29,310 --> 00:00:33,193
+So every answer starts from the university's own documents.
+
+10
+00:00:33,193 --> 00:00:35,562
+Each question passes a safety check.
+
+11
+00:00:35,562 --> 00:00:38,788
+Exact questions go straight to a course database.
+
+12
+00:00:38,788 --> 00:00:43,066
+Everything else uses retrieval from the handbook, the procedures,
+
+13
+00:00:43,066 --> 00:00:46,950
+and the course lists, and the model must cite what it uses.
+
+14
+00:00:47,850 --> 00:00:49,311
+Take this question.
+
+15
+00:00:49,311 --> 00:00:53,235
+How many courses are in the 2022 Foundation basket?
+
+16
+00:00:53,235 --> 00:00:58,159
+The advisor returns fourteen courses, worth thirty-four credits,
+
+17
+00:00:58,159 --> 00:00:59,698
+with the full table.
+
+18
+00:00:59,698 --> 00:01:04,930
+No model was needed, so it used zero tokens, and it cannot miscount.
+
+19
+00:01:05,829 --> 00:01:08,322
+When information is missing, it asks.
+
+20
+00:01:08,322 --> 00:01:09,872
+Which batch are you in?
+
+21
+00:01:09,872 --> 00:01:12,297
+Which prerequisites have you passed?
+
+22
+00:01:12,297 --> 00:01:16,002
+When the documents don't contain an answer, it says so,
+
+23
+00:01:16,002 --> 00:01:19,909
+and names the office to contact, instead of making one up.
+
+24
+00:01:20,809 --> 00:01:24,596
+For eligibility, the work is split across six steps.
+
+25
+00:01:24,596 --> 00:01:26,708
+A planner reads the question.
+
+26
+00:01:26,708 --> 00:01:28,602
+Retrieval finds the rules.
+
+27
+00:01:28,602 --> 00:01:33,190
+Eligibility and credits are worked out in code, not by a model.
+
+28
+00:01:33,190 --> 00:01:35,229
+A recommendation is written,
+
+29
+00:01:35,229 --> 00:01:39,889
+and verification checks every number before the student sees it.
+
+30
+00:01:40,789 --> 00:01:44,973
+Students can ask by voice, and check the words before sending.
+
+31
+00:01:44,973 --> 00:01:47,739
+They can upload a photo of a grade sheet,
+
+32
+00:01:47,739 --> 00:01:50,505
+and confirm every grade before it's used.
+
+33
+00:01:50,505 --> 00:01:52,462
+They can listen to an answer,
+
+34
+00:01:52,462 --> 00:01:57,590
+or see their whole programme as an infographic drawn directly from the data.
+
+35
+00:01:58,490 --> 00:02:03,191
+We attacked it, too, with twenty-six prompt injections and privacy attempts.
+
+36
+00:02:03,191 --> 00:02:07,583
+With the safety layer, none succeeded, and only four reached the model.
+
+37
+00:02:07,583 --> 00:02:11,295
+Phone numbers and I D numbers are removed before processing,
+
+38
+00:02:11,295 --> 00:02:13,769
+and another student's record is refused.
+
+39
+00:02:14,670 --> 00:02:16,444
+And people stay in charge.
+
+40
+00:02:16,444 --> 00:02:20,199
+The advisor can't change a record or approve a request.
+
+41
+00:02:20,199 --> 00:02:24,636
+For appeals, medical cases, and graduation, it explains the rule,
+
+42
+00:02:24,636 --> 00:02:26,070
+and says who decides.
+
+43
+00:02:26,970 --> 00:02:28,690
+Grounded in documents.
+
+44
+00:02:28,690 --> 00:02:30,568
+Honest about its limits.
+
+45
+00:02:30,568 --> 00:02:33,149
+And designed to work with people.
+
+46
+00:02:33,149 --> 00:02:35,652
+This is the AI Academic Advisor.
+
+47
+00:02:35,652 --> 00:02:37,529
+Try the live demo today.

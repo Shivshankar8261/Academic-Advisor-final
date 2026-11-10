@@ -1,0 +1,641 @@
+{
+ "cases": 43,
+ "metrics": {
+  "rag_structured": {
+   "n": 43,
+   "correct": 39,
+   "partial": 1,
+   "hallucination": 2,
+   "incorrect": 1,
+   "eligibility_correct": 6,
+   "eligibility_n": 8,
+   "source_correct": 33,
+   "source_n": 34,
+   "avg_time_s": 249.96,
+   "median_time_s": 26.54,
+   "avg_tokens_llm_calls": 3991,
+   "answered_without_llm": 4,
+   "repairs": 0
+  },
+  "agentic": {
+   "n": 43,
+   "correct": 41,
+   "partial": 1,
+   "hallucination": 1,
+   "incorrect": 0,
+   "eligibility_correct": 7,
+   "eligibility_n": 8,
+   "source_correct": 33,
+   "source_n": 34,
+   "avg_time_s": 232.76,
+   "median_time_s": 26.24,
+   "avg_tokens_llm_calls": 4314,
+   "answered_without_llm": 5,
+   "repairs": 2
+  }
+ },
+ "rows": [
+  {
+   "id": "F01",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Normally you must attend at least 75 % of the classes conducted for a course to be eligible for the end‑term exam. If you have a valid medical leave or are representing the State/National/International in an event, the attendance requirement can be relaxed, but it can never go below 65 % of the classes."
+  },
+  {
+   "id": "F02",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "You need a minimum CGPA of 4.00 to be promoted to Year 2 of the program and to register for Semester 3."
+  },
+  {
+   "id": "F03",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "To graduate from the B.Tech programme you need to earn a total of 180 credits. The minimum CGPA required to be eligible for the award of the degree is 5.00."
+  },
+  {
+   "id": "F04",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "DATA209 Advanced Exploratory Data Analysis requires completion of DATA132 (Data Visualization and Storytelling) AND MATH203 (Probability and Statistics). These prerequisites are the same for both the 2025 and 2026 batches."
+  },
+  {
+   "id": "F05",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "You can register for up to 12 credits in a Summer Term."
+  },
+  {
+   "id": "E01",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "DATA301 Machine Learning is scheduled for Semester 5, which is an odd semester and therefore offered in the current term (September 2026). However, the course requires both DATA202 and MATH301 as prerequisites. You have successfully completed DATA202, but you failed MATH301 (Optimization Techniques for Data Science). Because the prerequisite MATH301 is not passed, you are not eligible to register for Machine Learning this semester. You would need to retake and pass MATH301 before enrolling in DATA301."
+  },
+  {
+   "id": "E02",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "DATA209 Advanced Exploratory Data Analysis is scheduled for Semester 3, which is an odd semester and is being offered in the current term (September 2026). However, the course requires both DATA132 (Data Visualization and Storytelling) and MATH203 (Probability and Statistics) as prerequisites. You have passed MATH203, but you failed DATA132 (recorded as FA). Because the prerequisite DATA132 is not passed, you are not eligible to register for DATA209 this semester. You will need to retake and pass DATA132 before enrolling in DATA209."
+  },
+  {
+   "id": "E03",
+   "strategy": "rag_structured",
+   "label": "unsupported_hallucination",
+   "provider": "none (exact database lookup)",
+   "answer": "**The 2025 batch has 6 courses listed in Semester 3, worth 25 credits in total.**\n\n1 further slot is listed only as TBA in the source (the student chooses later).\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| UCOR207 | Analytical Academic Writing | 3 | 3 | 2-1-0 | NIL |\n| SLAD206 | Human Values in Work and Life | 3 | 2 | 0-0-0 | NIL |\n| MATH209 | Linear Algebra | 3 | 4 | 3-1-0 | NIL |\n| COMP202 | Theoretical Computer Science | 3 | 4 | 3-1-0 | NIL |\n| COMP203 | Analysis of Algorithms | 3 | 4 | 3-0-2 | COMP201 |\n| DATA209 | Advanced Exploratory Data Analysis | 3 | 4 | 2-0-4 | DATA132 AND MATH203 |\n| TBA | Minor/Open (1 Course) | 3 | 4 | 4-0-0 | NIL |"
+  },
+  {
+   "id": "E04",
+   "strategy": "rag_structured",
+   "label": "incorrect",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "You meet the CGPA requirement for a Distinction (your CGPA is 8.95, which is above the 8.50 threshold). However, the documents do not specify the total credit requirement you must satisfy to be eligible for the degree, so I cannot confirm whether you have completed all required credits for graduation.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "E05",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "According to the Student Handbook, to register for Semester 5 (which is the entry point to Year 3) you must have a minimum CGPA of 5.00 (Clause 12.1). Your current CGPA is 4.72, which is below this threshold, so you are not eligible to progress to the third year or register for Semester 5 at this time. You may consider the following options supported by the handbook: (1) repeat the current academic year (both odd and even semesters) and retake the required courses to improve your CGPA, or (2) re‑register for select courses in the next academic year to earn the needed credits and raise your CGPA (Clauses 12.4 and 12.5). Both options require clearing any dues and paying the applicable fees."
+  },
+  {
+   "id": "E06",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "According to the Student Handbook, transfer credits are only accepted from institutions that have a Memorandum of Understanding (MoU) with Vidyashilp University (clause 14.1). Credits from a university without an MoU are therefore not eligible for transfer. Additionally, the maximum amount of transferable credits is limited to 40% of the total credit requirement for the degree (clause 14.4). For a B.Tech degree requiring 180 credits, the ceiling is 72 credits. Consequently, the 30 NPTEL credits can be considered (provided they are on the approved list), but the 50 credits from the non‑MoU university cannot be counted, and even the total transferable credits would exceed the 72‑credit limit. So, not all 80 credits will count toward your degree."
+  },
+  {
+   "id": "U01",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "MGMT210 (Basics of Investment Management) is scheduled for Semester 6 for the 2024 batch, which is an even semester. Since the current term (September 2026) is the odd semester and you are in Semester 5, the course is not offered this term. You have already passed the prerequisite FINA333, so you will be eligible to register for MGMT210 in the next even semester (Semester 6, Jan‑May 2027)."
+  },
+  {
+   "id": "U02",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "COMP201 Data Structures is scheduled for Semester 2, which is an even‑semester course for the 2024 batch. Since you are currently in Semester 5 (an odd semester), the course is not offered this term. You will need to wait until the next even semester (Semester 6) to retake it."
+  },
+  {
+   "id": "C01",
+   "strategy": "rag_structured",
+   "label": "unsupported_hallucination",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Machine Learning (DATA301) is scheduled in semester 5 for all batches, which is an odd semester. According to the term context, the current September 2026 term is the odd semester and the next term (January‑May 2027) is the even semester. Therefore, DATA301 will not be offered in the next (even) semester; you would need to wait for the following odd semester to register for it."
+  },
+  {
+   "id": "C02",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "To determine eligibility for progression, we need to know your current academic year (batch) and your CGPA. The handbook requires a minimum CGPA of 4.00 to move to Year 2 (Semester 3) and 5.00 for Year 3 or higher. Please provide your batch year and current CGPA."
+  },
+  {
+   "id": "C03",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "I can provide the list of courses scheduled for Semester 5 once I know which batch (year of admission) you belong to, as the semester offerings differ by batch."
+  },
+  {
+   "id": "I01",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The course code DATA206 appears as a prerequisite for DATA301 Machine Learning for the 2025 batch, but the supplied documents do not contain any entry for DATA206 – its title, credits, or details are not defined in the provided data."
+  },
+  {
+   "id": "I02",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The provided documents describe the add/drop policy as allowing changes within two weeks of the commencement of classes, but they do not specify the exact calendar date for this semester’s deadline.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "I03",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The provided documents do not specify the monetary amount of the late registration fee. The Student Handbook mentions that a Late Fee must be paid for late registration (see Section 2.7), but it does not state the exact amount. You may need to contact the Office of the Registrar or check the latest fee schedule on the university portal for the current fee amount.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "I04",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "PSYC101 is the \"Introduction to Psychology\" course (3 credits, L‑T‑P 2‑1‑0) and has no prerequisites. According to your transcript you have passed PSCY102 (the alternative introductory psychology course) but there is no record of PSYC101 being completed, so you have not yet satisfied the prerequisite for PSYC202."
+  },
+  {
+   "id": "I05",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The documents state that a limited number of courses may be offered in the Summer Term, but they do not specify which courses will be offered in Summer Term 2027.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "X01",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The Student Handbook (Section 2.7) allows a one‑week late‑registration window for any reason (including a family function) provided you pay the Late Fee, but it also says no registration is allowed after that week. However, the SOP contains contradictory statements: one part says the maximum permissible period is one week, while another part says “No late registration shall be permitted” except for medical or competition reasons. Because of this inconsistency, you should verify the exact policy with your Program Chair or the Office of the Registrar before attempting to register."
+  },
+  {
+   "id": "X02",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The prerequisite(s) for DATA301 Machine Learning differ by admission batch:\n- Batches 2022‑2024: you must have completed DATA202 (Exploratory Data Analysis) **and** MATH301 (Optimization Techniques for Data Science).\n- Batches 2025‑2026: the listed prerequisites are DATA206 **and** MATH301. However, the course DATA206 does not appear in any of the supplied files, so its details are unknown.\nNote: MATH301 itself has batch‑specific prerequisites (e.g., MATH201 for most batches, none for 2024)."
+  },
+  {
+   "id": "X03",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The documents show two different numbers for the University Core credits required by the 2026 batch. One source (the detailed semester‑spread tab) lists a minimum of 24 credits, while the credit‑structure summary tab lists 18 credits. Both figures appear in the provided files, so you should verify which one is currently applied with the academic office."
+  },
+  {
+   "id": "X04",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Because your attendance in COMP203 is 68%, you are below the standard 75% requirement but above the minimum 65% that applies when a medical relaxation is granted. For a medical emergency, the Student Handbook (clause 7.3) says you must submit a leave request with supporting documents to your Faculty Advisor, who recommends it to the Program Chair, and the final approval is by the Vice‑Chancellor. The SOP version mentions only the Faculty Advisor and Program Chair (no Vice‑Chancellor). Once the relaxation is approved, you will be allowed to sit for the end‑term exam in COMP203. You should submit the medical certificate and request as soon as possible to the Faculty Advisor.\n\nNote from the source data: the documents are inconsistent on this - - Student Handbook 7.3 (p. 21): the leave request goes to the Faculty Advisor [Mentor] for recommendation to the Program Chair, and the relaxation is 'subject to the approval by the Vice-Chancellor' (7.4: the same for State/National/International events). - SOP, Student Attendance (p. 2): the request goes to the Faculty Advisor for recommendation to the Program Chair (events: Director, Campus Life and Faculty Advisor); the SOP does not mention Vice-Chancellor approval.."
+  },
+  {
+   "id": "R01",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Here is the Finance minor curriculum for each B.Tech batch:\n\n**2022 batch (8 courses, 24 credits)**\n1. Financial and Management Accounting (FAMA) – 3 cr (semester 3) – no code\n2. FINA333 – Fiancial Institutions Markets and Services – 3 cr (sem 4) – prereq MGMT208\n3. MGMT207 – Corporate Finance – 3 cr (sem 5) – prereq FAMA\n4. MGMT209 – Financial Statement Analysis – 3 cr (sem 6) – prereq FINA201 (undefined)\n5. MGMT210 – Basics of Investment Management – 4 cr (sem 6) – prereq FINA333\n6. MGMT213 – Introduction to FinTech – 2 cr (sem 7) – prereq FINA333\n7. MGMT323 – Basics of Startup Finance – 4 cr (sem 7) – prereq MGMT207\n8. MGMT203 – Business Strategy Simulation – 2 cr (sem 7) – prereq (MKMT201 OR MGMT207 OR FINA201)\n*Gaps*: course code for FAMA missing; prerequisites FINA201 and MKMT201 are not defined.\n\n**2023 batch (8 courses, 24 credits)**\n1. MGMT208 – Introduction to Financial Accounting – 3 cr (sem 3)\n2. FINA333 – Fiancial Institutions Markets and Services – 3 cr (sem 4) – prereq MGMT208\n3. MGMT207 – Corporate Finance – 3 cr (sem 5) – prereq MGMT208\n4. MGMT209 – Financial Statement Analysis – 3 cr (sem 6) – prereq MGMT208\n5. MGMT210 – Basics of Investment Management – 4 cr (sem 6) – prereq FINA333\n6. MGMT323 – Basics of Startup Finance – 4 cr (sem 6) – prereq MGMT207\n7. MGMT213 – Introduction to FinTech – 2 cr (sem 7)\n8. MGMT307 – Strategy & Decision Making – 2 cr (sem 7)\n\n**2024 batch (8 courses, 24 credits)**\n1. MGMT208 – Introduction to Financial Accounting – 3 cr (sem 3)\n2. FINA333 – Fiancial Institutions Markets and Services – 3 cr (sem 4) – prereq MGMT208\n3. MGMT207 – Corporate Finance – 3 cr (sem 5) – no prereq\n4. MGMT209 – Financial Statement Analysis – 3 cr (sem 5) – no prereq\n5. MGMT210 – Basics of Investment Management – 4 cr (sem 6) – prereq FINA333\n6. MGMT323 – Basics of Startup Finance – 4 cr (sem 6) – prereq MGMT207\n7. MGMT213 – Introduction to FinTech – 2 cr (sem 7)\n8. MGMT307 – Strategy & Decision Making – 2 cr (sem 7)\n\n**2025 batch (6 listed courses, 22 credits + 2 credits TBD)**\n1. MGMT330 – Introduction to Financial Accounting (R) – 4 cr (sem 3)\n2. New – Financial Institutions Markets & Services with FinTech – 4 cr (sem 4) – no code yet\n3. New – Corporate Finance – 4 cr (sem 5) – no code yet\n4. MGMT210 – Basics of Investment Management – 4 cr (sem 6) – prereq FINA333\n5. MGMT213 – Introduction to FinTech – 2 cr (sem 6)\n6. MGMT323 – Basics of Startup Finance – 4 cr (sem 7) – prereq MGMT207\n*Gaps*: 2 credits are TBD; two new courses have no assigned codes.\n\n**2026 batch (1 listed course, 4 credits + 20 credits TBD)**\n1. MGMT330 – Introduction to Financial Accounting (R) – 4 cr (sem 3)\n*Gaps*: 20 credits are TBD; many courses not yet decided.\n\nAll batches require a minimum of 24 credits for the Open/Minor basket (2022‑2024) or 32 credits (2025‑2026) as per the programme structure.\n\nNote from the source data: 20 credits of the 2026 batch are not yet decided (TBA/TBD in the source)."
+  },
+  {
+   "id": "R02",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "For the 2024 batch, the Law minor currently lists 4 courses that together provide 14 credits. The minor requires a total of 24 credits, so 10 credits are still pending (listed as TBA/TBD)."
+  },
+  {
+   "id": "R03",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The Design minor for the 2023 batch includes six courses totaling 24 credits:\n1. CDES105 Appreciating and Deconstructing Art and Media – 3 credits (Semester 3)\n2. CDES702 Integrative Studio II – Sensemaking, Visualization – 4 credits (Semester 4)\n3. CDES221 Information Architecture and Design – 4 credits (Semester 5)\n4. CDES219 Elements of Sound – 4 credits (Semester 6)\n5. CDES301 Sketch to Story – 4 credits (Semester 6)\n6. CDES312 Designing Futures – 5 credits (Semester 7)\nTotal credits: 24."
+  },
+  {
+   "id": "R04",
+   "strategy": "rag_structured",
+   "label": "partially_correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The Psychology minor for the 2025 batch includes 6 courses."
+  },
+  {
+   "id": "R05",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The Economics minor is not offered to the 2024 batch, so there are no Economics minor courses available for that cohort."
+  },
+  {
+   "id": "R06",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "For the 2025 batch, the Marketing minor lists 5 courses with a total of 19 credits. Note that the source indicates 5 additional credits are still TBD, so the full minor credit requirement (32 credits) is not yet fully defined.\n\nNote from the source data: 5 credits of the 2025 batch are not yet decided (TBA/TBD in the source); 'Services Marketing' has no course code yet."
+  },
+  {
+   "id": "R07",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "For the 2024 batch Start‑up minor, the catalogue lists two concrete courses:\n1. MGMT326 Product Development – 4 credits – semester 4 – prerequisite: MKTG201 (Marketing Management)\n2. MGMT336 Design Thinking for Entrepreneurship – 4 credits – semester 5 – no prerequisite\nThese two courses total 8 credits. The minor requires 24 credits, so 16 credits are still listed as TBD (courses not yet decided) and have no assigned semester or prerequisite yet.\n\nGaps in the source data: 16 credits of the 2024 batch are still pending (TBA/TBD)."
+  },
+  {
+   "id": "R08",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Health Psychology (PSYC306) is scheduled in semester 6 (an even semester) for the 2023, 2024, 2025, and 2026 batches. Its prerequisites are PSYC101 (Introduction to Psychology) AND PSYC201 (Biological Psychology)."
+  },
+  {
+   "id": "R09",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Industrial Economics (ECON413) requires ECON201 (Microeconomics) and either ECON202 or ECON207. ECON207 (Macroeconomics and Applicants to Indian Economy) is defined, but ECON202 does not appear in the provided data, so its details are unknown."
+  },
+  {
+   "id": "R10",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The 2024 batch must complete a minimum of 24 Minor/Open credits."
+  },
+  {
+   "id": "R11",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Vid​yashilp University is located at Vidyashilp University Founding Campus #125, Bettenahalli Kundana Hobli, Chapparkallu Road, Bengaluru – 562110."
+  },
+  {
+   "id": "R12",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The provided documents do not specify the amount of the B.Tech tuition fee. The handbook mentions that the tuition fee is the annual fee for each academic year, but the exact figure is not listed in the available sources.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "R13",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Normally you must attend at least 75 % of the classes conducted in a course to be allowed to sit for the end‑term exam. If you have an approved leave (e.g., for representing the State/National/International events or for serious medical reasons), the attendance requirement can be relaxed, but it can never go below 65 % of the classes conducted."
+  },
+  {
+   "id": "R14",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The documents contain conflicting statements. The Student Handbook (sections 2.6‑2.7) says late registration is allowed for medical reasons (up to two weeks) and for competition participation with approval, and for any other reason up to one week with a late fee. However, the SOP (pages 1‑2) both states that the maximum permissible period for late registration is one week and also says “No late registration shall be permitted,” except for medical or competition cases with prior approval. Because of this inconsistency, you should verify the exact policy with your Program Chair or the Office of the Registrar before attempting to register late."
+  },
+  {
+   "id": "R15",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "none (exact database lookup)",
+   "answer": "**The 2022 batch Foundation basket lists 14 courses across Semesters 1, 2, 3, 4 and 6, worth 34 credits in total.**\n\nPSYC101/ECON101 is an either/or choice, so a student actually takes 13 courses from these 14.\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| MATH201 | Calculus | 1 | 3 | 2-1-0 | NIL |\n| COMP132 | Design Workshop | 1 | 2 | 0-0-4 | NIL |\n| MTSC111 | Materials for Smart Devices | 1 | 3 | 2-0-2 | NIL |\n| DATA131 | Visualizing Data for Story Telling | 1 | 2 | 1-0-2 | NIL |\n| PSYC101 (either/or) | Introduction to Psychology | 1 | 3 | 2-1-0 | NIL |\n| ECON101 (either/or) | Introduction to Economics | 1 | 3 | 2-1-0 | NIL |\n| MATH202 | Probability Theory | 2 | 3 | 2-1-0 | NIL |\n| MTSC211 | Sustainable Smart Materials | 2 | 3 | 2-0-2 | MTSC111 |\n| ENGL201 | Academic Writing | 2 | 3 | 2-0-2 | UCOR102 |\n| MTSC781 | Sustainable Cities and Communities | 3 | 3 | 0-0-0 | NIL |\n| MATH204 | Linear Algebra | 3 | 3 | 2-1-0 | NIL |\n| SLAD206 | Human Values in Work and Life | 4 | 2 | 0-0-0 | NIL |\n| SLAD207 | Foundation Seminar | 4 | 1 | 0-0-0 | NIL |\n| LANG101 | Language | 6 | 3 | 0-0-0 | NIL |"
+  },
+  {
+   "id": "R16",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "none (exact database lookup)",
+   "answer": "**The 2023 batch has 8 courses listed in Semester 3, worth 29 credits in total.**\n\n1 further slot is listed only as TBA in the source (the student chooses later).\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| UCOR205 | Socio Cultural Perspectives on Indian Life-SPIL | 3 | 3 | 2-1-0 | NIL |\n| UCOR201 | Introduction to Epistemology | 3 | 2 | 1-1-0 | NIL |\n| MTSC781 | Sustainable Cities and Communities | 3 | 3 | 0-0-0 | NIL |\n| MATH204 | Linear Algebra | 3 | 3 | 2-1-0 | NIL |\n| COMP203 | Analysis of Algorithms | 3 | 4 | 3-0-2 | COMP201 |\n| COMP202 | Theoretical Computer Science | 3 | 4 | 3-1-0 | NIL |\n| MATH207 | Research Methodology | 3 | 3 | 2-0-2 | NIL |\n| DATA202 | Exploratory Data Analysis | 3 | 3 | 2-0-2 | DATA201 AND MATH203 |\n| TBA | Minor/Open (#1 Course) | 3 | 4 | 4-0-0 | NIL |"
+  },
+  {
+   "id": "R17",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "none (exact database lookup)",
+   "answer": "**The 2024 batch Program Core basket lists 13 courses across Semesters 1, 2, 3, 4, 5, 6 and 7, worth 46 credits in total.**\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| DATA103 | Programming in Python | 1 | 3 | 1-0-4 | NIL |\n| COMP201 | Data Structures | 2 | 4 | 3-0-2 | NIL |\n| DATA132 | Data visualization and Storytelling | 2 | 3 | 1-0-4 | DATA103 |\n| COMP203 | Analysis of Algorithms | 3 | 4 | 3-0-2 | COMP201 |\n| COMP202 | Theoretical Computer Science | 3 | 4 | 3-1-0 | NIL |\n| COMP209 | Databases Management | 4 | 4 | 3-0-2 | NIL |\n| COMP204 | Digital Design and Computer Organization | 4 | 4 | 3-1-0 | NIL |\n| COMP301 | Artificial Intelligence | 4 | 4 | 3-0-2 | NIL |\n| COMP208 | Networks | 5 | 4 | 3-0-2 | NIL |\n| COMP207 | Operating Systems | 5 | 3 | 2-0-2 | NIL |\n| COMP205 | Object Oriented Programming | 5 | 3 | 2-0-2 | NIL |\n| COMP206 | Microprocessors and Computer Architecture | 6 | 4 | 3-0-2 | COMP204 AND COMP207 |\n| COMP302 | Internet of Things | 7 | 2 | 0-0-4 | COMP132 AND COMP201 AND COMP206 AND COMP208 AND COMP301 |"
+  },
+  {
+   "id": "R18",
+   "strategy": "rag_structured",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The standard minimum attendance requirement is 75 % of the classes conducted for each course (Handbook clause 7.2). However, if you have approved leave for medical reasons or are representing the State/National/International in events, the minimum can be relaxed to 65 % (Handbook clauses 7.3 & 7.4; SOP clause 2). Attendance requirements set by any government regulatory body for your program must also be met."
+  },
+  {
+   "id": "F01",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The handbook sets a general minimum attendance of 75% (Clause 7.2). However, for students with approved medical leave or who represent the State/National/International in events, the minimum can be relaxed, but it can never go below 65% of the classes conducted (Clauses 7.3, 7.4). Therefore, the lowest attendance you can have and still be allowed to sit the end‑term exam is 65%."
+  },
+  {
+   "id": "F02",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "You need a minimum CGPA of 4.00 to be promoted to Year 2 and be eligible to register for Semester 3."
+  },
+  {
+   "id": "F03",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "To graduate from the B.Tech programme you need to earn a total of 180 credits. The minimum CGPA required to be eligible for the award of the degree is 5.00."
+  },
+  {
+   "id": "F04",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The prerequisite courses for DATA209 Advanced Exploratory Data Analysis are DATA132 (Data Visualization and Storytelling) and MATH203 (Probability and Statistics)."
+  },
+  {
+   "id": "F05",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "You can register for up to 12 credits in a Summer Term."
+  },
+  {
+   "id": "E01",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "No, you cannot register for DATA301 Machine Learning this semester. The course is scheduled for Semester 5 (odd term), which matches the current term, but its prerequisites are DATA202 and MATH301. You have passed DATA202, but you failed MATH301 and have not retaken it, so the prerequisite is not satisfied. Therefore the eligibility check marks you as NOT ELIGIBLE."
+  },
+  {
+   "id": "E02",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "No, you are not eligible to register for DATA209 Advanced Exploratory Data Analysis this semester. The course is placed in Semester 3 (an odd semester) and is offered in the current odd term, but it requires both DATA132 and MATH203 as prerequisites. You have passed MATH203, but you failed DATA132 (Data Visualization and Storytelling) and have not yet passed it. You will need to clear DATA132 before you can enroll in DATA209."
+  },
+  {
+   "id": "E03",
+   "strategy": "agentic",
+   "label": "unsupported_hallucination",
+   "provider": "none (exact database lookup)",
+   "answer": "**The 2025 batch has 6 courses listed in Semester 3, worth 25 credits in total.**\n\n1 further slot is listed only as TBA in the source (the student chooses later).\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| UCOR207 | Analytical Academic Writing | 3 | 3 | 2-1-0 | NIL |\n| SLAD206 | Human Values in Work and Life | 3 | 2 | 0-0-0 | NIL |\n| MATH209 | Linear Algebra | 3 | 4 | 3-1-0 | NIL |\n| COMP202 | Theoretical Computer Science | 3 | 4 | 3-1-0 | NIL |\n| COMP203 | Analysis of Algorithms | 3 | 4 | 3-0-2 | COMP201 |\n| DATA209 | Advanced Exploratory Data Analysis | 3 | 4 | 2-0-4 | DATA132 AND MATH203 |\n| TBA | Minor/Open (1 Course) | 3 | 4 | 4-0-0 | NIL |"
+  },
+  {
+   "id": "E04",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "You meet the CGPA requirement for a Distinction (your CGPA is 8.95, which is above the 8.50 threshold). However, you have only earned 148 of the 180 credits required for the B.Tech (Data Science) degree, leaving 32 credits still to be completed (including all Specialization Tracks, Open/Minor, and Internship/Capstone credits). Until you finish those remaining credits and satisfy all other degree conditions, you are not yet eligible for a Distinction."
+  },
+  {
+   "id": "E05",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Based on the handbook, to move from Year 2 to Year 3 (i.e., to register for Semester 5) you must have a minimum CGPA of 5.00 after the results of the preceding semester. Your current CGPA is 4.72 (see the credit‑calculation data), which is below the required threshold, so you are not eligible to progress to the third year or register for Semester 5 at this time. You will need to improve your CGPA (e.g., by retaking courses or using the re‑registration provisions in Clause 12.5) before you can register for Semester 5."
+  },
+  {
+   "id": "E06",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "According to the Handbook, transfer credits are only accepted from institutions that have a Memorandum of Understanding (MoU) with Vidyashilp University (see clause 14.1). Your 50 credits from a university without an MoU therefore cannot be counted. For credits that are eligible (e.g., NPTEL credits under clause 14.2), the maximum you can transfer is 40 % of the total degree requirement. The degree requires 180 credits, so the ceiling is 0.40 × 180 = 72 credits. Even if the NPTEL credits are approved, only up to 72 credits in total can be transferred, and you are requesting 80 credits. Hence, not all 80 credits will count toward your degree.\n\n**Please verify:** I could not fully check this answer against the documents ('72 credits' does not appear in the evidence)."
+  },
+  {
+   "id": "U01",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "You have satisfied the prerequisite (FINA333) for MGMT210 Basics of Investment Management. However, MGMT210 is placed in semester 6, which is an even semester. According to the current term (odd semester, September 2026), even‑semester courses are not offered. Therefore you cannot register for MGMT210 this semester; you can plan to take it in the next even semester (January‑May 2027)."
+  },
+  {
+   "id": "U02",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "COMP201 Data Structures is scheduled for Semester 2, which is an even‑semester course. The current term (September 2026) is the odd semester, so the course is not offered now. Since you failed it, you can re‑take it in the next even semester (January‑May 2027)."
+  },
+  {
+   "id": "C01",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "none (exact database lookup)",
+   "answer": "I can check DATA301 Machine Learning for you, but its prerequisites depend on your batch and I don't have your record yet."
+  },
+  {
+   "id": "C02",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "To determine eligibility for progression, we need to know your current academic year (batch) and your CGPA. The handbook requires a minimum CGPA of 4.00 to move to Year 2 (Semester 3) and 5.00 for Year 3 or higher (Semester 5+). Please provide your batch/year and current CGPA."
+  },
+  {
+   "id": "C03",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "I need to know which admission batch you belong to (e.g., 2022, 2023, 2024, 2025, or 2026) to tell you the courses scheduled for Semester 5 in your curriculum."
+  },
+  {
+   "id": "I01",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The course code DATA206 is mentioned as a prerequisite for DATA301 (Machine Learning) for the 2025 batch, but it does not appear in any of the supplied course data. Its title, credits, or details are not provided in the available documents.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "I02",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The provided documents describe the add/drop policy as allowing changes within two weeks of the commencement of classes, but they do not specify the exact start date of classes for the current semester. Therefore, I cannot give the exact add/drop deadline date.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "I03",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The provided documents do not specify the monetary amount of the late registration fee. The Student Handbook mentions that a Late Fee is required for late registration (see Section 2.7), but it does not state the exact amount. You may need to contact the Office of the Registrar or check the latest fee schedule on the university portal for the current fee amount.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "I04",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "PSYC101 is \"Introduction to Psychology\" (3 credits, L‑T‑P 2‑1‑0) and is offered in semester 1 for all batches. It has no prerequisites. According to your record you have not taken PSYC101 – you only have PSCY102 (Introduction to Psychology) listed, which is a different course. Therefore you have not completed the prerequisite for PSYC202."
+  },
+  {
+   "id": "I05",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The documents state that a limited number of courses may be offered in the Summer Term, but they do not specify which courses will be offered in Summer Term 2027.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "X01",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The Student Handbook (Section 2.7) allows a one‑week late‑registration window for any reason (including a family function) provided you pay the Late Fee, but it also says no registration is allowed after that week. However, the SOP contains contradictory statements: one part says the maximum permissible period is one week, while another part says “No late registration shall be permitted” except for medical or competition reasons. Because of this inconsistency, you should verify the exact rule with your Program Chair or the Office of the Registrar before attempting to register."
+  },
+  {
+   "id": "X02",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The prerequisite(s) for DATA301 Machine Learning differ by admission batch:\n- Batches 2022‑2024: you must have completed DATA202 (Exploratory Data Analysis) **and** MATH301 (Optimization Techniques for Data Science).\n- Batches 2025‑2026: the listed prerequisites are DATA206 **and** MATH301. However, the course DATA206 does not appear in any of the supplied files, so its details are unknown.\nNote: MATH301 itself has batch‑specific prerequisites (e.g., MATH201 for most batches, none for 2024)."
+  },
+  {
+   "id": "X03",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The documents show two different numbers for the University Core credits required by the 2026 batch. One source (the detailed semester‑spread tab) lists a minimum of 24 credits, while the credit‑structure summary tab lists 18 credits. Both figures appear in the provided files, so you should verify which one is currently applied with the academic office."
+  },
+  {
+   "id": "X04",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Because you were hospitalized, you may request a medical attendance relaxation. Both the Handbook and the SOP require a leave request with supporting documents to be submitted to your Faculty Advisor, who then recommends it to the Program Chair. The Handbook adds that the final approval must come from the Vice‑Chancellor, while the SOP does not mention the Vice‑Chancellor. If the relaxation is approved, the minimum attendance requirement drops to 65%, so your 68% attendance would satisfy the rule and you would be allowed to sit for the end‑term exam for COMP203. You should submit the medical certificate and any other required documents as soon as possible."
+  },
+  {
+   "id": "R01",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Here are the Finance minor courses and total credits for each B.Tech batch:\n\n**2022 batch (8 courses, 24 credits)**\n1. Financial and Management Accounting (FAMA) – 3 cr (code not known) – semester 3\n2. FINA333 – Fiancial Institutions Markets and Services – 3 cr – semester 4 – prereq: MGMT208\n3. MGMT207 – Corporate Finance – 3 cr – semester 5 – prereq: FAMA (no code)\n4. MGMT209 – Financial Statement Analysis – 3 cr – semester 6 – prereq: FINA201 (undefined)\n5. MGMT210 – Basics of Investment Management – 4 cr – semester 6 – prereq: FINA333\n6. MGMT213 – Introduction to Fintech – 2 cr – semester 7 – prereq: FINA333\n7. MGMT323 – Basics of Startup Finance – 4 cr – semester 7 – prereq: MGMT207\n8. MGMT203 – Business Strategy Simulation – 2 cr – semester 7 – prereq: (MKMT201 OR MGMT207 OR FINA201)\n*Gaps: missing course code for FAMA; prerequisites FINA201 and MKMT201 are not defined.*\n\n**2023 batch (8 courses, 24 credits)**\n1. MGMT208 – Introduction to Financial Accounting – 3 cr – semester 3\n2. FINA333 – Fiancial Institutions Markets and Services – 3 cr – semester 4 – prereq: MGMT208\n3. MGMT207 – Corporate Finance – 3 cr – semester 5 – prereq: MGMT208\n4. MGMT209 – Financial Statement Analysis – 3 cr – semester 6 – prereq: MGMT208\n5. MGMT210 – Basics of Investment Management – 4 cr – semester 6 – prereq: FINA333\n6. MGMT323 – Basics of Startup Finance – 4 cr – semester 6 – prereq: MGMT207\n7. MGMT213 – Introduction to Fintech – 2 cr – semester 7\n8. MGMT307 – Strategy & Decision Making – 2 cr – semester 7\n\n**2024 batch (8 courses, 24 credits)**\n1. MGMT208 – Introduction to Financial Accounting – 3 cr – semester 3\n2. FINA333 – Fiancial Institutions Markets and Services – 3 cr – semester 4 – prereq: MGMT208\n3. MGMT207 – Corporate Finance – 3 cr – semester 5 – no prereq listed\n4. MGMT209 – Financial Statement Analysis – 3 cr – semester 5 – no prereq listed\n5. MGMT210 – Basics of Investment Management – 4 cr – semester 6 – prereq: FINA333\n6. MGMT323 – Basics of Startup Finance – 4 cr – semester 6 – prereq: MGMT207\n7. MGMT213 – Introduction to Fintech – 2 cr – semester 7\n8. MGMT307 – Strategy & Decision Making – 2 cr – semester 7\n\n**2025 batch (6 listed courses, 22 credits + 2 credits TBD)**\n1. MGMT330 – Introduction to Financial Accounting (R) – 4 cr – semester 3\n2. New – Financial Institutions Markets & Services with Fintech – 4 cr – semester 4 (no code yet)\n3. New – Corporate Finance – 4 cr – semester 5 (no code yet)\n4. MGMT210 – Basics of Investment Management – 4 cr – semester 6 – prereq: FINA333\n5. MGMT213 – Introduction to Fintech – 2 cr – semester 6\n6. MGMT323 – Basics of Startup Finance – 4 cr – semester 7 – prereq: MGMT207\n*Gaps: 2 credits are TBD and two courses have no assigned codes.*\n\n**2026 batch (1 listed course, 4 credits + 20 credits TBD)**\n1. MGMT330 – Introduction to Financial Accounting (R) – 4 cr – semester 3\n*Gaps: 20 credits are TBD and no further courses are defined yet.*\n\nNote from the source data: 20 credits of the 2026 batch are not yet decided (TBA/TBD in the source)."
+  },
+  {
+   "id": "R02",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "For the 2024 batch, the Law minor currently lists 4 courses (LAWP100, LAWS301, LAWM301, LAWM302) that together provide 14 credits. The minor requires a total of 24 credits, so 10 credits are still pending as TBA/TBD courses."
+  },
+  {
+   "id": "R03",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The Design minor for the 2023 batch includes six courses totaling 24 credits:\n1. CDES105 Appreciating and Deconstructing Art and Media – 3 credits (Semester 3)\n2. CDES702 Integrative Studio II – Sensemaking, Visualization – 4 credits (Semester 4)\n3. CDES221 Information Architecture and Design – 4 credits (Semester 5)\n4. CDES219 Elements of Sound – 4 credits (Semester 6)\n5. CDES301 Sketch to Story – 4 credits (Semester 6)\n6. CDES312 Designing Futures – 5 credits (Semester 7)\nTotal credits: 24."
+  },
+  {
+   "id": "R04",
+   "strategy": "agentic",
+   "label": "partially_correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The Psychology minor for the 2025 batch includes 6 courses."
+  },
+  {
+   "id": "R05",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The Economics minor is not offered to the 2024 batch. The source file indicates 'No Students' for this batch, meaning no Economics minor courses are available to you."
+  },
+  {
+   "id": "R06",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "For the 2025 batch, the Marketing minor lists 5 courses with a total of 19 credits. Note that the source indicates 5 additional credits are still TBD, so the full credit requirement (32 credits) is not yet fully defined.\n\nNote from the source data: 5 credits of the 2025 batch are not yet decided (TBA/TBD in the source); 'Services Marketing' has no course code yet."
+  },
+  {
+   "id": "R07",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "For the 2024 batch Start‑up minor, the defined courses are:\n1. MGMT326 Product Development – 4 credits – semester 4 – prerequisite: MKTG201 (Marketing Management)\n2. MGMT336 Design Thinking for Entrepreneurship – 4 credits – semester 5 – no prerequisite\nThese two courses total 8 credits. The minor requires a minimum of 24 credits, so 16 credits are still listed as TBD (not yet decided) in the source data. No other Start‑up minor courses are specified for 2024."
+  },
+  {
+   "id": "R08",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Health Psychology (PSYC306) is scheduled in semester 6 (an even semester) for the 2023, 2024, 2025, and 2026 batches. Its prerequisites are PSYC101 (Introduction to Psychology) AND PSYC201 (Biological Psychology)."
+  },
+  {
+   "id": "R09",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "ECON413 Industrial Economics requires ECON201 (Microeconomics) AND either ECON202 or ECON207. ECON207 (Macroeconomics and Applicants to Indian Economy) is defined, but ECON202 does not appear in the provided data, so its details are unknown."
+  },
+  {
+   "id": "R10",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The 2024 batch must complete a minimum of 24 Minor/Open credits."
+  },
+  {
+   "id": "R11",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Vid​yashilp University is located at Vidyashilp University Founding Campus #125, Bettenahalli Kundana Hobli, Chapparkallu Road, Bengaluru – 562110."
+  },
+  {
+   "id": "R12",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The provided documents do not specify the amount of the B.Tech tuition fee. The handbook mentions that the tuition fee is the annual fee for each academic year, but the exact figure is not listed in the available sources.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83)."
+  },
+  {
+   "id": "R13",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "Normally you must have attended at least 75 % of the classes conducted in a course to be allowed to sit the end‑term exam (Handbook clause 7.2). However, if you obtain approved leave for medical reasons or for representing the State/National/International events, the attendance requirement can be relaxed, but it can never go below 65 % of the classes (Handbook clauses 7.3 and 7.4)."
+  },
+  {
+   "id": "R14",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The documents contain conflicting statements. The Student Handbook (sections 2.6‑2.7) says late registration is allowed for medical reasons (up to two weeks) and for competition participation with approval, and for any other reason up to one week with a late fee. However, the SOP (pages 1‑2) both states that the maximum permissible period for late registration is one week and also says “No late registration shall be permitted,” except for medical or competition cases with prior approval. Because of this inconsistency, you should verify the exact policy with your Program Chair or the Office of the Registrar before attempting to register late."
+  },
+  {
+   "id": "R15",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "none (exact database lookup)",
+   "answer": "**The 2022 batch Foundation basket lists 14 courses across Semesters 1, 2, 3, 4 and 6, worth 34 credits in total.**\n\nPSYC101/ECON101 is an either/or choice, so a student actually takes 13 courses from these 14.\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| MATH201 | Calculus | 1 | 3 | 2-1-0 | NIL |\n| COMP132 | Design Workshop | 1 | 2 | 0-0-4 | NIL |\n| MTSC111 | Materials for Smart Devices | 1 | 3 | 2-0-2 | NIL |\n| DATA131 | Visualizing Data for Story Telling | 1 | 2 | 1-0-2 | NIL |\n| PSYC101 (either/or) | Introduction to Psychology | 1 | 3 | 2-1-0 | NIL |\n| ECON101 (either/or) | Introduction to Economics | 1 | 3 | 2-1-0 | NIL |\n| MATH202 | Probability Theory | 2 | 3 | 2-1-0 | NIL |\n| MTSC211 | Sustainable Smart Materials | 2 | 3 | 2-0-2 | MTSC111 |\n| ENGL201 | Academic Writing | 2 | 3 | 2-0-2 | UCOR102 |\n| MTSC781 | Sustainable Cities and Communities | 3 | 3 | 0-0-0 | NIL |\n| MATH204 | Linear Algebra | 3 | 3 | 2-1-0 | NIL |\n| SLAD206 | Human Values in Work and Life | 4 | 2 | 0-0-0 | NIL |\n| SLAD207 | Foundation Seminar | 4 | 1 | 0-0-0 | NIL |\n| LANG101 | Language | 6 | 3 | 0-0-0 | NIL |"
+  },
+  {
+   "id": "R16",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "none (exact database lookup)",
+   "answer": "**The 2023 batch has 8 courses listed in Semester 3, worth 29 credits in total.**\n\n1 further slot is listed only as TBA in the source (the student chooses later).\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| UCOR205 | Socio Cultural Perspectives on Indian Life-SPIL | 3 | 3 | 2-1-0 | NIL |\n| UCOR201 | Introduction to Epistemology | 3 | 2 | 1-1-0 | NIL |\n| MTSC781 | Sustainable Cities and Communities | 3 | 3 | 0-0-0 | NIL |\n| MATH204 | Linear Algebra | 3 | 3 | 2-1-0 | NIL |\n| COMP203 | Analysis of Algorithms | 3 | 4 | 3-0-2 | COMP201 |\n| COMP202 | Theoretical Computer Science | 3 | 4 | 3-1-0 | NIL |\n| MATH207 | Research Methodology | 3 | 3 | 2-0-2 | NIL |\n| DATA202 | Exploratory Data Analysis | 3 | 3 | 2-0-2 | DATA201 AND MATH203 |\n| TBA | Minor/Open (#1 Course) | 3 | 4 | 4-0-0 | NIL |"
+  },
+  {
+   "id": "R17",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "none (exact database lookup)",
+   "answer": "**The 2024 batch Program Core basket lists 13 courses across Semesters 1, 2, 3, 4, 5, 6 and 7, worth 46 credits in total.**\n\n| Course Code | Title | Semester | Credits | L-T-P | Prerequisites |\n|---|---|---|---|---|---|\n| DATA103 | Programming in Python | 1 | 3 | 1-0-4 | NIL |\n| COMP201 | Data Structures | 2 | 4 | 3-0-2 | NIL |\n| DATA132 | Data visualization and Storytelling | 2 | 3 | 1-0-4 | DATA103 |\n| COMP203 | Analysis of Algorithms | 3 | 4 | 3-0-2 | COMP201 |\n| COMP202 | Theoretical Computer Science | 3 | 4 | 3-1-0 | NIL |\n| COMP209 | Databases Management | 4 | 4 | 3-0-2 | NIL |\n| COMP204 | Digital Design and Computer Organization | 4 | 4 | 3-1-0 | NIL |\n| COMP301 | Artificial Intelligence | 4 | 4 | 3-0-2 | NIL |\n| COMP208 | Networks | 5 | 4 | 3-0-2 | NIL |\n| COMP207 | Operating Systems | 5 | 3 | 2-0-2 | NIL |\n| COMP205 | Object Oriented Programming | 5 | 3 | 2-0-2 | NIL |\n| COMP206 | Microprocessors and Computer Architecture | 6 | 4 | 3-0-2 | COMP204 AND COMP207 |\n| COMP302 | Internet of Things | 7 | 2 | 0-0-4 | COMP132 AND COMP201 AND COMP206 AND COMP208 AND COMP301 |"
+  },
+  {
+   "id": "R18",
+   "strategy": "agentic",
+   "label": "correct",
+   "provider": "groq:openai/gpt-oss-120b",
+   "answer": "The standard minimum attendance requirement is 75 % of the classes conducted for each course (Handbook clause 7.2). However, if you have approved leave for exams, serious medical reasons, or represent the State/National/International in events, the minimum can be relaxed to 65 % (Handbook clauses 7.3, 7.4 and SOP clause 2). Attendance below these thresholds will prevent you from appearing for end‑term exams and result in an FA grade."
+  }
+ ]
+}
