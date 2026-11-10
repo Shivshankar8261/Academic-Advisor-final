@@ -147,6 +147,8 @@ The undergraduate journey of a business student at VU is carefully designed with
 <!-- page:6 -->
 ## B.M.S. (Hons.) Digital Business: Faculty
 
+Faculty members (professors and teachers) of the B.M.S. (Hons.) Digital Business programme at Vidyashilp University, with their designation and qualifications:
+
 * Kuriakose Mamkoottam, Dean, School of Business and Entrepreneurship, PhD in Sociology, Delhi School of Economics
 * Umesh S. Mahtani, Program Chair, Business Studies, Bachelor of Management Studies, MBA, IIM Bangalore, PhD in Management
 * Ankita Tripathi, Assistant Professor, School of Business and Entrepreneurship, PhD in Finance and Accounting, Hemchand Yadav Vishwavidyalaya
@@ -311,6 +313,8 @@ The VU Centre for Incubation and Entrepreneurship provides an opportunity for th
 
 <!-- page:15 -->
 ## B.M.S. (Hons.) Digital Business: Message from the Dean
+
+Message from Kuriakose Mamkoottam, Professor & Dean (B.M.S. (Hons.) Digital Business).
 
 Vidyashilp University is a young educational initiative located in Bangalore and the School of Business and Entrepreneurship offers 4-year undergraduate programs in management under the guidelines of the new education policy. Honours Bachelor in Management Studies (BMS), Honours Bachelor in Management Studies (BMS with Research) and B.M.S., LL.B. (Hons) are options available for students. The school also offers doctoral program in management.
 

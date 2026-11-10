@@ -2,7 +2,7 @@
 Hosted database (Supabase Postgres, provisioned through the Vercel integration).
 
 Two jobs:
-  1. Source of truth for the data ALICE answers from (courses, minors, baskets, BMS spread, campus rooms, equipment,
+  1. Source of truth for the data ALICE answers from (courses, minors, baskets, campus rooms, equipment,
      facilities). At start-up, and then every SYNC_EVERY_S, the tables are copied into a local SQLite cache that every
      exact lookup reads. Reads therefore stay fast, an edit in Supabase reaches answers within minutes, and if
      Supabase is unreachable the bundled copy keeps answering.
@@ -43,6 +43,7 @@ DATABASE_URL = _clean_url(os.getenv("POSTGRES_URL") or os.getenv("DATABASE_URL")
 SYNC_EVERY_S = float(os.getenv("DB_SYNC_EVERY_S", "600"))
 CACHE = Path(tempfile.gettempdir()) / "alice_courses_live.db"
 
+RETIRED_TABLES = ["bms_courses", "bms_baskets"]
 # table -> (columns in order, primary key or None). The same shape in SQLite and Postgres.
 TABLES = {
     "courses": ["id", "kind", "batch", "semester", "basket", "minor", "course_code", "code_status", "title", "L", "T", "P",
@@ -50,8 +51,6 @@ TABLES = {
                 "source_file", "source_tab", "source_row"],
     "baskets": ["batch", "basket", "min_credits", "placed_credits", "source_file", "source_tab", "source_row"],
     "struct_baskets": ["batch", "basket", "credits", "source_file", "source_tab", "source_row"],
-    "bms_courses": ["semester", "basket", "code", "title", "L", "T", "P", "credits", "timetable_batch", "source_row"],
-    "bms_baskets": ["basket", "min_credits", "captured_credits", "source_row"],
     "rooms": ["room_id", "block", "floor", "floor_name", "name", "type", "department", "capacity", "ac", "ac_units", "source_row"],
     "equipment": ["equipment_id", "room_id", "block", "floor", "item", "category", "quantity", "operational_qty", "status",
                   "source_row"],
@@ -113,6 +112,8 @@ def seed(bundled: Path, force: bool = False) -> bool:
         if have and have[0] == want and not force:
             pg.commit()
             return False
+        for table in RETIRED_TABLES:  # data that must no longer be served, e.g. the draft BMS spread
+            cur.execute(f"DROP TABLE IF EXISTS {table}")
         lite = sqlite3.connect(bundled)
         for table, cols in TABLES.items():
             types = {r[1]: r[2] for r in lite.execute(f"PRAGMA table_info({table})")}

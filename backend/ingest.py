@@ -33,7 +33,6 @@ DOCS = {
     "minors.md": "Minor_Courses_for_BTech_Students.xlsx",
     "structure_summary.md": "Semester_Spread_Structures_Sept_2026.xlsx",
     "term_context.md": "term_context.md (derived)",
-    "bms_structure.md": "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx",
     "campus_infrastructure.md": "College_Infrastructure_Dataset_SYNTHETIC.xlsx",
     # programme brochures and the programme sheet (extract_brochures.py)
     "programmes.md": "Vidyashilp_University_Programs_.xlsx",

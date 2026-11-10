@@ -236,6 +236,8 @@ The final year serves as a high-impact bridge to the professional world, centere
 <!-- page:10 -->
 ## B.A./B.M.S., LL.B. (Hons.) Law: Faculty
 
+Faculty members (professors and teachers) of the B.A./B.M.S., LL.B. (Hons.) Law programme at Vidyashilp University, with their designation and qualifications:
+
 1:7 | FACULTY STUDENT RATIO
 
 Our distinguished faculty have advanced academic training from some of the world's top universities, including the University of Glasgow, SOAS, University of London, National Law University - Delhi, Central University of Kerala, National Law University, Tripura and Bhopal, and West Bengal National University of Juridical Sciences. Learn from their expertise, collaborate on groundbreaking research, and embark on your own journey of educational transformation.
@@ -535,6 +537,8 @@ Know More
 
 <!-- page:22 -->
 ## B.A./B.M.S., LL.B. (Hons.) Law: “The faculty at Vidyashilp
+
+Faculty members (professors and teachers) of the B.A./B.M.S., LL.B. (Hons.) Law programme at Vidyashilp University, with their designation and qualifications:
 University are very supportive
 and knowledgeable, always
 willing to help students whenever
@@ -551,6 +555,8 @@ B.A., LLB. (Hons.)
 ## B.A./B.M.S., LL.B. (Hons.) Law: 22 · VIDYASHILP UNIVERSITY
 
 ## B.A./B.M.S., LL.B. (Hons.) Law: Message from the Dean
+
+Message from Roopa Madhav, Dean and Program Chair (B.A./B.M.S., LL.B. (Hons.) Law).
 
 Welcome to the School of Law at Vidyashilp University. Based in Bengaluru, we are an emerging voice in legal education, committed to nurturing skilled lawyers equipped to solve real-world problems with innovation, understanding, and resilience. While rooted in rigorous legal training, the School draws upon the strengths of other disciplines across the University to offer a truly interdisciplinary learning experience. Students are prepared not only for legal careers, but also for diverse professional pathways beyond conventional practice. The School of Law is part of a vibrant academic community that fosters interdisciplinary and socially conscious approaches to legal education. Through innovative pedagogy, policy engagement, research, certificate courses, legal services clinics, and pro bono initiatives, the School actively contributes to contemporary legal discourse. The curriculum is continuously enriched through interactions with experts and practitioners, while research and industry partnerships advance key areas including public law, regulatory governance, sustainability, IPR, technology, AI, and international law.
 

@@ -17,6 +17,10 @@ import identity
 MINOR_NAMES = r"law|design|psychology|economics|finance|marketing|start-?up|entrepreneurship"
 QUESTION_START = r"(what|which|who|how|when|where|why|can|could|may|should|is|are|am|do|does|did|will|would|have|has)\b"
 COMMAND_START = r"(list|show|tell|give|explain|summari[sz]e|compare|describe)\b"
+TOPIC_WORDS = (r"\b(courses?|subjects?|credits?|eligib\w*|fees?|tuition|cost|admissions?|entrance|apply|minors?|majors?"
+               r"|facult(y|ies)|dean|professors?|teachers?|placements?|internships?|scholarships?|syllabus|curriculum"
+               r"|structure|tracks?|speciali[sz]\w*|electives?|duration|exams?|attendance|rules?|requirements?"
+               r"|careers?|jobs?|hostel|library|campus|timetable|deadline|grades?|cgpa)\b")
 SELF_STATEMENT = r"\b(i am|i'm|im|i was|i joined|i study|i've|my (batch|semester|sem|programme|program)|as an?)\b"
 NEEDS_RE = re.compile(r"what (information|info|details?|else) do you (need|require)|what do you (need|require)\b"
                       r"|anything else you need", re.I)
@@ -68,7 +72,8 @@ def _is_statement(sentence: str) -> bool:
         return True
     if s.endswith("?") or re.match(QUESTION_START, s) or re.match(COMMAND_START, s):
         return False
-    return not re.search(r"\b(courses?|subjects?|credits?)\b", s)
+    # "eligibility for btech data science" names a topic, so it is a request, not the student describing themselves
+    return not re.search(TOPIC_WORDS, s)
 
 
 def _absorb(facts: Facts, message: str, asked_batch: bool):

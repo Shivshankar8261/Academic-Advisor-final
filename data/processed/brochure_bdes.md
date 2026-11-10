@@ -224,6 +224,8 @@ Through workshops, field engagement, lectures, and collaborative projects, parti
 <!-- page:14 -->
 ## B.Des. Communication Design: Faculty
 
+Faculty members (professors and teachers) of the B.Des. Communication Design programme at Vidyashilp University, with their designation and qualifications:
+
 1:7 | FACULTY STUDENT RATIO
 
 Our faculty have trained at leading institutions including Indiana University of Pennsylvania, the National Institute of Design, and TH Köln – University of Applied Sciences, among others. Learn from their expertise, collaborate on groundbreaking research, and embark on your own journey of educational transformation.
@@ -439,6 +441,8 @@ Know More
 
 <!-- page:22 -->
 ## B.Des. Communication Design: Message from the Dean
+
+Message from Narendra Raghunath, Dean (B.Des. Communication Design).
 
 We live in a time of profound transformation. Artificial intelligence, digital technologies, ecological challenges, and rapidly changing social realities are reshaping how we communicate, create, and work. In such a context, design cannot be understood merely as the creation of products, images, or services. It has become a critical way of understanding complexity, solving problems, and shaping meaningful futures.
 

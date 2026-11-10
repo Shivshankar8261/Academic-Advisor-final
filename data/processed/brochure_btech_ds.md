@@ -29,6 +29,8 @@ FACULTY STUDENT RATIO
 
 ## B.Tech. (Hons.) CSE - Data Science: Lead Global Innovation with World-Class Faculty
 
+Faculty members (professors and teachers) of the B.Tech. (Hons.) CSE - Data Science programme at Vidyashilp University, with their designation and qualifications:
+
 Our distinguished faculty have advanced academic training from some of the world's top universities, including IISc - Bengaluru, IIT Bombay, BITS - Pilani, IIT - Dhanbad, IIM - Kozhikode, Bharati Vidyapeeth University- Pune. Learn from their expertise, collaborate on groundbreaking research, and embark on your own journey of educational transformation.
 
 ## B.Tech. (Hons.) CSE - Data Science: B.Tech. (Hons.)
@@ -80,6 +82,8 @@ Capstone projects, internships, and practical sessions ensure industry readiness
 Prepares students for roles in AI, data-driven decision-making, and innovative technology solutions.
 
 ## B.Tech. (Hons.) CSE - Data Science: Expert Faculty:
+
+Faculty members (professors and teachers) of the B.Tech. (Hons.) CSE - Data Science programme at Vidyashilp University, with their designation and qualifications:
 Learn from accomplished academicians and industry professionals with expertise in computational sciences and cutting-edge technologies.
 
 ## B.Tech. (Hons.) CSE - Data Science: State-of-the-Art Infrastructure:
@@ -200,6 +204,8 @@ Track 2:
 
 <!-- page:6 -->
 ## B.Tech. (Hons.) CSE - Data Science: Faculty
+
+Faculty members (professors and teachers) of the B.Tech. (Hons.) CSE - Data Science programme at Vidyashilp University, with their designation and qualifications:
 
 * PS Sastry
 Dean, School of
@@ -471,6 +477,8 @@ Know More
 
 <!-- page:15 -->
 ## B.Tech. (Hons.) CSE - Data Science: Message from the Dean
+
+Message from P S Sastry, Professor & Dean (B.Tech. (Hons.) CSE - Data Science).
 
 Our BTech in Computer Science & Engineering with honors in Data Science is designed to train professionals for the new age industry. As all industries globally shift towards more data-driven decision making, this program is geared towards training skilled data scientists. At Vidyashilp, we blend theoretical concepts with practical application ideas so that you will mature into a problem solver who can address complex real-world applications.
 

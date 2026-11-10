@@ -53,8 +53,9 @@ STANDING_RULES = [
 CONTACT_HINT = ("Please check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 "
                 "(Student Handbook, Important Contact Numbers, p. 83).")
 NOT_IN_DOCUMENTS = AdvisorResponse(
-    answer=f"This isn't in the provided documents (Student Handbook, SOP, semester spreads including BMS, minor "
-           f"course lists and the campus infrastructure data), so I can't answer it reliably. {CONTACT_HINT}",
+    answer=f"This isn't in the provided documents (Student Handbook, SOP, B.Tech semester spreads, minor course "
+           f"lists, the programme brochures and programme sheet, and the campus data), so I can't answer it "
+           f"reliably. {CONTACT_HINT}",
     confidence="low", grounded=False, sources=[], needs_clarification=False, clarifying_question=None,
     insufficient_information=True, conflict_detected=False)
 

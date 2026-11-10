@@ -149,6 +149,8 @@ Master the art of economic inquiry through in-depth research, digital economics,
 <!-- page:7 -->
 ## B.A. (Hons.) Economics: Faculty
 
+Faculty members (professors and teachers) of the B.A. (Hons.) Economics programme at Vidyashilp University, with their designation and qualifications:
+
 - Prof. Chandan Gowda, Dean, School of Liberal Arts and Sciences, PhD (Sociology), University of Michigan, Ann Arbor, USA
 - Prof. Radhika Lobo, Program Chair, School of Liberal Arts and Sciences, PhD (Economics), Nagpur University
 - Dr. Sheetal Bharat, Associate Professor, PhD (Economics), University of California, Riverside
@@ -358,6 +360,8 @@ B.A. (Hons.) Economics
 
 <!-- page:15 -->
 ## B.A. (Hons.) Economics: Message from the Dean
+
+Message from Chandan Gowda, Professor & Dean (B.A. (Hons.) Economics).
 
 Liberal arts offer exciting frameworks for understanding the social, political, cultural, and economic institutions that shape our world. Drawing on perspectives from fields such as history, sociology, economics, philosophy, literature, and the arts, this approach encourages students to explore diverse ways of knowing. A liberal arts education fosters critical thinking, empathy, and a deeper appreciation of the complexity of society, preparing students to become thoughtful citizens, leaders and social observers.
 

@@ -104,6 +104,8 @@ def transcribe_page(image: bytes, page: int, programme: str) -> str:
     raise RuntimeError(f"page {page}: {last}")
 
 
+FACULTY_HEADING = re.compile(r"\bfacult(y|ies)\b|\bour team\b|\bmentors?\b", re.I)
+DEAN_SIGNATURE = re.compile(r"\n\**([A-Z][A-Za-z. ]{3,40}?)\**\s*\n+\**((?:Professor\s*(?:&|and)\s*)?Dean\b[^\n]*)", re.M)
 RUNNING_HEADER = re.compile(r"(\d+\s*[.•]\s*)?VIDYASHILP\s+UNIVERSITY(\s*[.•]\s*\d+)?|\d{1,2}", re.I)
 
 
@@ -118,6 +120,9 @@ def tidy(md: str, programme: str) -> str:
             and not lines[first].lstrip().startswith(("*", "-", "|")):
         lines[first] = "## " + lines[first].strip().strip("*")
     md = "\n".join(lines)
+    # The dean signs at the end of the message, which can land in a different chunk from the opening: name them up top.
+    sig = DEAN_SIGNATURE.search(md)
+    lead = f"Message from {sig.group(1).strip()}, {sig.group(2).strip()} ({programme})." if sig else ""
     out = []
     for line in md.splitlines():
         m = re.match(r"^(#{1,6})\s+(.*)", line)
@@ -125,6 +130,13 @@ def tidy(md: str, programme: str) -> str:
             level = "##" if len(m.group(1)) <= 2 else "###"
             title = m.group(2).strip().strip("*")
             line = f"{level} {programme}: {title}" if level == "##" else f"### {title}"
+            out.append(line)
+            if level == "##" and FACULTY_HEADING.search(title):
+                out.append(f"\nFaculty members (professors and teachers) of the {programme} programme at Vidyashilp "
+                           "University, with their designation and qualifications:")
+            elif level == "##" and lead and re.search(r"\bdean\b", title, re.I):
+                out.append(f"\n{lead}")
+            continue
         out.append(line)
     return "\n".join(out).strip()
 
@@ -193,9 +205,9 @@ def extract_sheet() -> int:
 
     out = ["# Vidyashilp University Programmes\n",
            f"Source: {SHEET} (programmes, eligibility, admission, credit structure, courses, minors and fees).\n",
-           "## All programmes offered at Vidyashilp University\n",
            f"Vidyashilp University (VU) offers {len(programmes)} undergraduate programmes: "
            + "; ".join(p["Program"] for p in programmes) + ".\n",
+           "## All programmes offered at Vidyashilp University: summary table\n",
            "| Programme | School | Duration | Total credits | Eligibility | Admission |", "|---|---|---|---|---|---|"]
     for p in programmes:
         out.append(f"| {p['Program']} | {val(p['School'])} | {val(p['Duration (years)'], ' years')} | "

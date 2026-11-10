@@ -783,13 +783,24 @@ def mentioned_codes(q: str) -> list[str]:
     return list(dict.fromkeys(codes))
 
 
+NORMAL_SEARCH_RE = re.compile(
+    r"\bb\.?\s?a\.?\b(?!\s*(batch|semester))|\bbachelor of (arts|design|management|laws)\b|\bb\.?\s?des\b|\bll\.?\s?b\b"
+    r"|\bb\.?\s?m\.?\s?s\b|\bdigital business\b|\bbachelor of management\b|\blaw (programme|program|school|degree)\b|\bfacult(y|ies)\b|\bdeans?\b|\bprofessors?\b|\bwho teaches\b"
+    r"|\bfees?\b|\btuition\b|\beligibility (criteria|for (admission|the programme|the program))\b|\badmissions?\b|\bentrance\b|\bplacements?\b|\binternships?\b"
+    r"|\bscholarships?\b|\bcareers?\b|\bspeciali[sz]ation tracks?\b", re.I)
+
+
 def route(question: str, profile: dict | None = None, message: str | None = None, facts=None) -> list[dict]:
     import campus  # noqa: PLC0415 - campus builds on this module's helpers
     exact = campus.route(question, message)
-    if exact:  # BMS spread and campus infrastructure: exact answers from the November 2026 files
+    if exact:  # campus infrastructure: exact answers from the synthetic campus file
         return exact
     q = question.strip()
     low = q.lower()
+    # The exact lookups below cover the B.Tech spread and minor lists only. Other programmes and non-course topics go
+    # to normal search over the programme sheet, brochures and handbook.
+    if NORMAL_SEARCH_RE.search(message or q):
+        return []
     batches = _batches(q, profile, message, facts)
     codes = mentioned_codes(q)
     minor = next((name for key, name in MINOR_NAMES.items() if re.search(rf"\b{re.escape(key)}\b", low)), None)

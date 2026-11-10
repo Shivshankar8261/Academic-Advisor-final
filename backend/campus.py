@@ -1,23 +1,18 @@
 """
-Exact answers from the two November 2026 files: the BMS (Hons.) Digital Business spread and the synthetic campus
-infrastructure dataset. Counts and lists are SQL over courses.db (built by extract_extra.py), so a model never
-counts rooms or adds up credits. Every answer states the file's own status: the BMS sheet is a draft with inferred
-baskets, and the campus data is synthetic demo data, not the real campus.
+Exact answers from the synthetic campus infrastructure dataset. Counts and lists are SQL over courses.db (built by
+extract_extra.py), so a model never counts rooms. Every answer says the campus data is synthetic demo data, not the
+real campus. (The draft BMS semester spread is no longer used: BMS questions are answered from the programme sheet
+and the BMS brochure.)
 
     campus.route(question, message) -> [direct-answer chunk] or []   ([] = not one of these exact questions)
 """
 import re
 
-import structured
 from structured import _chunk, _db, _direct, _num
 
-BMS_FILE = "Semester_Spread_Structures_Sept_2026_with_BMS.xlsx"
 INFRA_FILE = "College_Infrastructure_Dataset_SYNTHETIC.xlsx"
-BMS_NOTE = ("*This BMS sheet is a draft built from Semester III, V and VII timetables. The basket placement is "
-            "inferred, not official, so please confirm it with the BMS programme office.*")
 INFRA_NOTE = "*This campus information comes from a synthetic demo dataset, not the real Vidyashilp campus.*"
 
-BMS_RE = re.compile(r"\bb\.?\s?m\.?\s?s\b|\bdigital business\b|\bbachelor of management\b", re.I)
 INFRA_RE = re.compile(
     r"\b(campus|infrastructure|blocks?|floors?|ground floor|rooms?|classrooms?|class rooms?|labs?|laboratory|"
     r"seats?|seating|capacity|air[- ]?condition\w*|\bac\b|cctv|cameras?|projectors?|displays?|touch[- ]?screens?|"
@@ -368,95 +363,8 @@ def rooms_by_block(block, floor) -> list[dict]:
     return _answer(text, INFRA_FILE, "Rooms sheet", INFRA_NOTE)
 
 
-# ----------------------------------------------------------------------------------------------------------- BMS
-def _sem(text: str) -> int | None:
-    m = SEM_RE.search(text)
-    if not m:
-        return None
-    v = (m.group(1) or m.group(2)).lower()
-    return int(v) if v.isdigit() else ROMAN.get(v)
-
-
-def bms_semester(sem: int) -> list[dict]:
-    with _db() as con:
-        rows = con.execute("SELECT * FROM bms_courses WHERE semester=? ORDER BY source_row", (sem,)).fetchall()
-    if not rows:
-        text = (f"**The BMS sheet has no data for Semester {sem} yet.** Only Semesters 3, 5 and 7 are filled in, from "
-                f"their timetables; Semesters 1, 2, 4, 6 and 8 are blank until those timetables are provided.")
-        return _answer(text, BMS_FILE, "Sem_Spread_BMS, notes 1-2", BMS_NOTE)
-    total = sum(r["credits"] for r in rows)
-    text = (f"**BMS (Hons.) Digital Business, Semester {sem}: {len(rows)} courses, {_num(total)} credits in total** "
-            f"(from the batch {rows[0]['timetable_batch']} timetable).\n\n"
-            + _table(["Code", "Course", "Basket (inferred)", "L-T-P", "Credits"],
-                     [[r["code"], r["title"], r["basket"], f"{r['L']}-{r['T']}-{r['P']}", r["credits"]] for r in rows]))
-    if any(r["basket"] == "Minor / Open" for r in rows):
-        text += ("\n\nThe Minor / Open rows are options for different minors, so a student does not take all of them.")
-    return _answer(text, BMS_FILE, f"Sem_Spread_BMS, Semester {sem}", BMS_NOTE)
-
-
-def bms_baskets() -> list[dict]:
-    with _db() as con:
-        rows = con.execute("SELECT * FROM bms_baskets ORDER BY source_row").fetchall()
-    total = sum(r["min_credits"] for r in rows)
-    text = (f"**BMS (Hons.) Digital Business needs {_num(total)} credits in total, across six baskets.**\n\n"
-            + _table(["Basket", "Minimum credits", "Credits captured so far"],
-                     [[r["basket"], r["min_credits"], r["captured_credits"]] for r in rows])
-            + "\n\nThe minimums come from the official BMS programme page. \"Captured\" counts only courses in the "
-              "Semester 3, 5 and 7 timetables, so it is incomplete; Minor / Open and Specialization exceed their "
-              "minimums because those rows list options, not courses every student takes.")
-    return _answer(text, BMS_FILE, "Sem_Spread_BMS, baskets and Fixed Min Credits", BMS_NOTE)
-
-
-def bms_course(text: str) -> list[dict]:
-    with _db() as con:
-        rows = con.execute("SELECT * FROM bms_courses").fetchall()
-    low = text.lower()
-    hits = [r for r in rows if re.search(rf"(?<![\w-]){re.escape(r['code'].lower())}(?![\w-])", low)
-            or r["title"].lower().replace(" (r)", "") in low]
-    if not hits:
-        return []
-    out = "\n".join(f"**{r['code']}: {r['title']}** is a BMS Semester {r['semester']} course in the {r['basket']} basket "
-                    f"(inferred), L-T-P {r['L']}-{r['T']}-{r['P']}, {_num(r['credits'])} credits." for r in hits)
-    return _answer(out, BMS_FILE, "Sem_Spread_BMS", BMS_NOTE)
-
-
-# The BMS spread only knows semesters, baskets and courses. These topics (and the B.M.S., LL.B. law programme) are
-# answered from the programme sheet and brochures instead, so the question falls through to retrieval.
-BMS_ELSEWHERE_RE = re.compile(r"\bll\.?\s?b\b|\bfees?\b|\btuition\b|\beligib|\badmission|\bentrance\b|\bminors?\b|"
-                              r"\bfaculty\b|\bdean\b|\bplacements?\b|\binternships?\b|\bscholarships?\b", re.I)
-
-
-def bms_route(q: str, message: str) -> list[dict]:
-    now = message or q
-    if re.search(r"\bll\.?\s?b\b", now, re.I):
-        return []
-    found = bms_course(now)
-    if found:
-        return found
-    sem = _sem(now) or _sem(q)
-    if sem:
-        return bms_semester(sem)
-    if BMS_ELSEWHERE_RE.search(now):
-        return []
-    if re.search(r"\bbaskets?\b|\bcredits?\b|\bstructure\b|\brequire", now, re.I):
-        return bms_baskets()
-    if re.search(r"\b(courses?|subjects?|list|all|curriculum|syllabus)\b", now, re.I):
-        return _bms_all()
-    return bms_baskets()
-
-
-def _bms_all() -> list[dict]:
-    parts = [bms_semester(s)[0]["direct_answer"].replace("\n\n" + BMS_NOTE, "") for s in (3, 5, 7)]
-    text = ("**The BMS sheet lists courses for Semesters 3, 5 and 7 only (40 courses); the other semesters are blank.**"
-            "\n\n" + "\n\n".join(parts))
-    return _answer(text, BMS_FILE, "Sem_Spread_BMS, Semesters 3, 5 and 7", BMS_NOTE)
-
-
 def route(question: str, message: str | None = None) -> list[dict]:
     now = message or question
-    if BMS_RE.search(now) or (BMS_RE.search(question) and not structured.SELF_CHECK_RE.search(now)
-                              and not INFRA_RE.search(now)):
-        return bms_route(question, message or question)
     if INFRA_RE.search(now) or ROOM_ID_RE.search(now) or (INFRA_RE.search(question) and (_block(now) or _floor(now) is not None)):
         return infra_route(question, message or question)
     return []

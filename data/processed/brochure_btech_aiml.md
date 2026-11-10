@@ -49,6 +49,8 @@ in Computer Science & Engineering - AI/ML
 
 ## B.Tech. (Hons.) CSE - AI & ML: Lead Global Innovation with World-Class Faculty
 
+Faculty members (professors and teachers) of the B.Tech. (Hons.) CSE - AI & ML programme at Vidyashilp University, with their designation and qualifications:
+
 Our distinguished faculty have advanced academic training from some of the world's top Universities, including the IISc - Bengaluru, IIT- Bombay, BITS - Pilani, IIT- Dhanbad , IIM- Kozhikode and Bharti Vidyapeeth University, Pune, among others. Learn from their expertise, and embark on your own journey of educational transformation.
 
 <!-- page:3 -->
@@ -75,6 +77,8 @@ Emphasis on soft skills such as communication, critical thinking, and teamwork.
 Real-world projects, internships, and practical sessions ensure industry readiness.
 
 ## B.Tech. (Hons.) CSE - AI & ML: Expert Faculty:
+
+Faculty members (professors and teachers) of the B.Tech. (Hons.) CSE - AI & ML programme at Vidyashilp University, with their designation and qualifications:
 Learn from accomplished academicians and industry professionals with expertise in computational sciences and cutting-edge technologies.
 
 ## B.Tech. (Hons.) CSE - AI & ML: State-of-the-Art Infrastructure:
@@ -222,6 +226,8 @@ Data Structures, Theoretical Computer Science, Analysis of Algorithms, Digital D
 
 <!-- page:6 -->
 ## B.Tech. (Hons.) CSE - AI & ML: Faculty
+
+Faculty members (professors and teachers) of the B.Tech. (Hons.) CSE - AI & ML programme at Vidyashilp University, with their designation and qualifications:
 
 * P S Sastry
 Dean, School of Engineering & Technology
@@ -403,6 +409,8 @@ B.Tech. (Hons.)
 
 <!-- page:15 -->
 ## B.Tech. (Hons.) CSE - AI & ML: Message from the Dean
+
+Message from P S Sastry, Professor & Dean (B.Tech. (Hons.) CSE - AI & ML).
 
 Our B.Tech (Hons.) in Computer Science & Engineering (AI/ML) Program is strategically aligned with the demands of the global market. It is especially designed to train the next generation of innovators who will harness the transformative power of Artificial Intelligence and Machine Learning. At Vidyashilp University, you won't just learn algorithms; you will learn how to apply them to solve real-world problems.
 

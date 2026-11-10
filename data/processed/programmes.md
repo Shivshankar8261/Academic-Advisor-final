@@ -2,9 +2,9 @@
 
 Source: Vidyashilp_University_Programs_.xlsx (programmes, eligibility, admission, credit structure, courses, minors and fees).
 
-## All programmes offered at Vidyashilp University
-
 Vidyashilp University (VU) offers 8 undergraduate programmes: B.Tech (Hons) Computer Science & Engineering - Data Science; B.Tech (Hons) Computer Science & Engineering - AI & ML; B.M.S. (Hons) / (Hons with Research) in Digital Business; B.A. (Hons) / (Hons with Research) in Economics; B.A. (Hons) / (Hons with Research) in Psychology; B.Des (Communication Design); B.A., LL.B. (Hons); B.M.S., LL.B. (Hons).
+
+## All programmes offered at Vidyashilp University: summary table
 
 | Programme | School | Duration | Total credits | Eligibility | Admission |
 |---|---|---|---|---|---|

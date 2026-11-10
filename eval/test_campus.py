@@ -1,4 +1,4 @@
-"""BMS spread and campus infrastructure answers, checked against the spreadsheets themselves (not against our code).
+"""Campus infrastructure answers, checked against the spreadsheets themselves (not against our code).
 Offline, no model: python -m pytest eval/test_campus.py -q"""
 import sys
 from pathlib import Path
@@ -12,10 +12,10 @@ sys.path.insert(0, str(ROOT / "backend"))
 import advisor  # noqa: E402
 import campus  # noqa: E402
 import llm  # noqa: E402
+import memory  # noqa: E402
 import structured  # noqa: E402
 
 WB = openpyxl.load_workbook(ROOT / "data/synthetic/college_infrastructure_synthetic.xlsx", data_only=True)
-BMS = openpyxl.load_workbook(ROOT / "data/raw/bms_semester_spread_sept2026.xlsx", data_only=True).worksheets[0]
 
 
 def sheet(name):
@@ -97,21 +97,11 @@ def test_department_is_not_mistaken_for_computers():
     assert "faculty offices" in first_line("How many faculty offices does Computer Science have?")
 
 
-@pytest.mark.parametrize("sem, col", [(3, "R"), (5, "AF"), (7, "AT")])
-def test_bms_semester_lists_every_course_in_the_sheet(sem, col):
-    codes = [BMS[f"{col}{r}"].value for r in range(5, 27) if BMS[f"{col}{r}"].value]
-    answer = structured.route(f"What BMS courses are in semester {sem}?")[0]["direct_answer"]
-    assert f"{len(codes)} courses" in answer and all(f"| {c} |" in answer for c in codes)
-
-
-@pytest.mark.parametrize("sem", [1, 2, 4, 6, 8])
-def test_blank_bms_semesters_are_reported_as_blank(sem):
-    assert "no data" in first_line(f"BMS semester {sem} courses")
-
-
-def test_bms_total_credits_and_draft_warning():
-    answer = structured.route("How many credits does the BMS programme need?")[0]["direct_answer"]
-    assert "164 credits" in answer and "draft" in answer and "inferred" in answer
+def test_draft_bms_spread_is_not_used():
+    """The draft BMS spread was withdrawn: BMS questions must reach normal search, never an exact-answer shortcut."""
+    for q in ["What BMS courses are in semester 3?", "How many credits does the BMS programme need?",
+              "who all are the bms faculties ??"]:
+        assert campus.route(q) == [] and structured.route(q) == []
 
 
 @pytest.mark.parametrize("question", ["How many classrooms are there?", "Which rooms have AC?", "Where is the library?"])
@@ -137,5 +127,4 @@ def test_btech_answers_unchanged():
 
 @pytest.mark.parametrize("text", ["BMS semester 2", "bms sem 3", "BMS Semester III"])
 def test_bms_semester_alone_is_a_question_not_a_fact_about_the_student(text):
-    r = ask(text)
-    assert "BMS" in r.answer and not r.answer.startswith("Noted")
+    assert memory.recall_kind(text, memory.Facts(), []) != "noted"

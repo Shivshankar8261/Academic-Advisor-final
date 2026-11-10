@@ -58,6 +58,8 @@ Internships provide practical exposure and hands-on experience in applying psych
 
 ## B.A. (Hons.) Psychology: Lead Global Innovation with World-Class Faculty
 
+Faculty members (professors and teachers) of the B.A. (Hons.) Psychology programme at Vidyashilp University, with their designation and qualifications:
+
 Our distinguished faculty have advanced academic training from some of the world's top institutions, including the University of Birmingham, the Indian Institute of Technology (IIT) Bombay, and NIMHANS, Bengaluru.
 
 1:7
@@ -175,6 +177,8 @@ Oh god, this kid must've been impossible to deal with.
 <!-- page:7 -->
 ## B.A. (Hons.) Psychology: Student Achievements & Faculty Collaborations
 
+Faculty members (professors and teachers) of the B.A. (Hons.) Psychology programme at Vidyashilp University, with their designation and qualifications:
+
 VU Psychology students have presented their research at reputed national conferences, addressing topics ranging from neurodiversity to virtual therapies, and showcased their academic excellence and social awareness.
 
 ## B.A. (Hons.) Psychology: Select Conference Presentations
@@ -204,6 +208,8 @@ Ms. Lakshanya, a third year BA (Hons.) Psychology student, and Sohinee Ganguly, 
 
 <!-- page:9 -->
 ## B.A. (Hons.) Psychology: Faculty
+
+Faculty members (professors and teachers) of the B.A. (Hons.) Psychology programme at Vidyashilp University, with their designation and qualifications:
 
 - Prof. Chandan Gowda
 Dean, School of Liberal Arts and Sciences,
@@ -327,6 +333,8 @@ Know More
 
 <!-- page:15 -->
 ## B.A. (Hons.) Psychology: Message from the Dean
+
+Message from Chandan Gowda, Professor & Dean (B.A. (Hons.) Psychology).
 
 Liberal arts offer exciting frameworks for understanding the social, political, cultural, and economic institutions that shape our world. Drawing on perspectives from fields such as history, sociology, economics, philosophy, literature, and the arts, this approach encourages students to explore diverse ways of knowing. A liberal arts education fosters critical thinking, empathy, and a deeper appreciation of the complexity of society, preparing students to become thoughtful citizens, leaders and social observers.
 
