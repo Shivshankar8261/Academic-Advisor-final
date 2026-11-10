@@ -30,3 +30,6 @@ frontend/.env.local
 .vercel/
 # Vercel CLI link / build output
 .vercel
+
+# original university documents: kept locally for the extract_*.py scripts, not published
+data/raw/
