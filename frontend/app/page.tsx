@@ -62,16 +62,6 @@ type StudentSummary = {
   scenario: string;
 };
 
-const EXAMPLES: { icon: string; tag: string; q: string }[] = [
-  { icon: "📘", tag: "Prerequisites", q: "Can I take Machine Learning next semester?" },
-  { icon: "🎓", tag: "Programmes", q: "What specialisation tracks does the B.Tech Data Science programme offer?" },
-  { icon: "🧠", tag: "Minors", q: "Which minors can a B.A. Psychology student take?" },
-  { icon: "📝", tag: "Registration", q: "I missed registration because of a family function. Can I still register late?" },
-  { icon: "🗺️", tag: "Infographic", q: "Show me an infographic of the 2024 batch course structure" },
-  { icon: "🏫", tag: "Campus", q: "Is anything on campus under maintenance right now?" },
-  { icon: "💼", tag: "BMS programme", q: "What BMS courses are in semester 3?" },
-];
-
 function formatCost(cost: number | null): string {
   if (cost === null) return "free tier";
   return cost < 0.0001 ? "<$0.0001" : `$${cost.toFixed(4)}`;
@@ -1118,21 +1108,6 @@ export default function Home() {
             <span aria-hidden className="mt-6 h-1 w-24 rounded-full bg-vured-500 sm:mt-8 sm:w-32" />
 
             <div className="mt-10 w-full max-w-4xl sm:mt-14">{composer}</div>
-
-            <div className="mt-6 flex max-w-4xl flex-wrap justify-center gap-2">
-              {EXAMPLES.map((ex, i) => (
-                <button
-                  key={ex.q}
-                  onClick={() => send(ex.q)}
-                  title={ex.q}
-                  style={{ animationDelay: `${150 + i * 60}ms` }}
-                  className="animate-fade-up rounded-full border border-slate-200 bg-white/80 px-3.5 py-1.5 text-sm text-slate-600 transition hover:border-vured-500/50 hover:text-brand-900"
-                >
-                  <span className="mr-1.5">{ex.icon}</span>
-                  {ex.q}
-                </button>
-              ))}
-            </div>
           </div>
         ) : (
           <div className="mx-auto flex max-w-4xl flex-col gap-5 py-8">
