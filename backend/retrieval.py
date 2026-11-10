@@ -103,6 +103,21 @@ def _bm25() -> dict[str, list[tuple[int, float]]]:
     return postings
 
 
+RARE_DF = 8  # a word in at most this many chunks is specific (a surname, a course title word)
+
+
+@lru_cache
+def _doc_freq() -> Counter:
+    return Counter(t for r in records() for t in set(_terms(r["text"])))
+
+
+def contains_question_terms(query: str, text: str) -> bool:
+    q = set(_terms(query)) - STOPWORDS
+    if not q or not any(_doc_freq()[t] <= RARE_DF for t in q):
+        return False
+    return q <= set(_terms(text))
+
+
 def lexical_scores(query: str) -> np.ndarray:
     """BM25 scores scaled to 0-1 (best chunk = 1)."""
     s = np.zeros(len(records()), dtype=np.float32)
@@ -163,6 +178,10 @@ def retrieve(query: str, k: int = TOP_K) -> list[dict]:
     if lexical[best] > 0 and scores[best] >= LEXICAL_MIN_COSINE and \
             records()[best]["section"] not in {h["section"] for h in hits}:
         hits.append({**records()[best], "score": round(float(scores[best]), 3)})
+    # A name ("who is Ankita Tripathi") embeds poorly, so its cosine stays under MIN_RELEVANCE even when a chunk
+    # contains it word for word. Mark chunks that contain every word of the question, one of them rare.
+    for h in hits:
+        h["exact_terms"] = contains_question_terms(query, h["text"])
 
     # Heading coverage: a chunk whose section heading contains every word of the question ("BMS" + "faculty") is
     # exactly what was asked for, however poorly its body (a list of names) embeds.

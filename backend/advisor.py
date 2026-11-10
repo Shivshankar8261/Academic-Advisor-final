@@ -194,7 +194,9 @@ ALWAYS_WHOLE_SECTION = [(r"attendance|shortage", "Section III - Academic Regulat
 
 
 def has_relevant(chunks: list[dict]) -> bool:
-    return any(c["score"] >= MIN_RELEVANCE for c in chunks)
+    """Something relevant was retrieved: a close match in meaning, or a chunk that contains every word of the
+    question including a rare one (a person's name scores low on meaning but is an exact hit)."""
+    return any(c["score"] >= MIN_RELEVANCE or c.get("exact_terms") for c in chunks)
 
 
 def gather_context(query: str, profile: dict | None, message: str, facts=None) -> tuple[list[dict], list[dict]]:
