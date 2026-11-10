@@ -151,8 +151,8 @@
   "expected": "ECON201 AND (ECON202 OR ECON207) - '/' means OR; ECON202 is not defined anywhere in the supplied files.",
   "label": "correct",
   "source_correct": true,
-  "provider": "groq:openai/gpt-oss-20b",
-  "answer": "The course *Industrial Economics* (ECON413) requires the following prerequisites for the 2022‑batch curriculum:\n- **ECON201 – Microeconomics**\n- **Either ECON202 or ECON207 – Macroeconomics and Applicants to Indian Economy**\n\nNote that ECON202 is not defined in the supplied course data, so its details are unknown. If you need the exact description or credit information for ECON202, you may need to consult the university’s course catalogue or contact the registrar’s office.\n\n",
+  "provider": "gemini:gemini-flash-lite-latest",
+  "answer": "The prerequisite for Industrial Economics (ECON413) is ECON201 AND (ECON202 OR ECON207). Note that prerequisite code ECON202 does not appear anywhere in the supplied course data, so its details are unknown.",
   "sources": [
    "Minor_Courses_for_BTech_Students.xlsx | tab 'Economics', ECON413, row 5",
    "Minor_Courses_for_BTech_Students.xlsx | Course ECON413 Industrial Economics"
@@ -171,11 +171,10 @@
   "label": "correct",
   "source_correct": true,
   "provider": "gemini:gemini-flash-lite-latest",
-  "answer": "For the 2024 batch, the minimum number of credits required for the Minor/Open basket (also referred to as Open/Minor) is 24 credits.",
+  "answer": "The 2024 batch needs a minimum of 24 Minor/Open credits for the degree.",
   "sources": [
    "Semester_Spread_Structures_Sept_2026.xlsx | tab 'Sem_Spread_2024', row 22 (Open/Minor basket)",
-   "Semester_Spread_Structures_Sept_2026.xlsx | 2024 Batch - Credit baskets (tab Sem_Spread_2024)",
-   "Semester_Spread_Structures_Sept_2026.xlsx | 2024 Batch - Credit structure summary (Struct_2024)"
+   "Semester_Spread_Structures_Sept_2026.xlsx | 2024 Batch - Credit baskets (tab Sem_Spread_2024)"
   ],
   "flags": {
    "insufficient_information": false,
@@ -191,10 +190,9 @@
   "label": "correct",
   "source_correct": true,
   "provider": "gemini:gemini-flash-lite-latest",
-  "answer": "Vidyashilp University is located at the following address: Vidyashilp University Founding Campus, #125, Bettenahalli Kundana Hobli, Chapparkallu Road, Bengaluru – 562110.",
+  "answer": "Vidyashilp University is located at the Founding Campus, #125, Bettenahalli Kundana Hobli, Chapparkallu Road, Bengaluru – 562110.",
   "sources": [
-   "Student Handbook Aug 2026.pdf | University Address (handbook back cover), p. 84",
-   "Bachelor of Management (Hons.) Brochure.pdf | B.M.S. (Hons.) Digital Business: Apply Now, p. 16"
+   "Student Handbook Aug 2026.pdf | University Address (handbook back cover), p. 84"
   ],
   "flags": {
    "insufficient_information": false,
@@ -206,17 +204,20 @@
  {
   "id": "R12",
   "query": "What is the B.Tech tuition fee?",
-  "expected": "Not in the documents: the handbook describes the fee components and payment rules but gives no amount.",
+  "expected": "Rs 5,03,500 per year (Vidyashilp_University_Programs_.xlsx, B.Tech fees table). Before that sheet was added the documents gave no amount and the advisor had to say so.",
   "label": "correct",
-  "source_correct": null,
-  "provider": "gemini:gemini-flash-lite-latest",
-  "answer": "This isn't in the provided documents.\n\nPlease check with the Office of the Registrar - Assistant Registrar (Academic): 8792489795 (Student Handbook, Important Contact Numbers, p. 83).",
-  "sources": [],
+  "source_correct": true,
+  "provider": "groq:openai/gpt-oss-120b",
+  "answer": "The annual tuition fee for B.Tech (Hons) programmes (e.g., Data Science or AI & ML) is Rs 5,03,500 per year.",
+  "sources": [
+   "Vidyashilp_University_Programs_.xlsx | B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: fees",
+   "Vidyashilp_University_Programs_.xlsx | B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: fees"
+  ],
   "flags": {
-   "insufficient_information": true,
+   "insufficient_information": false,
    "conflict_detected": false,
    "needs_clarification": false,
-   "grounded": false
+   "grounded": true
   }
  },
  {
@@ -244,12 +245,11 @@
   "label": "correct",
   "source_correct": true,
   "provider": "gemini:gemini-3.5-flash-lite",
-  "answer": "The University documents contain an inconsistency regarding late registration. The SOP states under 'Late Registration' that no late registration shall be permitted except for medical exigencies or competitions, but under 'Course Registration Deadline' it states a maximum of one calendar week is permissible. Meanwhile, the Student Handbook (Clauses 2.6 and 2.7) allows late registration for medical cases up to two weeks, for competitions/events with approval, and for any other reason up to one calendar week upon paying a Late Fee. Please confirm the exact rule with the Program Chair or the Office of the Registrar.",
+  "answer": "There is an inconsistency in the documents regarding late registration. The SOP states under 'Course Registration Deadline' that the maximum permissible period for late registration is one calendar week, but under 'Late Registration' it says no late registration is permitted except for medical exigencies (up to two calendar weeks) or participation in competitions/events with prior approval. Meanwhile, Student Handbook clauses 2.6 and 2.7 allow late registration for medical cases up to two weeks, for competitions/events, and for any other reason up to one calendar week upon paying a Late Fee. Please confirm the applicable rule with the Program Chair or the Office of the Registrar.",
   "sources": [
    "SOP_STUDENT_17082026.pdf | 1. Course Registration (Course Registration Deadline vs Late Registration), pp. 1-2",
-   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 2. Registration (2.7), pp. 16-17",
-   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 2. Registration (2.6.2), p. 16",
-   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 2. Registration (2.6), p. 16"
+   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 2. Registration (2.6), p. 16",
+   "Student Handbook Aug 2026.pdf | Section III - Academic Regulations > 2. Registration (2.7), pp. 16-17"
   ],
   "flags": {
    "insufficient_information": false,

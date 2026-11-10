@@ -5,7 +5,7 @@ Step 1b of the data pipeline: the programme brochures and the university program
                 Each page is rendered (pdftoppm) and transcribed to Markdown by Gemini vision. Pages are cached in
                 data/processed/brochure_pages/, so a re-run only reads pages it has not seen.
                 -> data/processed/brochure_<slug>.md   (one file per programme, with <!-- page:N --> markers)
-    Vu Uni Data.xlsx   programmes, credit split and course lists for every programme
+    Vidyashilp_University_Programs_.xlsx   programmes, eligibility, admission, credits, courses, minors and fees
                 -> data/processed/programmes.md   (one ## section per programme)
 
 The Student Handbook and SOP in the same folder are identical to data/raw/ (same checksum) and are skipped.
@@ -30,7 +30,7 @@ from config import GEMINI_API_KEY, PROCESSED_DIR, RAW_DIR, ROOT, VISION_MODELS
 
 SOURCE_DIR = ROOT / "VU Brouchures "
 CACHE_DIR = PROCESSED_DIR / "brochure_pages"
-SHEET = "Vu Uni Data.xlsx"
+SHEET = "Vidyashilp_University_Programs_.xlsx"
 # How students actually write the programme names: MiniLM does not see "LLB" and "LL.B." (or "PhD"/"Ph.D.") as the same
 # word, so each programme section names its common spellings.
 ALIASES = {
@@ -160,71 +160,91 @@ def extract_brochures() -> dict[str, int]:
 
 def _rows(ws) -> list[dict]:
     rows = list(ws.iter_rows(values_only=True))
-    head = [str(h) for h in rows[0]]
-    return [dict(zip(head, r)) for r in rows[1:] if any(v is not None for v in r)]
+    head = [str(h).strip() if h is not None else "" for h in rows[0]]
+    return [{k: v for k, v in zip(head, r) if k} for r in rows[1:] if any(v not in (None, "") for v in r)]
+
+
+def _inr(n) -> str:
+    """503500 -> "Rs 5,03,500" (Indian digit grouping)."""
+    s = str(int(n))
+    head, tail = s[:-3], s[-3:]
+    head = ",".join([head[max(0, i - 2):i] for i in range(len(head), 0, -2)][::-1]) if head else ""
+    return f"Rs {head + ',' if head else ''}{tail}"
 
 
 def extract_sheet() -> int:
     src = SOURCE_DIR / SHEET
-    shutil.copy2(src, RAW_DIR / "vu_uni_data.xlsx")
+    shutil.copy2(src, RAW_DIR / "vidyashilp_university_programs.xlsx")
     wb = openpyxl.load_workbook(src, data_only=True)
-    programmes, courses, credits = _rows(wb["programs"]), _rows(wb["courses"]), _rows(wb["credits"])
+    programmes, courses = _rows(wb["Programs"]), _rows(wb["Courses"])
+    credits, fees = _rows(wb["Credit_Structure"]), _rows(wb["Fees"])
+    minors = {r["Program ID"]: [k for k, v in r.items() if k != "Program ID" and str(v).strip().lower() == "yes"]
+              for r in _rows(wb["Minors_Matrix"])}
 
-    by_prog = defaultdict(list)
-    for c in courses:
-        by_prog[c["program_id"]].append(c)
-    credit_split = defaultdict(list)
-    for c in credits:
-        credit_split[c["program_id"]].append(c)
+    def by(rows, key="Program ID"):
+        out = defaultdict(list)
+        for r in rows:
+            out[r[key]].append(r)
+        return out
+    courses_by, credits_by, fees_by = by(courses), by(credits), by(fees)
 
     def val(v, unit=""):
-        return "not stated" if v in (None, "", "None") else f"{v}{unit}"
+        return "not stated" if v in (None, "", "-", "None") else f"{v}{unit}"
 
-    ug = [p for p in programmes if p["level"] != "Doctoral"]
-    phd = [p for p in programmes if p["level"] == "Doctoral"]
     out = ["# Vidyashilp University Programmes\n",
-           "Source: Vu Uni Data.xlsx (programme list, credit split and course lists for every VU programme).\n",
+           f"Source: {SHEET} (programmes, eligibility, admission, credit structure, courses, minors and fees).\n",
            "## All programmes offered at Vidyashilp University\n",
-           f"Vidyashilp University (VU) offers {len(ug)} undergraduate programmes: "
-           + "; ".join(p["program_name"] for p in ug) + f". It also offers {len(phd)} Ph.D. (PhD, doctoral) "
-           "programmes: " + "; ".join(p["program_name"] for p in phd) + ".\n",
-           "| Programme | Level | School | Duration | Total credits |", "|---|---|---|---|---|"]
+           f"Vidyashilp University (VU) offers {len(programmes)} undergraduate programmes: "
+           + "; ".join(p["Program"] for p in programmes) + ".\n",
+           "| Programme | School | Duration | Total credits | Eligibility | Admission |", "|---|---|---|---|---|---|"]
     for p in programmes:
-        out.append(f"| {p['program_name']} | {p['level']} | {val(p['school'])} | {val(p['duration_years'], ' years')} "
-                   f"| {val(p['total_credits'])} |")
+        out.append(f"| {p['Program']} | {val(p['School'])} | {val(p['Duration (years)'], ' years')} | "
+                   f"{val(p['Total credits'])} | {val(p['Eligibility'])} | {val(p['Entrance / selection'])} |")
     out.append("")
-    if phd:
-        out.append("## Ph.D. (PhD, doctoral) programmes and research areas\n")
-        out.append(f"VU offers {len(phd)} Ph.D. (PhD) programmes. Duration and credits are not stated in the sheet.\n")
-        out += [f"- **{p['program_name']}**: research areas {p['major']}" for p in phd]
-        out.append("")
 
     for p in programmes:
-        if p["level"] == "Doctoral":
-            continue
-        pid, name = p["program_id"], p["program_name"]
-        out.append(f"## {name} ({ALIASES.get(pid, pid)})\n")
-        out.append(f"{name} (also written {ALIASES.get(pid, pid)}) is a {val(p['duration_years'], '-year')} "
-                   f"undergraduate programme of the {val(p['school'])}. It requires {val(p['total_credits'])} "
-                   f"credits in total.\n")
-        out.append(f"- School: {val(p['school'])}\n- Duration: {val(p['duration_years'], ' years')}\n"
-                   f"- Total credits: {val(p['total_credits'])}\n- Major: {val(p['major'])}\n"
-                   f"- Minors available: {val(p['minors'])}\n")
-        if credit_split[pid]:
+        pid, name = p["Program ID"], p["Program"]
+        alias = ALIASES.get(pid, pid)
+        out.append(f"## {name} ({alias})\n")
+        out.append(f"{name} (also written {alias}) is a {val(p['Duration (years)'], '-year')}, "
+                   f"{val(p['Semesters'])}-semester undergraduate programme of the {val(p['School'])}. "
+                   f"It requires {val(p['Total credits'])} credits in total.\n")
+        out.append(f"- Degree: {val(p['Degree'])}\n- Variants: {val(p['Variants'])}\n- Major: {val(p['Major'])}\n"
+                   f"- Minor options: {val(p['Minor options'])}\n")
+        out.append(f"### {name}: eligibility and admission\n")
+        out.append(f"Eligibility for {name} ({alias}): {val(p['Eligibility'])}. "
+                   f"Entrance / selection: {val(p['Entrance / selection'])}.\n")
+        if minors.get(pid):
+            out.append(f"### {name}: minors available\n")
+            out.append(f"Students of {name} ({alias}) can take a minor in: {', '.join(minors[pid])}.\n")
+        if credits_by[pid]:
             out.append(f"### {name}: credit distribution\n")
-            out += [f"- {c['category']}: {c['credits']} credits" for c in credit_split[pid]]
+            out += [f"- {c['Category']}: {c['Credits']} credits" for c in credits_by[pid]]
+            out.append("")
+        if fees_by[pid]:
+            out.append(f"### {name}: fees\n")
+            out.append(f"Fees for {name} ({alias}), in Indian rupees, as listed in the programme sheet:\n")
+            out.append("| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | "
+                       "Refundable | Payable on |")
+            out.append("|---|---|---|---|---|---|---|---|---|")
+            for f in fees_by[pid]:
+                out.append(f"| {val(f.get('Intake / batch'))} | {val(f.get('Schedule type'))} | "
+                           f"{val(f.get('Academic year'))} | {val(f.get('Year of study'))} | {val(f.get('Fee component'))} | "
+                           f"{val(f.get('Frequency'))} | {_inr(f['Amount (INR)'])} | {val(f.get('Refundable'))} | "
+                           f"{val(f.get('Payable on'))} |")
             out.append("")
         groups = defaultdict(list)
-        for c in by_prog[pid]:
-            groups[(c["catalog_version"], c["category"], c["major_minor_track"] or "")].append(c)
-        versions = {k[0] for k in groups}
-        for (version, category, track), rows in sorted(groups.items(), key=lambda kv: (kv[0][0] != "current", kv[0])):
-            label = f"{category}" + (f" - {track}" if track else "")
-            note = " (older catalogue)" if version == "older" and len(versions) > 1 else \
-                " (older catalogue; the current curriculum may differ)" if version == "older" else ""
-            out.append(f"### {name}: {label}{note}\n")
-            out += [f"- {r['course_name']}" + (f" ({r['role']})" if r["role"] and r["role"] != "Core" else "")
-                    for r in rows]
+        for c in courses_by[pid]:
+            groups[c["Category"]].append(c)
+        for category, rows in groups.items():
+            out.append(f"### {name}: {category} courses\n")
+            seen = []
+            for r in rows:  # the sheet repeats a course when it is listed under two catalogue pages
+                line = f"- {r['Course name']}" + (f" ({r['Role (Core / Elective / Minor / Project)']})"
+                                                   if r.get("Role (Core / Elective / Minor / Project)") not in (None, "Core") else "")
+                if line not in seen:
+                    seen.append(line)
+            out += seen
             out.append("")
     (PROCESSED_DIR / "programmes.md").write_text("\n".join(out))
     return len(courses)

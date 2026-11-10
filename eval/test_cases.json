@@ -683,17 +683,17 @@
     "category": "regression_grounding",
     "student_id": null,
     "query": "What is the B.Tech tuition fee?",
-    "expected_outcome": "Not in the documents: the handbook describes the fee components and payment rules but gives no amount.",
-    "expected_behavior": "insufficient",
-    "forbidden_facts": [
-      "lakh",
-      "₹",
-      "Rs.",
-      "INR 1",
-      "INR 2",
-      "INR 3",
-      "INR 4",
-      "INR 5"
+    "expected_outcome": "Rs 5,03,500 per year (Vidyashilp_University_Programs_.xlsx, B.Tech fees table). Before that sheet was added the documents gave no amount and the advisor had to say so.",
+    "expected_behavior": "answer",
+    "required_facts": [
+      [
+        "5,03,500",
+        "503500",
+        "503,500"
+      ]
+    ],
+    "expected_sources": [
+      "Vidyashilp_University_Programs_"
     ]
   },
   {

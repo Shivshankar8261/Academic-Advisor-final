@@ -420,14 +420,24 @@ def bms_course(text: str) -> list[dict]:
     return _answer(out, BMS_FILE, "Sem_Spread_BMS", BMS_NOTE)
 
 
+# The BMS spread only knows semesters, baskets and courses. These topics (and the B.M.S., LL.B. law programme) are
+# answered from the programme sheet and brochures instead, so the question falls through to retrieval.
+BMS_ELSEWHERE_RE = re.compile(r"\bll\.?\s?b\b|\bfees?\b|\btuition\b|\beligib|\badmission|\bentrance\b|\bminors?\b|"
+                              r"\bfaculty\b|\bdean\b|\bplacements?\b|\binternships?\b|\bscholarships?\b", re.I)
+
+
 def bms_route(q: str, message: str) -> list[dict]:
     now = message or q
+    if re.search(r"\bll\.?\s?b\b", now, re.I):
+        return []
     found = bms_course(now)
     if found:
         return found
     sem = _sem(now) or _sem(q)
     if sem:
         return bms_semester(sem)
+    if BMS_ELSEWHERE_RE.search(now):
+        return []
     if re.search(r"\bbaskets?\b|\bcredits?\b|\bstructure\b|\brequire", now, re.I):
         return bms_baskets()
     if re.search(r"\b(courses?|subjects?|list|all|curriculum|syllabus)\b", now, re.I):

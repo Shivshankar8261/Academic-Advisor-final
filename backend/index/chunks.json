@@ -2632,753 +2632,785 @@
 "pages": ""
 },
 {
-"text": "[Vidyashilp University Programmes]\n# Vidyashilp University Programmes\n\nSource: Vu Uni Data.xlsx (programme list, credit split and course lists for every VU programme).",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[Vidyashilp University Programmes]\n# Vidyashilp University Programmes\n\nSource: Vidyashilp_University_Programs_.xlsx (programmes, eligibility, admission, credit structure, courses, minors and fees).",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "Vidyashilp University Programmes",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[All programmes offered at Vidyashilp University]\nVidyashilp University (VU) offers 8 undergraduate programmes: B.Tech (Hons) Computer Science & Engineering - Data Science; B.Tech (Hons) Computer Science & Engineering - AI & ML; B.M.S. (Hons) / (Hons with Research) in Digital Business; B.A. (Hons) / (Hons with Research) in Economics; B.A. (Hons) / (Hons with Research) in Psychology; B.Des (Communication Design); B.A., LL.B. (Hons); B.M.S., LL.B. (Hons). It also offers 8 Ph.D. (PhD, doctoral) programmes: Ph.D. in Computer Science; Ph.D. in Data Science; Ph.D. in Mathematics & Statistics; Ph.D. in Material Science; Ph.D. in Economics; Ph.D. in Psychology; Ph.D. in Sociology & Anthropology; Ph.D. in Law.| Programme | Level | School | Duration | Total credits |\n|---|---|---|---|---|\n| B.Tech (Hons) Computer Science & Engineering - Data Science | Undergraduate | School of Engineering and Technology | 4 years | 180 |\n| B.Tech (Hons) Computer Science & Engineering - AI & ML | Undergraduate | School of Engineering and Technology | 4 years | 180 |\n| B.M.S. (Hons) / (Hons with Research) in Digital Business | Undergraduate | School of Business and Entrepreneurship | 4 years | 164 |\n| B.A. (Hons) / (Hons with Research) in Economics | Undergraduate | School of Liberal Arts and Sciences | 4 years | 164 |\n| B.A. (Hons) / (Hons with Research) in Psychology | Undergraduate | School of Liberal Arts and Sciences | 4 years | 164 |\n| B.Des (Communication Design) | Undergraduate | School of Design | 4 years | 164 |\n| B.A., LL.B. (Hons) | Undergraduate | School of Law | 5 years | 205 |\n| B.M.S., LL.B. (Hons) | Undergraduate | School of Law | 5 years | 205 |",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[All programmes offered at Vidyashilp University]\nVidyashilp University (VU) offers 8 undergraduate programmes: B.Tech (Hons) Computer Science & Engineering - Data Science; B.Tech (Hons) Computer Science & Engineering - AI & ML; B.M.S. (Hons) / (Hons with Research) in Digital Business; B.A. (Hons) / (Hons with Research) in Economics; B.A. (Hons) / (Hons with Research) in Psychology; B.Des (Communication Design); B.A., LL.B. (Hons); B.M.S., LL.B. (Hons).| Programme | School | Duration | Total credits | Eligibility | Admission |\n|---|---|---|---|---|---|\n| B.Tech (Hons) Computer Science & Engineering - Data Science | School of Engineering and Technology | 4 years | 180 | 10+2, min 50% overall; Physics & Mathematics compulsory | KCET / JEE Main / COMEDK / CUET / state CETs |\n| B.Tech (Hons) Computer Science & Engineering - AI & ML | School of Engineering and Technology | 4 years | 180 | 10+2, min 50% overall; Physics & Mathematics compulsory | KCET / JEE Main / COMEDK / CUET / state CETs |\n| B.M.S. (Hons) / (Hons with Research) in Digital Business | School of Business and Entrepreneurship | 4 years | 164 | 10+2 any discipline, min 50% | Merit list + personal interview |\n| B.A. (Hons) / (Hons with Research) in Economics | School of Liberal Arts and Sciences | 4 years | 164 | 10+2, min 50% | Merit list + personal interview |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "All programmes offered at Vidyashilp University",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[All programmes offered at Vidyashilp University]\n| Ph.D. in Computer Science | Doctoral | not stated | not stated | not stated |\n| Ph.D. in Data Science | Doctoral | not stated | not stated | not stated |\n| Ph.D. in Mathematics & Statistics | Doctoral | not stated | not stated | not stated |\n| Ph.D. in Material Science | Doctoral | not stated | not stated | not stated |\n| Ph.D. in Economics | Doctoral | not stated | not stated | not stated |\n| Ph.D. in Psychology | Doctoral | not stated | not stated | not stated |\n| Ph.D. in Sociology & Anthropology | Doctoral | not stated | not stated | not stated |\n| Ph.D. in Law | Doctoral | not stated | not stated | not stated |",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[All programmes offered at Vidyashilp University]\n| B.A. (Hons) / (Hons with Research) in Psychology | School of Liberal Arts and Sciences | 4 years | 164 | 10+2, min 50% | Merit list + personal interview |\n| B.Des (Communication Design) | School of Design | 4 years | 164 | 10+2 any discipline, min 50% | Registration, interview (no exam named on page) |\n| B.A., LL.B. (Hons) | School of Law | 5 years | 205 | 10+2, min 45% (42% OBC; 40% SC/ST) | CLAT / LSAT / AILET preferred + interview |\n| B.M.S., LL.B. (Hons) | School of Law | 5 years | 205 | 10+2, min 45% (42% OBC; 40% SC/ST) | CLAT / LSAT / AILET preferred + interview |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "All programmes offered at Vidyashilp University",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[Ph.D. (PhD, doctoral) programmes and research areas]\nVU offers 8 Ph.D. (PhD) programmes. Duration and credits are not stated in the sheet.\n- **Ph.D. in Computer Science**: research areas Image Processing, Internet of Things, Algorithms\n- **Ph.D. in Data Science**: research areas Artificial Intelligence, Machine Learning, NLP, Deep Learning, Multi-modal Learning, Audio & Video Analytics\n- **Ph.D. in Mathematics & Statistics**: research areas Fractional Calculus, Wavelets, Statistics\n- **Ph.D. in Material Science**: research areas Gas Sensors, Photocatalytic Dye Degradation, Water Splitting\n- **Ph.D. in Economics**: research areas International Economics, Gender Economics, Indian Economics\n- **Ph.D. in Psychology**: research areas Visual Perception, Attention, Memory\n- **Ph.D. in Sociology & Anthropology**: research areas Urban Studies, Phenomenology of Religion, Marriage and Kinship, Migration and South Asian Diasporas",
-"source_file": "Vu Uni Data.xlsx",
-"section": "Ph.D. (PhD, doctoral) programmes and research areas",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[Ph.D. (PhD, doctoral) programmes and research areas]\n- **Ph.D. in Law**: research areas Human Rights Law, Sanitation Law and Policy, Environmental Law, Administrative Law, Constitutional Law, Technology Law and AI Ethics, Law and Gender Justice",
-"source_file": "Vu Uni Data.xlsx",
-"section": "Ph.D. (PhD, doctoral) programmes and research areas",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science)]\nB.Tech (Hons) Computer Science & Engineering - Data Science (also written BTech Data Science, B.Tech DS, CSE Data Science) is a 4-year undergraduate programme of the School of Engineering and Technology. It requires 180 credits in total.\n\n- School: School of Engineering and Technology\n- Duration: 4 years\n- Total credits: 180\n- Major: Data Science\n- Minors available: Economics; Marketing; Psychology; Finance; Design; Law",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science)]\nB.Tech (Hons) Computer Science & Engineering - Data Science (also written BTech Data Science, B.Tech DS, CSE Data Science) is a 4-year, 8-semester undergraduate programme of the School of Engineering and Technology. It requires 180 credits in total.\n\n- Degree: B.Tech (Hons)\n- Variants: Hons\n- Major: Data Science\n- Minor options: Economics; Psychology; Design; Marketing; Finance; Law",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science)",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Honors Program Core]\n- Advanced Exploratory Data Analysis\n- Optimization Techniques for Data Science\n- Machine Learning\n- Deep Learning\n- Cloud Computing and AI Model Deployment",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Honors Program Core",
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: eligibility and admission]\nEligibility for B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science): 10+2, min 50% overall; Physics & Mathematics compulsory. Entrance / selection: KCET / JEE Main / COMEDK / CUET / state CETs.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: eligibility and admission",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Program Core]\n- Data Structures\n- Theoretical Computer Science\n- Analysis of Algorithms\n- Digital Design and Computer Organization\n- Object-Oriented Programming\n- Microprocessors and Computer Architecture\n- Operating Systems\n- Networks\n- Databases Management\n- Programming in Python\n- Data Visualization and Storytelling\n- Artificial Intelligence\n- Internet of Things",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Program Core",
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: minors available]\nStudents of B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) can take a minor in: Economics, Marketing, Psychology, Finance, Design, Law.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: minors available",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Program Foundation]\n- Materials for Smart Devices\n- Sustainable Smart Materials\n- Design Workshop\n- Calculus\n- Probability and Statistics\n- Linear Algebra\n- Advanced Statistical Analysis and Research Methods with R",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Program Foundation",
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: fees]\nFees for B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science), in Indian rupees, as listed in the programme sheet:| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | Refundable | Payable on |\n|---|---|---|---|---|---|---|---|---|\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | At the time of admission |\n| 2025-29 batch | Full schedule | 2026-27 | 2 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2026 |\n| 2025-29 batch | Full schedule | 2027-28 | 3 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2027 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Security Deposit | One-time | Rs 10,000 | Yes | At the time of admission |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Convocation Fee | One-time | Rs 1,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Alumni Association Fee | One-time | Rs 4,000 | No | June 05, 2028 |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Specialization Tracks - Track 1 (Applied Deep Learning)]\n- Advanced Exploratory Data Analysis (Elective)\n- Optimization Techniques for Data Science (Elective)\n- Machine Learning (Elective)\n- Deep Learning (Elective)\n- Cloud Computing and AI Model Deployment (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Specialization Tracks - Track 1 (Applied Deep Learning)",
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: fees]\n| 2026-27 intake | Annual tuition only | 2026-27 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | not stated |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Specialization Tracks - Track 2 (Full Stack Development)]\n- Full Stack Development (Elective)\n- Backend Systems and API Development (Elective)\n- Big Data Analytics (Elective)\n- Web Frameworks (Elective)\n- Mobile Application Development (Elective)\n- Performance Optimization and Testing (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Specialization Tracks - Track 2 (Full Stack Development)",
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: University Core courses]\n- Communication Skills\n- Human Values and Ethics\n- Analytical Academic Writing\n- Critical Thinking\n- Problem Solving for Design Thinking\n- Environmental Studies and Sustainability\n- Fundamentals of Indian Constitution and Human Rights\n- Community Engagement\n- Humanistic Leadership Development\n- Socio-Cultural Perspectives on Indian Life",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: University Core courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: University Core]\n- Communication Skills\n- Human Values and Ethics\n- Analytical Academic Writing\n- Critical Thinking\n- Problem Solving for Design Thinking\n- Environmental Studies and Sustainability\n- Fundamentals of Indian Constitution and Human Rights\n- Community Engagement\n- Humanistic Leadership Development\n- Socio-Cultural Perspectives on Indian Life",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: University Core",
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Program Foundation courses]\n- Materials for Smart Devices\n- Sustainable Smart Materials\n- Design Workshop\n- Calculus\n- Probability and Statistics\n- Linear Algebra\n- Advanced Statistical Analysis and Research Methods with R",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Program Foundation courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML)]\nB.Tech (Hons) Computer Science & Engineering - AI & ML (also written BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) is a 4-year undergraduate programme of the School of Engineering and Technology. It requires 180 credits in total.\n\n- School: School of Engineering and Technology\n- Duration: 4 years\n- Total credits: 180\n- Major: Artificial Intelligence & Machine Learning\n- Minors available: Economics; Marketing; Psychology; Finance; Design; Law",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Program Core courses]\n- Data Structures\n- Theoretical Computer Science\n- Analysis of Algorithms\n- Digital Design and Computer Organization\n- Object-Oriented Programming\n- Microprocessors and Computer Architecture\n- Operating Systems\n- Networks\n- Databases Management\n- Programming in Python\n- Data Visualization and Storytelling\n- Artificial Intelligence\n- Internet of Things",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Program Core courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Honors Program Core courses]\n- Advanced Exploratory Data Analysis\n- Optimization Techniques for Data Science\n- Machine Learning\n- Deep Learning\n- Cloud Computing and AI Model Deployment",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Honors Program Core courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Specialization Tracks courses]\n- Advanced Exploratory Data Analysis (Elective)\n- Optimization Techniques for Data Science (Elective)\n- Machine Learning (Elective)\n- Deep Learning (Elective)\n- Cloud Computing and AI Model Deployment (Elective)\n- Full Stack Development (Elective)\n- Backend Systems and API Development (Elective)\n- Big Data Analytics (Elective)\n- Web Frameworks (Elective)\n- Mobile Application Development (Elective)\n- Performance Optimization and Testing (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Specialization Tracks courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Minor courses]\n- Economics (minor) (Minor)\n- Psychology (minor) (Minor)\n- Design (minor) (Minor)\n- Marketing (minor) (Minor)\n- Finance (minor) (Minor)\n- Law (minor) (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - Data Science (BTech Data Science, B.Tech DS, CSE Data Science) > B.Tech (Hons) Computer Science & Engineering - Data Science: Minor courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML)]\nB.Tech (Hons) Computer Science & Engineering - AI & ML (also written BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) is a 4-year, 8-semester undergraduate programme of the School of Engineering and Technology. It requires 180 credits in total.\n\n- Degree: B.Tech (Hons)\n- Variants: Hons\n- Major: Artificial Intelligence & Machine Learning\n- Minor options: Economics; Psychology; Design; Marketing; Finance; Law",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML)",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Electives]\n- Generative AI models (Elective)\n- Parallel Computing (Elective)\n- Probabilistic Graphical Models (Elective)\n- Bayesian Methods in Machine Learning (Elective)\n- Multi-Modal Learning (Elective)\n- Data Visualization and Story Telling (Elective)\n- Full Stack Development (Elective)\n- Backend Systems and API Development (Elective)\n- Big Data Analytics (Elective)\n- Web Frameworks (Elective)\n- Mobile Application Development (Elective)\n- Performance Optimization and Testing (Elective)\n- Advanced Statistical Analysis and Research Methods with R (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Electives",
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: eligibility and admission]\nEligibility for B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML): 10+2, min 50% overall; Physics & Mathematics compulsory. Entrance / selection: KCET / JEE Main / COMEDK / CUET / state CETs.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: eligibility and admission",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Honors Program Core]\n- Deep Learning\n- Natural Language Processing\n- Reinforcement Learning\n- Image Processing and Computer Vision\n- Cloud Computing and AI Model Deployment",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Honors Program Core",
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: minors available]\nStudents of B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) can take a minor in: Economics, Marketing, Psychology, Finance, Design, Law.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: minors available",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Program Core]\n- Data Structures\n- Theoretical Computer Science\n- Analysis of Algorithms\n- Digital Design and Computer Organization\n- Object-Oriented Programming\n- Microprocessors and Computer Architecture\n- Operating Systems\n- Networks\n- Databases Management\n- Optimization Techniques\n- Machine Learning\n- Artificial Intelligence",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Program Core",
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: fees]\nFees for B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML), in Indian rupees, as listed in the programme sheet:\n\n| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | Refundable | Payable on |\n|---|---|---|---|---|---|---|---|---|\n| 2026-27 intake | Annual tuition only | 2026-27 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | not stated |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Program Foundation]\n- Language\n- Smart devices & smart materials\n- Introduction to quantum mechanics\n- Design Workshop\n- Multivariate Calculus\n- Probability and Statistics\n- Linear Algebra\n- Programming in Python",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Program Foundation",
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: University Core courses]\n- Communication Skills\n- Human Values in work and Life\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Fundamentals of Indian Constitution and Human Rights\n- Community Engagement\n- Socio-Cultural Perspectives on Indian Life\n- Humanistic Leadership Development\n- Analytical Academic Writing\n- Critical Thinking\n- Problem Solving for Design Thinking",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: University Core courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Research / Internship / Project]\n- Internship / Capstone Project (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Research / Internship / Project",
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Program Foundation courses]\n- Language\n- Smart devices & smart materials\n- Introduction to quantum mechanics\n- Design Workshop\n- Multivariate Calculus\n- Probability and Statistics\n- Linear Algebra\n- Programming in Python",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Program Foundation courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: University Core]\n- Communication Skills\n- Human Values in work and Life\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Fundamentals of Indian Constitution and Human Rights\n- Community Engagement\n- Socio-Cultural Perspectives on Indian Life\n- Humanistic Leadership Development\n- Analytical Academic Writing\n- Critical Thinking\n- Problem Solving for Design Thinking",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: University Core",
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Program Core courses]\n- Data Structures\n- Theoretical Computer Science\n- Analysis of Algorithms\n- Digital Design and Computer Organization\n- Object-Oriented Programming\n- Microprocessors and Computer Architecture\n- Operating Systems\n- Networks\n- Databases Management\n- Optimization Techniques\n- Machine Learning\n- Artificial Intelligence",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Program Core courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business)]\nB.M.S. (Hons) / (Hons with Research) in Digital Business (also written BMS, Bachelor of Management Studies, Digital Business) is a 4-year undergraduate programme of the School of Business and Entrepreneurship. It requires 164 credits in total.\n\n- School: School of Business and Entrepreneurship\n- Duration: 4 years\n- Total credits: 164\n- Major: Digital Business\n- Minors available: Data Science; Economics; Psychology; Design; Law",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Honors Program Core courses]\n- Deep Learning\n- Natural Language Processing\n- Reinforcement Learning\n- Image Processing and Computer Vision\n- Cloud Computing and AI Model Deployment",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Honors Program Core courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Electives courses]\n- Generative AI models (Elective)\n- Parallel Computing (Elective)\n- Probabilistic Graphical Models (Elective)\n- Bayesian Methods in Machine Learning (Elective)\n- Multi-Modal Learning (Elective)\n- Data Visualization and Story Telling (Elective)\n- Full Stack Development (Elective)\n- Backend Systems and API Development (Elective)\n- Big Data Analytics (Elective)\n- Web Frameworks (Elective)\n- Mobile Application Development (Elective)\n- Performance Optimization and Testing (Elective)\n- Advanced Statistical Analysis and Research Methods with R (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Electives courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Minor courses]\n- Economics (minor) (Minor)\n- Psychology (minor) (Minor)\n- Design (minor) (Minor)\n- Marketing (minor) (Minor)\n- Finance (minor) (Minor)\n- Law (minor) (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Minor courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Research / Internship / Project courses]\n- Internship / Capstone Project (Project/Research)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Tech (Hons) Computer Science & Engineering - AI & ML (BTech AI ML, B.Tech AIML, Artificial Intelligence and Machine Learning, CSE AI-ML) > B.Tech (Hons) Computer Science & Engineering - AI & ML: Research / Internship / Project courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business)]\nB.M.S. (Hons) / (Hons with Research) in Digital Business (also written BMS, Bachelor of Management Studies, Digital Business) is a 4-year, 8-semester undergraduate programme of the School of Business and Entrepreneurship. It requires 164 credits in total.\n\n- Degree: B.M.S. (Hons)\n- Variants: Hons; Hons with Research\n- Major: Digital Business\n- Minor options: Data Science; Economics; Design; Law; Psychology (current page). Older page: Data Science; Economics; Marketing; Psychology; Finance; Design",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business)",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: eligibility and admission]\nEligibility for B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business): 10+2 any discipline, min 50%. Entrance / selection: Merit list + personal interview.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: eligibility and admission",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: minors available]\nStudents of B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) can take a minor in: Data Science, Economics, Psychology, Design, Law.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: minors available",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
 "text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: credit distribution]\n- University Core: 18 credits\n- Program Foundation: 32 credits\n- Major: 52 credits\n- Specialization Tracks: 20 credits\n- Minor / Open Courses: 24 credits\n- Research / Internship / Project: 18 credits",
-"source_file": "Vu Uni Data.xlsx",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: credit distribution",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Program Foundation]\n- AI for Decision Making\n- Introduction to Psychology\n- Visualization Data for Storytelling\n- Programming in Python\n- Introduction to Digital World",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Program Foundation",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: fees]\nFees for B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business), in Indian rupees, as listed in the programme sheet:| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | Refundable | Payable on |\n|---|---|---|---|---|---|---|---|---|\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | At the time of admission |\n| 2025-29 batch | Full schedule | 2026-27 | 2 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2026 |\n| 2025-29 batch | Full schedule | 2027-28 | 3 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2027 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Security Deposit | One-time | Rs 10,000 | Yes | At the time of admission |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Convocation Fee | One-time | Rs 1,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Alumni Association Fee | One-time | Rs 4,000 | No | June 05, 2028 |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research - Hons with Research]\n- Advanced Research Methodology (Project/Research)\n- Dissertation (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research - Hons with Research",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: fees]\n| 2026-27 intake | Annual tuition only | 2026-27 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | not stated |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: University Core]\n- Critical Thinking\n- Problem Solving for Design Thinking\n- Communication Skills\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Fundamentals of Indian Constitution and Human Rights\n- Community Engagement\n- Socio-Cultural Perspectives on Indian Life",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: University Core",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: University Core courses]\n- Overview of Learning Methods\n- Speaking and Presentation Skills\n- Design Thinking and Problem Solving\n- Academic and Business Writing\n- Indian Society and Culture / Performing Arts / Sports\n- Personality and Leadership Skills\n- Critical Thinking\n- Social Engagement Experience\n- Problem Solving for Design Thinking\n- Communication Skills\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Fundamentals of Indian Constitution and Human Rights\n- Community Engagement\n- Socio-Cultural Perspectives on Indian Life",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: University Core courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Major - Digital Business and Management Studies (older catalogue)]\n- Financial Accounting and Analysis\n- Introduction to Digital Business\n- Introduction to Economics\n- Business Economics\n- Digital Business Finance\n- Digital Marketing\n- Organizational Behaviour and Design\n- Digital Business Models\n- Emerging Technologies for Business\n- People and Talent Management\n- Digital Leadership\n- Legal Aspects in Digital Business\n- Strategy and Decision Making\n- Business Strategy Simulation\n- Digital Consumer\n- Operations Management\n- Supply Chain Management\n- Research Methodology (BMS Hons with Research only)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Major - Digital Business and Management Studies (older catalogue)",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Program Foundation courses]\n- English Language I\n- Introduction to Statistics and Data Analysis\n- Data Analysis Project\n- Introduction to Economics / Introduction to Psychology\n- English Language II / English Writings-Select Readings\n- Environmental Science and Sustainable Development\n- Language\n- Tracing Economics: Kautilya to now / Globalization: Economic and Social Perspectives / Indian Psychology\n- Foundation Seminar\n- Professional Ethics and Human Values\n- Program Teaching Internship\n- AI for Decision Making\n- Introduction to Psychology\n- Visualization Data for Storytelling\n- Programming in Python\n- Introduction to Digital World",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Program Foundation courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Data Science (older catalogue)]\n- Introduction to Data Science (Minor)\n- Data Analysis and Visualization (Minor)\n- Data Science Project (Minor)\n- Introduction to Machine Learning (Minor)\n- Artificial Intelligence (Minor)\n- Data Science for Psychologists (Minor)\n- Data Science for Economics (Minor)\n- Applications of Deep Learning (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Data Science (older catalogue)",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Major courses]\n- Financial Accounting and Analysis\n- Introduction to Digital Business\n- Introduction to Economics\n- Business Economics\n- Digital Business Finance\n- Digital Marketing\n- Organizational Behaviour and Design\n- Digital Business Models\n- Emerging Technologies for Business\n- People and Talent Management\n- Digital Leadership\n- Legal Aspects in Digital Business\n- Strategy and Decision Making\n- Business Strategy Simulation\n- Digital Consumer\n- Operations Management\n- Supply Chain Management\n- Research Methodology (BMS Hons with Research only)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Major courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Design (older catalogue)]\n- Culture of Design (Minor)\n- Process of Design (Minor)\n- Design Research (Minor)\n- Design for Communication (Minor)\n- Experience Design (Minor)\n- Social Design (Minor)\n- Design your life (Minor)\n- Design Project (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Design (older catalogue)",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Specialization Tracks courses]\n- Overview of the Startup World (Elective)\n- Design Thinking and Lean Startup Canvas (Elective)\n- Startup Strategy (Elective)\n- Developing a Business Plan (Elective)\n- Business Marketing (Elective)\n- Fundamentals of Digital Product Management (Elective)\n- Technology for Startups (Elective)\n- Financial Institutions, Markets and Services (Elective)\n- Foundations of FinTech (Elective)\n- Financial Statement Analysis (Elective)\n- Basics of Investment Management (Elective)\n- Introduction to Financial Derivatives (Elective)\n- Digital Currencies (Elective)\n- Financial Economics (Elective)\n- Behavioural Finance (Elective)\n- Marketing Research (Elective)\n- Brand Management (Elective)\n- Digital Product Management (Elective)\n- Services Marketing (Elective)\n- Integrated Marketing Communications (Elective)\n- Retail Management (Elective)\n- International Marketing (Elective)\n- Marketing (track) (Elective)\n- Finance (track) (Elective)\n- Startup Management (track) (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Specialization Tracks courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Economics (older catalogue)]\n- Introduction to Microeconomics (Minor)\n- Introduction to Macroeconomics (Minor)\n- Indian Economy (Minor)\n- Intermediate Microeconomics (Minor)\n- Intermediate Macroeconomics (Minor)\n- Development Economics (Minor)\n- Behavioural Economics (Minor)\n- International Economics (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Economics (older catalogue)",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses courses]\n- Introduction to Data Science (Minor)\n- Data Analysis and Visualization (Minor)\n- Data Science Project (Minor)\n- Introduction to Machine Learning (Minor)\n- Artificial Intelligence (Minor)\n- Data Science for Psychologists (Minor)\n- Data Science for Economics (Minor)\n- Applications of Deep Learning (Minor)\n- Introduction to Microeconomics (Minor)\n- Introduction to Macroeconomics (Minor)\n- Indian Economy (Minor)\n- Intermediate Microeconomics (Minor)\n- Intermediate Macroeconomics (Minor)\n- Development Economics (Minor)\n- Behavioural Economics (Minor)\n- International Economics (Minor)\n- Principles of Business (Minor)\n- Introduction to Digital Marketing (Minor)\n- Consumer Behaviour (Minor)\n- Services Marketing (Minor)\n- Integrated Marketing Communications (Minor)\n- Brand Management (Minor)\n- Marketing Research (Minor)\n- Digital Product Management (Minor)\n- Introduction to Psychology (Minor)\n- Development of Psychological Thought (Minor)\n- Biological Psychology (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Finance (older catalogue)]\n- Managerial Economics (Minor)\n- Financial Accounting (Minor)\n- Financial Management (Minor)\n- Essentials of Business Management (Minor)\n- Financial Economics (Minor)\n- Financial Services (Minor)\n- Blockchain for Financial Services (Minor)\n- Minor Project (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Finance (older catalogue)",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses courses]\n- Cognitive Psychology (Minor)\n- Developmental Psychology (Minor)\n- Social Psychology (Minor)\n- Clinical Psychology (Minor)\n- Integrative Practicum (Minor)\n- Managerial Economics (Minor)\n- Financial Accounting (Minor)\n- Financial Management (Minor)\n- Essentials of Business Management (Minor)\n- Financial Economics (Minor)\n- Financial Services (Minor)\n- Blockchain for Financial Services (Minor)\n- Minor Project (Minor)\n- Culture of Design (Minor)\n- Process of Design (Minor)\n- Design Research (Minor)\n- Design for Communication (Minor)\n- Experience Design (Minor)\n- Social Design (Minor)\n- Design your life (Minor)\n- Design Project (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Marketing (older catalogue)]\n- Principles of Business (Minor)\n- Introduction to Digital Marketing (Minor)\n- Consumer Behaviour (Minor)\n- Services Marketing (Minor)\n- Integrated Marketing Communications (Minor)\n- Brand Management (Minor)\n- Marketing Research (Minor)\n- Digital Product Management (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Marketing (older catalogue)",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research / Internship / Project courses]\n- Short-term / Summer-Break Industry Internship (Project/Research)\n- Integrative Project (Major + Minor domains) (Project/Research)\n- Minor Project (Project/Research)\n- Industry Internship (Project/Research)\n- Capstone Project (Project/Research)\n- Startup Experience (Startup Track) (Project/Research)\n- Advanced Research Methodology (mandatory additional course) (Project/Research)\n- Integrative Project (with Minor domains) (Project/Research)\n- Industry Based Research Project (Project/Research)\n- Research Dissertation (Project/Research)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research / Internship / Project courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Psychology (older catalogue)]\n- Introduction to Psychology (Minor)\n- Development of Psychological Thought (Minor)\n- Biological Psychology (Minor)\n- Cognitive Psychology (Minor)\n- Developmental Psychology (Minor)\n- Social Psychology (Minor)\n- Clinical Psychology (Minor)\n- Integrative Practicum (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor / Open Courses - Psychology (older catalogue)",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor courses]\n- Data Science (minor) (Minor)\n- Economics (minor) (Minor)\n- Design (minor) (Minor)\n- Law (minor) (Minor)\n- Psychology (minor) (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Minor courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Program Foundation (older catalogue)]\n- English Language I\n- Introduction to Statistics and Data Analysis\n- Data Analysis Project\n- Introduction to Economics / Introduction to Psychology\n- English Language II / English Writings-Select Readings\n- Environmental Science and Sustainable Development\n- Language\n- Tracing Economics: Kautilya to now / Globalization: Economic and Social Perspectives / Indian Psychology\n- Foundation Seminar\n- Professional Ethics and Human Values\n- Program Teaching Internship",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Program Foundation (older catalogue)",
+"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research courses]\n- Advanced Research Methodology (Project/Research)\n- Dissertation (Project/Research)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research / Internship / Project - Honors (older catalogue)]\n- Short-term / Summer-Break Industry Internship (Project/Research)\n- Integrative Project (Major + Minor domains) (Project/Research)\n- Minor Project (Project/Research)\n- Industry Internship (Project/Research)\n- Capstone Project (Project/Research)\n- Startup Experience (Startup Track) (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research / Internship / Project - Honors (older catalogue)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research / Internship / Project - Honors with Research (older catalogue)]\n- Advanced Research Methodology (mandatory additional course) (Project/Research)\n- Short-term / Summer-Break Industry Internship (Project/Research)\n- Integrative Project (with Minor domains) (Project/Research)\n- Industry Based Research Project (Project/Research)\n- Research Dissertation (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Research / Internship / Project - Honors with Research (older catalogue)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Specialization Tracks - A. Startup Experience (older catalogue)]\n- Overview of the Startup World (Elective)\n- Design Thinking and Lean Startup Canvas (Elective)\n- Startup Strategy (Elective)\n- Developing a Business Plan (Elective)\n- Business Marketing (Elective)\n- Fundamentals of Digital Product Management (Elective)\n- Technology for Startups (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Specialization Tracks - A. Startup Experience (older catalogue)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Specialization Tracks - B. Finance Management (older catalogue)]\n- Financial Institutions, Markets and Services (Elective)\n- Foundations of FinTech (Elective)\n- Financial Statement Analysis (Elective)\n- Basics of Investment Management (Elective)\n- Introduction to Financial Derivatives (Elective)\n- Digital Currencies (Elective)\n- Financial Economics (Elective)\n- Behavioural Finance (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Specialization Tracks - B. Finance Management (older catalogue)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Specialization Tracks - C. Marketing Management (older catalogue)]\n- Marketing Research (Elective)\n- Brand Management (Elective)\n- Digital Product Management (Elective)\n- Services Marketing (Elective)\n- Integrated Marketing Communications (Elective)\n- Retail Management (Elective)\n- International Marketing (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: Specialization Tracks - C. Marketing Management (older catalogue)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: University Core (older catalogue)]\n- Overview of Learning Methods\n- Speaking and Presentation Skills\n- Design Thinking and Problem Solving\n- Academic and Business Writing\n- Indian Society and Culture / Performing Arts / Sports\n- Personality and Leadership Skills\n- Critical Thinking\n- Social Engagement Experience",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S. (Hons) / (Hons with Research) in Digital Business (BMS, Bachelor of Management Studies, Digital Business) > B.M.S. (Hons) / (Hons with Research) in Digital Business: University Core (older catalogue)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics)]\nB.A. (Hons) / (Hons with Research) in Economics (also written BA Economics, Bachelor of Arts in Economics) is a 4-year undergraduate programme of the School of Liberal Arts and Sciences. It requires 164 credits in total.\n\n- School: School of Liberal Arts and Sciences\n- Duration: 4 years\n- Total credits: 164\n- Major: Economics\n- Minors available: Data Science; Marketing; Psychology; Finance; Design",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics)]\nB.A. (Hons) / (Hons with Research) in Economics (also written BA Economics, Bachelor of Arts in Economics) is a 4-year, 8-semester undergraduate programme of the School of Liberal Arts and Sciences. It requires 164 credits in total.\n\n- Degree: B.A. (Hons)\n- Variants: Hons; Hons with Research\n- Major: Economics\n- Minor options: Data Science; Marketing; Psychology; Finance; Design (Economics is the major)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics)",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: eligibility and admission]\nEligibility for B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics): 10+2, min 50%. Entrance / selection: Merit list + personal interview.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: eligibility and admission",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: minors available]\nStudents of B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) can take a minor in: Data Science, Marketing, Psychology, Finance, Design.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: minors available",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
 "text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: credit distribution]\n- University Core: 18 credits\n- Program Foundation: 32 credits\n- Major: 52 credits\n- Specialization Tracks: 20 credits\n- Minor / Open Courses: 24 credits\n- Research / Internship / Project: 18 credits",
-"source_file": "Vu Uni Data.xlsx",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: credit distribution",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Major - Economics (older catalogue; the current curriculum may differ)]\n- Microeconomics\n- Macroeconomics\n- Mathematical Economics\n- Intermediate Microeconomics\n- Intermediate Macroeconomics\n- Statistics and Research Methodology\n- Fundamentals of Finance\n- Introduction to Econometrics\n- Public Economics\n- International Economics\n- Economics of Growth and Development\n- History of Economic Thought\n- Indian Economy\n- Behavioural Economics\n- Emerging Topics in Economics",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Major - Economics (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: fees]\nFees for B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics), in Indian rupees, as listed in the programme sheet:| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | Refundable | Payable on |\n|---|---|---|---|---|---|---|---|---|\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Tuition Fee | Annual | Rs 3,97,000 | No | At the time of admission |\n| 2025-29 batch | Full schedule | 2026-27 | 2 | Tuition Fee | Annual | Rs 3,97,500 | No | June 05, 2026 |\n| 2025-29 batch | Full schedule | 2027-28 | 3 | Tuition Fee | Annual | Rs 3,97,500 | No | June 05, 2027 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Tuition Fee | Annual | Rs 3,97,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Security Deposit | One-time | Rs 10,000 | Yes | At the time of admission |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Convocation Fee | One-time | Rs 1,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Alumni Association Fee | One-time | Rs 4,000 | No | June 05, 2028 |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Data Science (older catalogue; the current curriculum may differ)]\n- Introduction to Data Science (Minor)\n- Data Analysis and Visualization (Minor)\n- Data Science Project (Minor)\n- Introduction to Machine Learning (Minor)\n- Artificial Intelligence (Minor)\n- Data Science for Psychologists (Minor)\n- Data Science for Economics (Minor)\n- Applications of Deep Learning (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Data Science (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: fees]\n| 2026-27 intake | Annual tuition only | 2026-27 | 1 | Tuition Fee | Annual | Rs 3,97,000 | No | not stated |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Design (older catalogue; the current curriculum may differ)]\n- Culture of Design (Minor)\n- Process of Design (Minor)\n- Design Research (Minor)\n- Design for Communication (Minor)\n- Experience Design (Minor)\n- Social Design (Minor)\n- Design your life (Minor)\n- Design Project (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Design (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: University Core courses]\n- Overview of Learning Methods\n- Speaking and Presentation Skills\n- Design Thinking and Problem Solving\n- Academic and Business Writing\n- Indian Society and Culture / Performing Arts / Sports\n- Personality and Leadership Skills\n- Critical Thinking\n- Social Engagement Experience",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: University Core courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Finance (older catalogue; the current curriculum may differ)]\n- Principles of Business (Minor)\n- Financial Accounting (Minor)\n- Financial Management (Minor)\n- Essentials of Business Management (Minor)\n- Financial Economics (Minor)\n- Financial Services (Minor)\n- Introduction to Blockchain for Financial Services (Minor)\n- Behavioural Finance (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Finance (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Program Foundation courses]\n- English Language - I\n- English Language - II\n- Introduction to Statistics and Data Analysis\n- Data Analysis Project\n- Introduction to Economics\n- Introduction to Psychology\n- English Writings-Select Readings\n- Environmental Science and Sustainable Development\n- Language\n- Tracing Economics: Kautilya to now\n- Globalization: Economic and Social Perspectives\n- Indian Psychology\n- Foundation Seminar\n- Professional Ethics and Human Values\n- Program Teaching Internship",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Program Foundation courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Marketing (older catalogue; the current curriculum may differ)]\n- Principles of Business (Minor)\n- Introduction to Digital Marketing (Minor)\n- Consumer Behaviour (Minor)\n- Services Marketing (Minor)\n- Integrated Marketing Communications (Minor)\n- Brand Management (Minor)\n- Marketing Research (Minor)\n- Digital Product Management (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Marketing (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Major courses]\n- Microeconomics\n- Macroeconomics\n- Mathematical Economics\n- Intermediate Microeconomics\n- Intermediate Macroeconomics\n- Statistics and Research Methodology\n- Fundamentals of Finance\n- Introduction to Econometrics\n- Public Economics\n- International Economics\n- Economics of Growth and Development\n- History of Economic Thought\n- Indian Economy\n- Behavioural Economics\n- Emerging Topics in Economics",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Major courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Psychology (older catalogue; the current curriculum may differ)]\n- Introduction to Psychology (Minor)\n- Development of Psychological Thought (Minor)\n- Biological Psychology (Minor)\n- Cognitive Psychology (Minor)\n- Developmental Psychology (Minor)\n- Social Psychology (Minor)\n- Clinical Psychology (Minor)\n- Integrative Practicum (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses - Psychology (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Specialization Tracks courses]\n- Advanced Behavioural Economics (Elective)\n- Behavioural Finance (Elective)\n- Experimental Economics (Elective)\n- Neuroeconomics (Elective)\n- Economics of Informal Markets (Elective)\n- Digital Economics (Elective)\n- Monetary Economics (Elective)\n- Gender Economics (Elective)\n- Industrial Economics (Elective)\n- Agricultural Economics (Elective)\n- Economics of Health and Education (Elective)\n- Business Economics (Elective)\n- Financial Economics (Elective)\n- Advanced Econometrics (Elective)\n- International Finance (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Specialization Tracks courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Program Foundation (older catalogue; the current curriculum may differ)]\n- English Language - I\n- English Language - II\n- Introduction to Statistics and Data Analysis\n- Data Analysis Project\n- Introduction to Economics\n- Introduction to Psychology\n- English Writings-Select Readings\n- Environmental Science and Sustainable Development\n- Language\n- Tracing Economics: Kautilya to now\n- Globalization: Economic and Social Perspectives\n- Indian Psychology\n- Foundation Seminar\n- Professional Ethics and Human Values\n- Program Teaching Internship",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Program Foundation (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses courses]\n- Introduction to Data Science (Minor)\n- Data Analysis and Visualization (Minor)\n- Data Science Project (Minor)\n- Introduction to Machine Learning (Minor)\n- Artificial Intelligence (Minor)\n- Data Science for Psychologists (Minor)\n- Data Science for Economics (Minor)\n- Applications of Deep Learning (Minor)\n- Principles of Business (Minor)\n- Introduction to Digital Marketing (Minor)\n- Consumer Behaviour (Minor)\n- Services Marketing (Minor)\n- Integrated Marketing Communications (Minor)\n- Brand Management (Minor)\n- Marketing Research (Minor)\n- Digital Product Management (Minor)\n- Introduction to Psychology (Minor)\n- Development of Psychological Thought (Minor)\n- Biological Psychology (Minor)\n- Cognitive Psychology (Minor)\n- Developmental Psychology (Minor)\n- Social Psychology (Minor)\n- Clinical Psychology (Minor)\n- Integrative Practicum (Minor)\n- Financial Accounting (Minor)\n- Financial Management (Minor)\n- Essentials of Business Management (Minor)\n- Financial Economics (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Research / Internship / Project - Honors (older catalogue; the current curriculum may differ)]\n- Summer-Break Internship (Project/Research)\n- Integrative Project (Major + Minor domains) (Project/Research)\n- Minor Project (Project/Research)\n- Industry Internship (Project/Research)\n- Capstone Project (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Research / Internship / Project - Honors (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses courses]\n- Financial Services (Minor)\n- Introduction to Blockchain for Financial Services (Minor)\n- Behavioural Finance (Minor)\n- Culture of Design (Minor)\n- Process of Design (Minor)\n- Design Research (Minor)\n- Design for Communication (Minor)\n- Experience Design (Minor)\n- Social Design (Minor)\n- Design your life (Minor)\n- Design Project (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Minor / Open Courses courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Research / Internship / Project - Honors with Research (older catalogue; the current curriculum may differ)]\n- Advanced Research Methodology (mandatory additional course) (Project/Research)\n- Summer-Break Internship (Project/Research)\n- Integrative Project (Major + Minor domains) (Project/Research)\n- Industry Based Research Project (Project/Research)\n- Research Dissertation (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Research / Internship / Project - Honors with Research (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Research / Internship / Project courses]\n- Summer-Break Internship (Project/Research)\n- Integrative Project (Major + Minor domains) (Project/Research)\n- Minor Project (Project/Research)\n- Industry Internship (Project/Research)\n- Capstone Project (Project/Research)\n- Advanced Research Methodology (mandatory additional course) (Project/Research)\n- Industry Based Research Project (Project/Research)\n- Research Dissertation (Project/Research)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Research / Internship / Project courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Specialization Tracks - Track A (Behavioural and Nudge) (older catalogue; the current curriculum may differ)]\n- Advanced Behavioural Economics (Elective)\n- Behavioural Finance (Elective)\n- Experimental Economics (Elective)\n- Neuroeconomics (Elective)\n- Economics of Informal Markets (Elective)\n- Digital Economics (Elective)\n- Monetary Economics (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Specialization Tracks - Track A (Behavioural and Nudge) (older catalogue; the current curriculum may differ)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Specialization Tracks - Track B (Development) (older catalogue; the current curriculum may differ)]\n- Economics of Informal Markets (Elective)\n- Gender Economics (Elective)\n- Industrial Economics (Elective)\n- Agricultural Economics (Elective)\n- Economics of Health and Education (Elective)\n- Digital Economics (Elective)\n- Monetary Economics (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Specialization Tracks - Track B (Development) (older catalogue; the current curriculum may differ)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Specialization Tracks - Track C (Development; business/finance content) (older catalogue; the current curriculum may differ)]\n- Business Economics (Elective)\n- Financial Economics (Elective)\n- Advanced Econometrics (Elective)\n- International Finance (Elective)\n- Experimental Economics (Elective)\n- Digital Economics (Elective)\n- Monetary Economics (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: Specialization Tracks - Track C (Development; business/finance content) (older catalogue; the current curriculum may differ)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: University Core (older catalogue; the current curriculum may differ)]\n- Overview of Learning Methods\n- Speaking and Presentation Skills\n- Design Thinking and Problem Solving\n- Academic and Business Writing\n- Indian Society and Culture / Performing Arts / Sports\n- Personality and Leadership Skills\n- Critical Thinking\n- Social Engagement Experience",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Economics (BA Economics, Bachelor of Arts in Economics) > B.A. (Hons) / (Hons with Research) in Economics: University Core (older catalogue; the current curriculum may differ)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology)]\nB.A. (Hons) / (Hons with Research) in Psychology (also written BA Psychology, Bachelor of Arts in Psychology) is a 4-year undergraduate programme of the School of Liberal Arts and Sciences. It requires 164 credits in total.\n\n- School: School of Liberal Arts and Sciences\n- Duration: 4 years\n- Total credits: 164\n- Major: Psychology\n- Minors available: Data Science; Economics; Marketing; Finance; Design",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology)]\nB.A. (Hons) / (Hons with Research) in Psychology (also written BA Psychology, Bachelor of Arts in Psychology) is a 4-year, 8-semester undergraduate programme of the School of Liberal Arts and Sciences. It requires 164 credits in total.\n\n- Degree: B.A. (Hons)\n- Variants: Hons; Hons with Research\n- Major: Psychology\n- Minor options: Data Science; Economics; Marketing; Finance; Design (Psychology is the major)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology)",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: eligibility and admission]\nEligibility for B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology): 10+2, min 50%. Entrance / selection: Merit list + personal interview.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: eligibility and admission",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: minors available]\nStudents of B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) can take a minor in: Data Science, Economics, Marketing, Finance, Design.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: minors available",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
 "text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: credit distribution]\n- University Core: 18 credits\n- Program Foundation: 32 credits\n- Major: 52 credits\n- Specialization Tracks: 20 credits\n- Minor / Open Courses: 24 credits\n- Research / Internship / Project: 18 credits",
-"source_file": "Vu Uni Data.xlsx",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: credit distribution",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Major - Psychology (older catalogue; the current curriculum may differ)]\n- Foundations of Psychology\n- Statistics and Research Methodology\n- Biological Psychology\n- Cognitive Psychology\n- Experimental Psychology\n- Developmental Psychology\n- Neuropsychology\n- Social Psychology\n- Clinical Psychology\n- Development of Psychological Thought\n- Abnormal Psychology\n- Psychological Testing and Measurement\n- Positive Psychology\n- Emerging Topics in Psychology",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Major - Psychology (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: fees]\nFees for B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology), in Indian rupees, as listed in the programme sheet:",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Data Science (older catalogue; the current curriculum may differ)]\n- Introduction to Data Science (Minor)\n- Data Analysis and Visualization (Minor)\n- Data Science Project (Minor)\n- Introduction to Machine Learning (Minor)\n- Artificial Intelligence (Minor)\n- Data Science for Psychologists (Minor)\n- Data Science for Economics (Minor)\n- Applications of Deep Learning (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Data Science (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: fees]\n| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | Refundable | Payable on |\n|---|---|---|---|---|---|---|---|---|\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Tuition Fee | Annual | Rs 3,97,000 | No | At the time of admission |\n| 2025-29 batch | Full schedule | 2026-27 | 2 | Tuition Fee | Annual | Rs 3,97,500 | No | June 05, 2026 |\n| 2025-29 batch | Full schedule | 2027-28 | 3 | Tuition Fee | Annual | Rs 3,97,500 | No | June 05, 2027 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Tuition Fee | Annual | Rs 3,97,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Security Deposit | One-time | Rs 10,000 | Yes | At the time of admission |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Convocation Fee | One-time | Rs 1,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Alumni Association Fee | One-time | Rs 4,000 | No | June 05, 2028 |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Design (older catalogue; the current curriculum may differ)]\n- Culture of Design (Minor)\n- Process of Design (Minor)\n- Design Research (Minor)\n- Design for Communication (Minor)\n- Experience Design (Minor)\n- Social Design (Minor)\n- Design your life (Minor)\n- Design Project (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Design (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: University Core courses]\n- Overview of Learning Methods\n- Speaking and Presentation Skills\n- Design Thinking and Problem Solving\n- Academic and Business Writing\n- Indian Society and Culture / Performing Arts / Sports\n- Personality and Leadership Skills\n- Critical Thinking\n- Social Engagement Experience",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: University Core courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Economics (older catalogue; the current curriculum may differ)]\n- Introduction to Microeconomics (Minor)\n- Introduction to Macroeconomics (Minor)\n- Indian Economy (Minor)\n- Intermediate Microeconomics (Minor)\n- Intermediate Macroeconomics (Minor)\n- Development Economics (Minor)\n- Behavioural Economics (Minor)\n- International Economics (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Economics (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Program Foundation courses]\n- English Language - I\n- English Language - II\n- Introduction to Statistics and Data Analysis\n- Data Analysis Project\n- Introduction to Economics\n- Introduction to Psychology\n- English Writings-Select Readings\n- Environmental Science and Sustainable Development\n- Language\n- Tracing Economics: Kautilya to now\n- Globalization: Economic and Social Perspectives\n- Indian Psychology\n- Foundation Seminar\n- Professional Ethics and Human Values\n- Program Teaching Internship",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Program Foundation courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Finance (older catalogue; the current curriculum may differ)]\n- Principles of Business (Minor)\n- Financial Accounting (Minor)\n- Financial Management (Minor)\n- Essentials of Business Management (Minor)\n- Financial Economics (Minor)\n- Financial Services (Minor)\n- Introduction to Blockchain for Financial Services (Minor)\n- Behavioural Finance (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Finance (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Major courses]\n- Foundations of Psychology\n- Statistics and Research Methodology\n- Biological Psychology\n- Cognitive Psychology\n- Experimental Psychology\n- Developmental Psychology\n- Neuropsychology\n- Social Psychology\n- Clinical Psychology\n- Development of Psychological Thought\n- Abnormal Psychology\n- Psychological Testing and Measurement\n- Positive Psychology\n- Emerging Topics in Psychology",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Major courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Marketing (older catalogue; the current curriculum may differ)]\n- Principles of Business (Minor)\n- Introduction to Digital Marketing (Minor)\n- Consumer Behaviour (Minor)\n- Services Marketing (Minor)\n- Integrated Marketing Communications (Minor)\n- Brand Management (Minor)\n- Marketing Research (Minor)\n- Digital Product Management (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses - Marketing (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Specialization Tracks courses]\n- Counselling Psychology (Elective)\n- Counselling Theories and Techniques (Elective)\n- Counselling Skills (Elective)\n- Group Counselling Techniques (Elective)\n- Psychology of Individual Differences (Elective)\n- Professional Development (Elective)\n- Personality Psychology (Elective)\n- History of Clinical Psychology (Elective)\n- Psychotherapy (Elective)\n- Diagnostic Lab (Elective)\n- Multicultural and Therapeutic Skills (Elective)\n- Asian Healing Practise (Elective)\n- Psychosocial Rehabilitation (Elective)\n- Clinical Neuropsychology (Elective)\n- Introduction to Cognition (Elective)\n- Cognitive Neuroscience (Elective)\n- Mathematical Foundations of Cognitive Science (Elective)\n- Philosophy of the Mind and Cognitive Science (Elective)\n- Emotions and Decision Making (Elective)\n- Language Computations (Elective)\n- Computation and Cognition (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Specialization Tracks courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Program Foundation (older catalogue; the current curriculum may differ)]\n- English Language - I\n- English Language - II\n- Introduction to Statistics and Data Analysis\n- Data Analysis Project\n- Introduction to Economics\n- Introduction to Psychology\n- English Writings-Select Readings\n- Environmental Science and Sustainable Development\n- Language\n- Tracing Economics: Kautilya to now\n- Globalization: Economic and Social Perspectives\n- Indian Psychology\n- Foundation Seminar\n- Professional Ethics and Human Values\n- Program Teaching Internship",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Program Foundation (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses courses]\n- Introduction to Data Science (Minor)\n- Data Analysis and Visualization (Minor)\n- Data Science Project (Minor)\n- Introduction to Machine Learning (Minor)\n- Artificial Intelligence (Minor)\n- Data Science for Psychologists (Minor)\n- Data Science for Economics (Minor)\n- Applications of Deep Learning (Minor)\n- Introduction to Microeconomics (Minor)\n- Introduction to Macroeconomics (Minor)\n- Indian Economy (Minor)\n- Intermediate Microeconomics (Minor)\n- Intermediate Macroeconomics (Minor)\n- Development Economics (Minor)\n- Behavioural Economics (Minor)\n- International Economics (Minor)\n- Principles of Business (Minor)\n- Introduction to Digital Marketing (Minor)\n- Consumer Behaviour (Minor)\n- Services Marketing (Minor)\n- Integrated Marketing Communications (Minor)\n- Brand Management (Minor)\n- Marketing Research (Minor)\n- Digital Product Management (Minor)\n- Financial Accounting (Minor)\n- Financial Management (Minor)\n- Essentials of Business Management (Minor)\n- Financial Economics (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Research / Internship / Project - Honors (older catalogue; the current curriculum may differ)]\n- Summer-Break Internship (Project/Research)\n- Integrative Project (Major + Minor domains) (Project/Research)\n- Minor Project (Project/Research)\n- Industry Internship (Project/Research)\n- Capstone Project (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Research / Internship / Project - Honors (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses courses]\n- Financial Services (Minor)\n- Introduction to Blockchain for Financial Services (Minor)\n- Behavioural Finance (Minor)\n- Culture of Design (Minor)\n- Process of Design (Minor)\n- Design Research (Minor)\n- Design for Communication (Minor)\n- Experience Design (Minor)\n- Social Design (Minor)\n- Design your life (Minor)\n- Design Project (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Minor / Open Courses courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Research / Internship / Project - Honors with Research (older catalogue; the current curriculum may differ)]\n- Advanced Research Methodology (mandatory additional course) (Project/Research)\n- Summer-Break Internship (Project/Research)\n- Integrative Project (Major + Minor domains) (Project/Research)\n- Industry Based Research Project (Project/Research)\n- Research Dissertation (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Research / Internship / Project - Honors with Research (older catalogue; the current curriculum may differ)",
+"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Research / Internship / Project courses]\n- Summer-Break Internship (Project/Research)\n- Integrative Project (Major + Minor domains) (Project/Research)\n- Minor Project (Project/Research)\n- Industry Internship (Project/Research)\n- Capstone Project (Project/Research)\n- Advanced Research Methodology (mandatory additional course) (Project/Research)\n- Industry Based Research Project (Project/Research)\n- Research Dissertation (Project/Research)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Research / Internship / Project courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Specialization Tracks - Track A (Counselling) (older catalogue; the current curriculum may differ)]\n- Counselling Psychology (Elective)\n- Counselling Theories and Techniques (Elective)\n- Counselling Skills (Elective)\n- Group Counselling Techniques (Elective)\n- Psychology of Individual Differences (Elective)\n- Professional Development (Elective)\n- Personality Psychology (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Specialization Tracks - Track A (Counselling) (older catalogue; the current curriculum may differ)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Specialization Tracks - Track B (Clinical) (older catalogue; the current curriculum may differ)]\n- History of Clinical Psychology (Elective)\n- Psychotherapy (Elective)\n- Diagnostic Lab (Elective)\n- Multicultural and Therapeutic Skills (Elective)\n- Asian Healing Practise (Elective)\n- Psychosocial Rehabilitation (Elective)\n- Clinical Neuropsychology (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Specialization Tracks - Track B (Clinical) (older catalogue; the current curriculum may differ)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Specialization Tracks - Track C (Cognitive) (older catalogue; the current curriculum may differ)]\n- Introduction to Cognition (Elective)\n- Cognitive Neuroscience (Elective)\n- Mathematical Foundations of Cognitive Science (Elective)\n- Philosophy of the Mind and Cognitive Science (Elective)\n- Emotions and Decision Making (Elective)\n- Language Computations (Elective)\n- Computation and Cognition (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: Specialization Tracks - Track C (Cognitive) (older catalogue; the current curriculum may differ)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: University Core (older catalogue; the current curriculum may differ)]\n- Overview of Learning Methods\n- Speaking and Presentation Skills\n- Design Thinking and Problem Solving\n- Academic and Business Writing\n- Indian Society and Culture / Performing Arts / Sports\n- Personality and Leadership Skills\n- Critical Thinking\n- Social Engagement Experience",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A. (Hons) / (Hons with Research) in Psychology (BA Psychology, Bachelor of Arts in Psychology) > B.A. (Hons) / (Hons with Research) in Psychology: University Core (older catalogue; the current curriculum may differ)",
-"processed_file": "programmes.md",
-"course_code": "",
-"pages": ""
-},
-{
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design)]\nB.Des (Communication Design) (also written BDes, Bachelor of Design, Communication Design) is a 4-year undergraduate programme of the School of Design. It requires 164 credits in total.\n\n- School: School of Design\n- Duration: 4 years\n- Total credits: 164\n- Major: Design\n- Minors available: Data Science; Economics; Marketing; Psychology; Finance; Law",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design)]\nB.Des (Communication Design) (also written BDes, Bachelor of Design, Communication Design) is a 4-year, 8-semester undergraduate programme of the School of Design. It requires 164 credits in total.\n\n- Degree: B.Des\n- Variants: not stated\n- Major: Design\n- Minor options: Finance; Data Science; Marketing; Psychology; Economics; Law",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design)",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) - Year 1 - Foundation: Cognitive & Perceptual]\n- Integrative Studio I: Unlearning, Explorations & Design Fundamentals\n- Representational & Exploratory Drawing\n- Design History I\n- Storytelling & Narrative Design - Travel & documentation\n- Introduction to Digital Tools\n- Integrative Studio II: Sensemaking & Visualization\n- Typography I (Fundamentals)\n- Narrative Design I: Transmedia Storytelling\n- Design History II\n- Art as Research",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) - Year 1 - Foundation: Cognitive & Perceptual",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): eligibility and admission]\nEligibility for B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design): 10+2 any discipline, min 50%. Entrance / selection: Registration, interview (no exam named on page).",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): eligibility and admission",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) - Year 2 - Systems, Media & Research Foundations]\n- Integrative Studio III: Systems & Context\n- Typography II (Editorial & Layout Systems)\n- Photography & Image-Text\n- Design Theory I\n- Visual Ethnography\n- Sensitisation Course II / Self Study\n- Integrative Studio IV: Research & Prototyping\n- Typography III (Advanced & Digital Systems)\n- Exhibition & Spatial Narratives\n- Design Theory II\n- Research Methods I\n- Sensitisation Course III / Self Study",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) - Year 2 - Systems, Media & Research Foundations",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): minors available]\nStudents of B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) can take a minor in: Data Science, Economics, Marketing, Psychology, Finance, Law.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): minors available",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) - Year 3 - Applied Practice & Specialisation]\n- Integrative Studio V: Communication & Publication Design\n- Motion Graphics & Film Production I\n- Information & Interaction Design\n- Design Theory III (Semiotics & Media)\n- Production Pipeline I\n- Integrative Studio VI: Campaigns, Experience & Interaction\n- Motion Graphics & Film Production II (Editing, Sound, VFX Intro)\n- Campaign & Strategic Communication\n- Research Methods II (Applied Research)\n- Production Pipeline II (Continuation)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) - Year 3 - Applied Practice & Specialisation",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): fees]\nFees for B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design), in Indian rupees, as listed in the programme sheet:| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | Refundable | Payable on |\n|---|---|---|---|---|---|---|---|---|\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | At the time of admission |\n| 2025-29 batch | Full schedule | 2026-27 | 2 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2026 |\n| 2025-29 batch | Full schedule | 2027-28 | 3 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2027 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2025-26 | 1 | Security Deposit | One-time | Rs 10,000 | Yes | At the time of admission |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Convocation Fee | One-time | Rs 1,500 | No | June 05, 2028 |\n| 2025-29 batch | Full schedule | 2028-29 | 4 | Alumni Association Fee | One-time | Rs 4,000 | No | June 05, 2028 |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) - Year 4 - Leadership, Research & Independence]\n- Integrative Studio VII: Systems, Policy & Social Impact\n- Interdisciplinary Industry / Research Studio\n- Portfolio Review",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) - Year 4 - Leadership, Research & Independence",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): fees]\n| 2027-28 intake | Annual tuition + deposit | 2027-28 | 1 | Tuition Fee | Annual | Rs 6,00,000 | No | not stated |\n| 2027-28 intake | Annual tuition + deposit | 2027-28 | 1 | Security Deposit | One-time | Rs 15,000 | Yes | not stated |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Research / Internship / Project - Final year]\n- Capstone Project / Thesis / Industry Project (Professional Practice, Ethics & Entrepreneurship) (Project/Research)\n- Portfolio Review II (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Research / Internship / Project - Final year",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): University Core courses]\n- Critical Thinking\n- Problem Solving for Design Thinking\n- Communication Skills\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Fundamentals of Indian Constitution and Human Rights\n- Community Engagement\n- Socio-Cultural Perspectives on Indian Life",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): University Core courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Research / Internship / Project - Industry Internship]\n- Summer Internship (post Sem 6, mandatory) (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Research / Internship / Project - Industry Internship",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) courses]\n- Integrative Studio I: Unlearning, Explorations & Design Fundamentals\n- Representational & Exploratory Drawing\n- Design History I\n- Storytelling & Narrative Design - Travel & documentation\n- Introduction to Digital Tools\n- Integrative Studio II: Sensemaking & Visualization\n- Typography I (Fundamentals)\n- Narrative Design I: Transmedia Storytelling\n- Design History II\n- Art as Research\n- Integrative Studio III: Systems & Context\n- Typography II (Editorial & Layout Systems)\n- Photography & Image-Text\n- Design Theory I\n- Visual Ethnography\n- Sensitisation Course II / Self Study\n- Integrative Studio IV: Research & Prototyping\n- Typography III (Advanced & Digital Systems)\n- Exhibition & Spatial Narratives\n- Design Theory II\n- Research Methods I\n- Sensitisation Course III / Self Study\n- Integrative Studio V: Communication & Publication Design\n- Motion Graphics & Film Production I\n- Information & Interaction Design\n- Design Theory III (Semiotics & Media)\n- Production Pipeline I",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Specialization Tracks - Specialisation Track I (Sem 5) / II (Sem 6) / III (Sem 7)]\n- Interactive Design (Elective)\n- Film & Animation (Elective)\n- Graphic Design (Elective)\n- Comics & Sequential Art (Elective)\n- Game Design (Elective)\n- Extended Reality (AR/VR/XR) (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Specialization Tracks - Specialisation Track I (Sem 5) / II (Sem 6) / III (Sem 7)",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) courses]\n- Integrative Studio VI: Campaigns, Experience & Interaction\n- Motion Graphics & Film Production II (Editing, Sound, VFX Intro)\n- Campaign & Strategic Communication\n- Research Methods II (Applied Research)\n- Production Pipeline II (Continuation)\n- Integrative Studio VII: Systems, Policy & Social Impact\n- Interdisciplinary Industry / Research Studio\n- Portfolio Review",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Program Core (studio / major) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): University Core]\n- Critical Thinking\n- Problem Solving for Design Thinking\n- Communication Skills\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Fundamentals of Indian Constitution and Human Rights\n- Community Engagement\n- Socio-Cultural Perspectives on Indian Life",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): University Core",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Specialization Tracks courses]\n- Interactive Design (Elective)\n- Film & Animation (Elective)\n- Graphic Design (Elective)\n- Comics & Sequential Art (Elective)\n- Game Design (Elective)\n- Extended Reality (AR/VR/XR) (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Specialization Tracks courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws)]\nB.A., LL.B. (Hons) (also written BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) is a 5-year undergraduate programme of the School of Law. It requires 205 credits in total.\n\n- School: School of Law\n- Duration: 5 years\n- Total credits: 205\n- Major: Law (BCI-compliant); Honours specialisations\n- Minors available: not stated",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Research / Internship / Project courses]\n- Summer Internship (post Sem 6, mandatory) (Project/Research)\n- Capstone Project / Thesis / Industry Project (Professional Practice, Ethics & Entrepreneurship) (Project/Research)\n- Portfolio Review II (Project/Research)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Research / Internship / Project courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Minor courses]\n- Finance (minor) (Minor)\n- Data Science (minor) (Minor)\n- Marketing (minor) (Minor)\n- Psychology (minor) (Minor)\n- Economics (minor) (Minor)\n- Law (minor) (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.Des (Communication Design) (BDes, Bachelor of Design, Communication Design) > B.Des (Communication Design): Minor courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws)]\nB.A., LL.B. (Hons) (also written BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) is a 5-year, 10-semester undergraduate programme of the School of Law. It requires 205 credits in total.\n\n- Degree: B.A., LL.B. (Hons)\n- Variants: Hons\n- Major: Law (BCI-compliant); Honours specialisations\n- Minor options: Not published separately",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws)",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Additional Law Courses]\n- Interpretation of Statutes and Principle of Legislation (Elective)\n- Legal Writing and Research Methodology (Elective)\n- Indian Legal and Constitutional History (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Additional Law Courses",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): eligibility and admission]\nEligibility for B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws): 10+2, min 45% (42% OBC; 40% SC/ST). Entrance / selection: CLAT / LSAT / AILET preferred + interview.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): eligibility and admission",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Compulsory Clinical Papers (BCI)]\n- Introduction to Alternate Dispute Resolution Methods\n- Legal Drafting: Pleading, Conveyancing and Document Preparation\n- Conflict Resolution Techniques Workshop\n- Judicial Writing and Judgment Analysis\n- Moot Court and Trial Advocacy: Practical Skills in Legal Argumentation\n- Advanced Courtroom Advocacy: High Court and Supreme Court Procedures\n- Bar and Bench Relationships and Ethical Frameworks for Legal Professionals\n- Court Room Observation and Interviewing Techniques: Exploring Pre-trial and Trial",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Compulsory Clinical Papers (BCI)",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): fees]\nFees for B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws), in Indian rupees, as listed in the programme sheet:| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | Refundable | Payable on |\n|---|---|---|---|---|---|---|---|---|\n| 2025-30 batch | Full schedule | 2025-26 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | At the time of admission |\n| 2025-30 batch | Full schedule | 2026-27 | 2 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2026 |\n| 2025-30 batch | Full schedule | 2027-28 | 3 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2027 |\n| 2025-30 batch | Full schedule | 2028-29 | 4 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2028 |\n| 2025-30 batch | Full schedule | 2029-30 | 5 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2029 |\n| 2025-30 batch | Full schedule | 2025-26 | 1 | Security Deposit | One-time | Rs 10,000 | Yes | At the time of admission |\n| 2025-30 batch | Full schedule | 2029-30 | 5 | Convocation Fee | One-time | Rs 1,500 | No | June 05, 2029 |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Core Papers (BCI)]\n- Legal Methods\n- Law of Tort including MV Accident & Consumer Protection Laws\n- Constitutional Law-I & II\n- General Principles of Contract Law (Law of Contract-I & II)\n- Jurisprudence\n- Law of Crimes Paper I: Penal Code & Paper II: Criminal Procedure Code\n- Administrative Law\n- Labour and Industrial Law I\n- Law of Evidence\n- Public International Law\n- Family Law I & II\n- Environmental Law\n- Labour and Industrial Law II\n- Civil Procedure Code and Limitation Act\n- Company Law\n- Transfer of Property Law\n- Principles of Taxation Law",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Core Papers (BCI)",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): fees]\n| 2025-30 batch | Full schedule | 2029-30 | 5 | Alumni Association Fee | One-time | Rs 4,000 | No | June 05, 2029 |\n| 2027-28 intake | Annual tuition + deposit | 2027-28 | 1 | Tuition Fee | Annual | Rs 5,75,000 | No | not stated |\n| 2027-28 intake | Annual tuition + deposit | 2027-28 | 1 | Security Deposit | One-time | Rs 15,000 | Yes | not stated |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Honours Specialization]\n- Public Law (Elective)\n- Business and Commercial Law (Elective)\n- IPR / Intellectual Property Law (Elective)\n- AI & Technology Law (Elective)\n- Public Health Law (Elective)\n- General Law (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Honours Specialization",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Liberal Discipline (university core) courses]\n- Principles of Economics\n- Essentials of Business Management\n- Human Values and Ethics\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Community Engagement & Service Experience\n- Socio-Cultural Perspective on Indian Life\n- Humanistic Leadership Development\n- Problem Solving with Design Thinking\n- Critical Thinking\n- Language\n- Communication Skills\n- Law and Literature\n- Analytical Academic Writing",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Liberal Discipline (university core) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Liberal Arts Minor]\n- Organisational Behaviour (Minor)\n- People and Talent Management (Minor)\n- Integrated Marketing Communications (Minor)\n- Marketing Management (Minor)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Liberal Arts Minor",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Liberal Arts Minor (as printed on page) courses]\n- Organisational Behaviour (Minor)\n- People and Talent Management (Minor)\n- Integrated Marketing Communications (Minor)\n- Marketing Management (Minor)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Liberal Arts Minor (as printed on page) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Liberal Discipline (university core)]\n- Principles of Economics\n- Essentials of Business Management\n- Human Values and Ethics\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Community Engagement & Service Experience\n- Socio-Cultural Perspective on Indian Life\n- Humanistic Leadership Development\n- Problem Solving with Design Thinking\n- Critical Thinking\n- Language\n- Communication Skills\n- Law and Literature\n- Analytical Academic Writing",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Liberal Discipline (university core)",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Core Papers (BCI) courses]\n- Legal Methods\n- Law of Tort including MV Accident & Consumer Protection Laws\n- Constitutional Law-I & II\n- General Principles of Contract Law (Law of Contract-I & II)\n- Jurisprudence\n- Law of Crimes Paper I: Penal Code & Paper II: Criminal Procedure Code\n- Administrative Law\n- Labour and Industrial Law I\n- Law of Evidence\n- Public International Law\n- Family Law I & II\n- Environmental Law\n- Labour and Industrial Law II\n- Civil Procedure Code and Limitation Act\n- Company Law\n- Transfer of Property Law\n- Principles of Taxation Law",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Core Papers (BCI) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Research / Internship / Project - Honours dissertation]\n- Dissertation Design & Synopsis (Project/Research)\n- Dissertation Submission (Project/Research)\n- Dissertation Defence and Viva Voce (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Research / Internship / Project - Honours dissertation",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Compulsory Clinical Papers (BCI) courses]\n- Introduction to Alternate Dispute Resolution Methods\n- Legal Drafting: Pleading, Conveyancing and Document Preparation\n- Conflict Resolution Techniques Workshop\n- Judicial Writing and Judgment Analysis\n- Moot Court and Trial Advocacy: Practical Skills in Legal Argumentation\n- Advanced Courtroom Advocacy: High Court and Supreme Court Procedures\n- Bar and Bench Relationships and Ethical Frameworks for Legal Professionals\n- Court Room Observation and Interviewing Techniques: Exploring Pre-trial and Trial",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Compulsory Clinical Papers (BCI) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Research / Internship / Project - Mandatory internships]\n- Internships (minimum 20 weeks in total) (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Research / Internship / Project - Mandatory internships",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Additional Law Courses courses]\n- Interpretation of Statutes and Principle of Legislation (Elective)\n- Legal Writing and Research Methodology (Elective)\n- Indian Legal and Constitutional History (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Additional Law Courses courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws)]\nB.M.S., LL.B. (Hons) (also written BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) is a 5-year undergraduate programme of the School of Law. It requires 205 credits in total.\n\n- School: School of Law\n- Duration: 5 years\n- Total credits: 205\n- Major: Law with business management; Honours specialisations\n- Minors available: not stated",
-"source_file": "Vu Uni Data.xlsx",
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Honours Specialization courses]\n- Public Law (Elective)\n- Business and Commercial Law (Elective)\n- IPR / Intellectual Property Law (Elective)\n- AI & Technology Law (Elective)\n- Public Health Law (Elective)\n- General Law (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Law Honours Specialization courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Research / Internship / Project courses]\n- Dissertation Design & Synopsis (Project/Research)\n- Dissertation Submission (Project/Research)\n- Dissertation Defence and Viva Voce (Project/Research)\n- Internships (minimum 20 weeks in total) (Project/Research)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.A., LL.B. (Hons) (BA LLB, BA LL.B, integrated law degree, Bachelor of Laws) > B.A., LL.B. (Hons): Research / Internship / Project courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws)]\nB.M.S., LL.B. (Hons) (also written BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) is a 5-year, 10-semester undergraduate programme of the School of Law. It requires 205 credits in total.\n\n- Degree: B.M.S., LL.B. (Hons)\n- Variants: Hons\n- Major: Law with business management; Honours specialisations\n- Minor options: Not published separately",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
 "section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws)",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Additional Law Courses]\n- Interpretation of Statutes and Principle of Legislation (Elective)\n- Legal Writing and Research Methodology (Elective)\n- Indian Legal and Constitutional History (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Additional Law Courses",
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): eligibility and admission]\nEligibility for B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws): 10+2, min 45% (42% OBC; 40% SC/ST). Entrance / selection: CLAT / LSAT / AILET preferred + interview.",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): eligibility and admission",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Compulsory Clinical Papers (BCI)]\n- Introduction to Alternate Dispute Resolution Methods\n- Legal Drafting: Pleading, Conveyancing and Document Preparation\n- Conflict Resolution Techniques Workshop\n- Judicial Writing and Judgment Analysis\n- Moot Court and Trial Advocacy: Practical Skills in Legal Argumentation\n- Advanced Courtroom Advocacy: High Court and Supreme Court Procedures\n- Bar and Bench Relationships and Ethical Frameworks for Legal Professionals\n- Court Room Observation and Interviewing Techniques: Exploring Pre-trial and Trial",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Compulsory Clinical Papers (BCI)",
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): fees]\nFees for B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws), in Indian rupees, as listed in the programme sheet:| Intake / batch | Schedule | Academic year | Year | Fee component | Frequency | Amount | Refundable | Payable on |\n|---|---|---|---|---|---|---|---|---|\n| 2025-30 batch | Full schedule | 2025-26 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | At the time of admission |\n| 2025-30 batch | Full schedule | 2026-27 | 2 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2026 |\n| 2025-30 batch | Full schedule | 2027-28 | 3 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2027 |\n| 2025-30 batch | Full schedule | 2028-29 | 4 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2028 |\n| 2025-30 batch | Full schedule | 2029-30 | 5 | Tuition Fee | Annual | Rs 5,03,500 | No | June 05, 2029 |\n| 2025-30 batch | Full schedule | 2025-26 | 1 | Security Deposit | One-time | Rs 10,000 | Yes | At the time of admission |\n| 2025-30 batch | Full schedule | 2029-30 | 5 | Convocation Fee | One-time | Rs 1,500 | No | June 05, 2029 |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Core Papers (BCI)]\n- Legal Methods\n- Law of Tort including MV Accident & Consumer Protection Laws\n- Constitutional Law-I & II\n- General Principles of Contract Law (Law of Contract-I & II)\n- Jurisprudence\n- Law of Crimes Paper I: Penal Code & Paper II: Criminal Procedure Code\n- Administrative Law\n- Labour and Industrial Law I\n- Law of Evidence\n- Public International Law\n- Family Law I & II\n- Environmental Law\n- Labour and Industrial Law II\n- Civil Procedure Code and Limitation Act\n- Company Law\n- Transfer of Property Law\n- Principles of Taxation Law",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Core Papers (BCI)",
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): fees]\n| 2025-30 batch | Full schedule | 2029-30 | 5 | Alumni Association Fee | One-time | Rs 4,000 | No | June 05, 2029 |\n| 2026-27 intake | Annual tuition only | 2026-27 | 1 | Tuition Fee | Annual | Rs 5,03,500 | No | not stated |\n| 2027-28 intake | Annual tuition + deposit | 2027-28 | 1 | Tuition Fee | Annual | Rs 5,75,000 | No | not stated |\n| 2027-28 intake | Annual tuition + deposit | 2027-28 | 1 | Security Deposit | One-time | Rs 15,000 | Yes | not stated |",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): fees",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Honours Specialization]\n- Public Law (Elective)\n- Business and Commercial Law (Elective)\n- IPR / Intellectual Property Law (Elective)\n- AI & Technology Law (Elective)\n- Public Health Law (Elective)\n- General Law (Elective)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Honours Specialization",
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Liberal Discipline (university core) courses]\n- Principles of Economics\n- Essentials of Business Management\n- Human Values and Ethics\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Community Engagement & Service Experience\n- Socio-Cultural Perspective on Indian Life\n- Humanistic Leadership Development\n- Problem Solving with Design Thinking\n- Critical Thinking\n- Language\n- Communication Skills\n- Law and Literature\n- Analytical Academic Writing",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Liberal Discipline (university core) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Liberal Discipline (university core)]\n- Principles of Economics\n- Essentials of Business Management\n- Human Values and Ethics\n- Learning to Learn\n- Environmental Studies and Sustainability\n- Community Engagement & Service Experience\n- Socio-Cultural Perspective on Indian Life\n- Humanistic Leadership Development\n- Problem Solving with Design Thinking\n- Critical Thinking\n- Language\n- Communication Skills\n- Law and Literature\n- Analytical Academic Writing",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Liberal Discipline (university core)",
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Core Papers (BCI) courses]\n- Legal Methods\n- Law of Tort including MV Accident & Consumer Protection Laws\n- Constitutional Law-I & II\n- General Principles of Contract Law (Law of Contract-I & II)\n- Jurisprudence\n- Law of Crimes Paper I: Penal Code & Paper II: Criminal Procedure Code\n- Administrative Law\n- Labour and Industrial Law I\n- Law of Evidence\n- Public International Law\n- Family Law I & II\n- Environmental Law\n- Labour and Industrial Law II\n- Civil Procedure Code and Limitation Act\n- Company Law\n- Transfer of Property Law\n- Principles of Taxation Law",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Core Papers (BCI) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Research / Internship / Project - Honours dissertation]\n- Dissertation Design & Synopsis (Project/Research)\n- Dissertation Submission (Project/Research)\n- Dissertation Defence and Viva Voce (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Research / Internship / Project - Honours dissertation",
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Compulsory Clinical Papers (BCI) courses]\n- Introduction to Alternate Dispute Resolution Methods\n- Legal Drafting: Pleading, Conveyancing and Document Preparation\n- Conflict Resolution Techniques Workshop\n- Judicial Writing and Judgment Analysis\n- Moot Court and Trial Advocacy: Practical Skills in Legal Argumentation\n- Advanced Courtroom Advocacy: High Court and Supreme Court Procedures\n- Bar and Bench Relationships and Ethical Frameworks for Legal Professionals\n- Court Room Observation and Interviewing Techniques: Exploring Pre-trial and Trial",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Compulsory Clinical Papers (BCI) courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
 },
 {
-"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Research / Internship / Project - Mandatory internships]\n- Internships (minimum 20 weeks in total) (Project/Research)",
-"source_file": "Vu Uni Data.xlsx",
-"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Research / Internship / Project - Mandatory internships",
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Additional Law Courses courses]\n- Interpretation of Statutes and Principle of Legislation (Elective)\n- Legal Writing and Research Methodology (Elective)\n- Indian Legal and Constitutional History (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Additional Law Courses courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Honours Specialization courses]\n- Public Law (Elective)\n- Business and Commercial Law (Elective)\n- IPR / Intellectual Property Law (Elective)\n- AI & Technology Law (Elective)\n- Public Health Law (Elective)\n- General Law (Elective)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Law Honours Specialization courses",
+"processed_file": "programmes.md",
+"course_code": "",
+"pages": ""
+},
+{
+"text": "[B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Research / Internship / Project courses]\n- Dissertation Design & Synopsis (Project/Research)\n- Dissertation Submission (Project/Research)\n- Dissertation Defence and Viva Voce (Project/Research)\n- Internships (minimum 20 weeks in total) (Project/Research)",
+"source_file": "Vidyashilp_University_Programs_.xlsx",
+"section": "B.M.S., LL.B. (Hons) (BMS LLB, BMS LL.B, integrated law and management degree, Bachelor of Laws) > B.M.S., LL.B. (Hons): Research / Internship / Project courses",
 "processed_file": "programmes.md",
 "course_code": "",
 "pages": ""
